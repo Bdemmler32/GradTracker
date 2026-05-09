@@ -1,19 +1,12 @@
 /* ============================================================
-   GradTracker v1.3.0 — Application Logic
-   Changes from v1.2.0:
-   [1]  Course Type field: VC / BC / AC / Standard
-   [2]  Settings req buttons unified — icon row on all screen sizes
-   [3]  General mobile responsiveness polish
-   [4]  Three-dot menu properly positioned & functional on mobile
-   [5]  Sidebar z-index & backdrop fix for mobile overlap
-   [6]  Stats/courses pages reflow on small screens
-   [7]  Edit sub-requirements in-line (pencil per sub-req)
-   [8]  Onboarding modal on first visit
-   [9]  Dashboard: planned-included % shown below main %
-   [10] Req breakdown bars use gold for planned segment
-   [11] Grade distribution shows planned grades in gold
-   [12] Stats values use exact decimals (no Math.round)
-   [13] Font Awesome school-circle-check icon replaces shield
+   GradTracker v1.4.0 — Application Logic
+   Changes from v1.3.0:
+   [1]  Desktop-only: mobile gate screen shown on narrow viewports
+   [2]  Status column is a dropdown; planned→earned opens grade modal
+   [3]  Sub-requirement name-match completion tracking in all views
+   [4]  Student info: Current School field; School Years: school name
+        auto-populated from student school, editable per year
+   [5]  "Tracker" portion of logo text rendered in gold
    ============================================================ */
 
 'use strict';
@@ -28,25 +21,33 @@ function saveData() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); 
 
 // ── State ─────────────────────────────────────────────────────
 let state = {
-  student: { name: '', gradYear: '' },
-  years: [],
+  student: { name: '', gradYear: '', school: '' },
+  years: [],          // [{id, name, school}]
   requirements: [],   // [{id, name, credits, subReqs:[{id,name,credits}]}]
   courses: []         // [{id, name, yearId, credits, grade, type, reqId, subReqId, planned}]
 };
 
 // ── Constants ─────────────────────────────────────────────────
-const GRADES     = ['A','B','C','D','F','P','NP','W','I','AU'];
+const GRADES       = ['A','B','C','D','F','P','NP','W','I','AU'];
 const COURSE_TYPES = ['Standard','VC','BC','AC'];
 
-// ── Global filter state (declared BEFORE init to avoid TDZ) ───
+// ── Globals declared before init() to avoid TDZ ───────────────
 let courseReqFilter = '';
-let _dotsReqId = null;
-let _dotsSubReqId = null; // for sub-req three-dot
+let _dotsReqId      = null;
 
-// ── Init ──────────────────────────────────────────────────────
+// ═════════════════════════════════════════════════════════════
+// INIT
+// ═════════════════════════════════════════════════════════════
 (function init() {
+  // (#1) Mobile gate — show gate and hide app on narrow screens
+  checkMobileGate();
+  window.addEventListener('resize', checkMobileGate);
+
   const saved = loadData();
   if (saved) {
+    // Migrate: ensure school field exists
+    if (saved.student && !saved.student.school) saved.student.school = '';
+    if (saved.years) saved.years = saved.years.map(y => ({ school: '', ...y }));
     if (saved.requirements) {
       saved.requirements = saved.requirements.map(r => ({
         ...r, subReqs: (r.subReqs || []).map(sr => ({ credits: 0, ...sr }))
@@ -54,48 +55,38 @@ let _dotsSubReqId = null; // for sub-req three-dot
     }
     Object.assign(state, saved);
   }
+
   setupNavigation();
   setupSettings();
   setupCourses();
-  setupDotsMenu();
   renderAll();
   registerSW();
-  // Onboarding: show if name not set and no courses yet
-  if (!state.student.name && state.courses.length === 0) {
-    showOnboarding();
-  }
+
+  if (!state.student.name && state.courses.length === 0) showOnboarding();
 })();
 
-// ── Navigation ────────────────────────────────────────────────
+// ── (#1) Mobile gate ──────────────────────────────────────────
+function checkMobileGate() {
+  const gate    = document.getElementById('mobile-gate');
+  const sidebar = document.getElementById('sidebar');
+  const main    = document.getElementById('main-content');
+  const isMobile = window.innerWidth < 900;
+  gate.style.display    = isMobile ? 'flex' : 'none';
+  sidebar.style.display = isMobile ? 'none'  : '';
+  main.style.display    = isMobile ? 'none'  : '';
+}
+
+// ═════════════════════════════════════════════════════════════
+// NAVIGATION
+// ═════════════════════════════════════════════════════════════
 function setupNavigation() {
   document.querySelectorAll('.nav-link, .inline-link').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const page = link.dataset.page;
       if (page) navigateTo(page);
-      closeSidebar();
     });
   });
-
-  document.getElementById('hamburger').addEventListener('click', e => {
-    e.stopPropagation();
-    document.getElementById('sidebar').classList.toggle('open');
-    closeDotsMenu();
-  });
-
-  // Backdrop close on mobile
-  document.addEventListener('click', e => {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar.classList.contains('open')
-        && !sidebar.contains(e.target)
-        && !e.target.closest('#hamburger')) {
-      closeSidebar();
-    }
-  });
-}
-
-function closeSidebar() {
-  document.getElementById('sidebar').classList.remove('open');
 }
 
 function navigateTo(page, extraData) {
@@ -116,49 +107,14 @@ function renderAll() {
   renderDashboard(); renderCourses(); renderStats(); renderSettings();
 }
 
-// ── Three-dot menu ────────────────────────────────────────────
-function setupDotsMenu() {
-  document.getElementById('dots-edit').addEventListener('click', () => {
-    if (_dotsReqId) openEditReqModal(_dotsReqId);
-    closeDotsMenu();
-  });
-  document.getElementById('dots-add-sub').addEventListener('click', () => {
-    if (_dotsReqId) { toggleSubReqForm(_dotsReqId); closeDotsMenu(); }
-  });
-  document.getElementById('dots-delete').addEventListener('click', () => {
-    if (_dotsReqId) { deleteReq(_dotsReqId); closeDotsMenu(); }
-  });
-  document.addEventListener('click', e => {
-    if (!document.getElementById('dots-menu').classList.contains('hidden')
-        && !e.target.closest('#dots-menu')
-        && !e.target.closest('.dots-btn')) {
-      closeDotsMenu();
-    }
-  });
-}
-
-function openDotsMenu(reqId, btn) {
-  _dotsReqId = reqId;
-  const menu = document.getElementById('dots-menu');
-  menu.classList.remove('hidden');
-  const rect = btn.getBoundingClientRect();
-  const mw = 190;
-  let left = rect.right - mw;
-  if (left < 8) left = 8;
-  menu.style.top  = (rect.bottom + window.scrollY + 4) + 'px';
-  menu.style.left = left + 'px';
-  menu.style.minWidth = mw + 'px';
-}
-
-function closeDotsMenu() {
-  document.getElementById('dots-menu').classList.add('hidden');
-  _dotsReqId = null;
-}
-
-// ── Helpers ───────────────────────────────────────────────────
+// ═════════════════════════════════════════════════════════════
+// HELPERS
+// ═════════════════════════════════════════════════════════════
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
-function getYearName(id) { return state.years.find(y => y.id === id)?.name || '—'; }
-function getReq(id) { return state.requirements.find(r => r.id === id); }
+
+function getYear(id)    { return state.years.find(y => y.id === id); }
+function getYearName(id){ return getYear(id)?.name || '—'; }
+function getReq(id)     { return state.requirements.find(r => r.id === id); }
 function getReqName(id) { return getReq(id)?.name || 'Uncategorized'; }
 
 function creditsEarnedForReq(reqId) {
@@ -185,56 +141,79 @@ function creditsByYear() {
   return map;
 }
 
-// (#12) No rounding — show up to 2 decimal places, trimming trailing zeros
 function fmt(n) {
   const v = Number(n);
   if (isNaN(v)) return '0';
-  // up to 2 decimals, no trailing zeros
   return parseFloat(v.toFixed(2)).toString();
 }
 
-// ── Onboarding (#8) ───────────────────────────────────────────
+// ── (#3) Sub-requirement completion detection ─────────────────
+// Rule: a sub-req is "satisfied" when at least one course has
+//   • c.reqId === req.id  (same parent requirement)
+//   • c.name (case-insensitive trimmed) === sr.name (case-insensitive trimmed)
+// Returns 'earned' | 'planned' | null
+function subReqStatus(req, sr) {
+  const srName = sr.name.trim().toLowerCase();
+  const matches = state.courses.filter(c =>
+    c.reqId === req.id &&
+    c.name.trim().toLowerCase() === srName
+  );
+  if (matches.some(c => !c.planned)) return 'earned';
+  if (matches.some(c =>  c.planned)) return 'planned';
+  return null;
+}
+
+// ═════════════════════════════════════════════════════════════
+// ONBOARDING
+// ═════════════════════════════════════════════════════════════
 function showOnboarding() {
   document.getElementById('onboard-overlay').classList.remove('hidden');
   document.getElementById('ob-name').focus();
 }
-
 function hideOnboarding() {
   document.getElementById('onboard-overlay').classList.add('hidden');
 }
 
 document.getElementById('ob-next').addEventListener('click', () => {
   const name     = document.getElementById('ob-name').value.trim();
+  const school   = document.getElementById('ob-school').value.trim();
   const gradYear = document.getElementById('ob-grad-year').value.trim();
-  if (name) {
-    state.student.name    = name;
-    state.student.gradYear = gradYear;
-    saveData();
-    // Update settings fields
-    document.getElementById('student-name').value = name;
-    document.getElementById('grad-year').value    = gradYear;
-    renderDashboard();
-  }
+  state.student.name    = name;
+  state.student.school  = school;
+  state.student.gradYear = gradYear;
+  saveData();
+  document.getElementById('student-name').value   = name;
+  document.getElementById('student-school').value = school;
+  document.getElementById('grad-year').value      = gradYear;
+  // Pre-fill the year school field with current school
+  document.getElementById('new-year-school').value = school;
   hideOnboarding();
   navigateTo('settings');
+  renderDashboard();
   toast(`Welcome, ${name || 'there'}! Now add your graduation requirements.`, 'success');
 });
 
-document.getElementById('ob-skip').addEventListener('click', () => {
-  hideOnboarding();
-});
+document.getElementById('ob-skip').addEventListener('click', hideOnboarding);
 
-// ── Dashboard ─────────────────────────────────────────────────
+// ═════════════════════════════════════════════════════════════
+// DASHBOARD
+// ═════════════════════════════════════════════════════════════
 function renderDashboard() {
   const earned   = totalEarned();
   const planned  = totalPlanned();
   const required = totalRequired();
-  const pctE = required > 0 ? Math.min(100, (earned           / required) * 100) : 0;
-  const pctP = required > 0 ? Math.min(100 - pctE, (planned   / required) * 100) : 0;
-  const pctWithPlanned = required > 0 ? Math.min(100, ((earned + planned) / required) * 100) : 0;
+  const pctE = required > 0 ? Math.min(100, (earned / required) * 100) : 0;
+  const pctP = required > 0 ? Math.min(100 - pctE, (planned / required) * 100) : 0;
+  const pctWP = required > 0 ? Math.min(100, ((earned + planned) / required) * 100) : 0;
 
-  const heading = document.getElementById('dash-heading');
-  heading.textContent = state.student.name ? `Welcome, ${state.student.name}` : 'Dashboard';
+  // Greeting + school subtitle (#4)
+  document.getElementById('dash-heading').textContent =
+    state.student.name ? `Welcome, ${state.student.name}` : 'Dashboard';
+  const sub = [];
+  if (state.student.school)   sub.push(state.student.school);
+  if (state.student.gradYear) sub.push(`Class of ${state.student.gradYear}`);
+  document.getElementById('dash-subtitle').textContent =
+    sub.length ? sub.join(' · ') : 'Your graduation progress at a glance';
 
   document.getElementById('dash-earned').textContent   = fmt(earned);
   document.getElementById('dash-required').textContent = fmt(required);
@@ -242,21 +221,21 @@ function renderDashboard() {
   document.getElementById('dash-progress-bar').style.width = pctE + '%';
   document.getElementById('dash-planned-bar').style.width  = pctP + '%';
   document.getElementById('dash-planned').textContent  = fmt(planned);
+  document.getElementById('dash-planned-wrap').style.visibility = planned > 0 ? 'visible' : 'hidden';
+  document.getElementById('legend-planned-item').style.display  = planned > 0 ? ''       : 'none';
 
-  // (#9) Planned-included percentage
-  const pctPlannedEl = document.getElementById('dash-pct-with-planned');
+  const pctWPEl = document.getElementById('dash-pct-with-planned');
   if (planned > 0 && required > 0) {
-    pctPlannedEl.textContent = fmt(pctWithPlanned) + '% with planned';
-    pctPlannedEl.style.display = 'block';
+    pctWPEl.textContent = fmt(pctWP) + '% with planned';
+    pctWPEl.style.display = 'block';
   } else {
-    pctPlannedEl.style.display = 'none';
+    pctWPEl.style.display = 'none';
   }
 
-  document.getElementById('dash-planned-wrap').style.visibility = planned > 0 ? 'visible' : 'hidden';
-  document.getElementById('legend-planned-item').style.display  = planned > 0 ? '' : 'none';
-  document.getElementById('no-requirements-notice').classList.toggle('hidden', state.requirements.length > 0);
+  document.getElementById('no-requirements-notice')
+    .classList.toggle('hidden', state.requirements.length > 0);
 
-  // Requirements grid
+  // Requirements grid — with sub-req status chips (#3)
   const grid = document.getElementById('dash-req-grid');
   grid.innerHTML = '';
   state.requirements.forEach(req => {
@@ -265,13 +244,19 @@ function renderDashboard() {
     const pct  = req.credits > 0 ? Math.min(100, (e / req.credits) * 100) : 0;
     const pctP = req.credits > 0 ? Math.min(100 - pct, (p / req.credits) * 100) : 0;
     const complete = e >= req.credits && req.credits > 0;
-    const badge    = complete ? '✓ Met' : fmt(pct) + '%';
 
     const subReqsHtml = (req.subReqs||[]).length ? `
       <div class="req-card-subreqs">
         ${req.subReqs.map(sr => {
-          const crStr = Number(sr.credits) > 0 ? ` (${fmt(sr.credits)})` : '';
-          return `<span class="subreq-chip">${esc(sr.name)}${crStr}</span>`;
+          const status = subReqStatus(req, sr);
+          const crStr  = Number(sr.credits) > 0 ? ` (${fmt(sr.credits)})` : '';
+          const cls    = status === 'earned'  ? 'subreq-chip sr-met'
+                       : status === 'planned' ? 'subreq-chip sr-planned'
+                       : 'subreq-chip';
+          const icon   = status === 'earned'  ? '✓ '
+                       : status === 'planned' ? '◷ '
+                       : '';
+          return `<span class="${cls}">${icon}${esc(sr.name)}${crStr}</span>`;
         }).join('')}
       </div>` : '';
 
@@ -279,7 +264,7 @@ function renderDashboard() {
       <div class="req-card ${complete?'complete':''}" role="button" tabindex="0"
            onclick="openReqCourses('${req.id}')"
            onkeydown="if(event.key==='Enter')openReqCourses('${req.id}')">
-        <span class="req-badge">${badge}</span>
+        <span class="req-badge">${complete ? '✓ Met' : fmt(pct) + '%'}</span>
         <div class="req-card-name">${esc(req.name)}</div>
         <div class="req-card-credits">${fmt(e)} <span>/ ${fmt(req.credits)} credits</span></div>
         ${p > 0 ? `<div class="req-card-planned">+${fmt(p)} planned</div>` : ''}
@@ -301,10 +286,12 @@ function renderDashboard() {
   const byYear = creditsByYear();
   state.years.forEach(y => {
     const {earned: e, planned: p} = byYear[y.id] || {earned:0, planned:0};
-    const cnt = state.courses.filter(co => co.yearId === y.id).length;
+    const cnt   = state.courses.filter(co => co.yearId === y.id).length;
+    const school = y.school ? `<div class="year-card-school">${esc(y.school)}</div>` : '';
     yearCards.innerHTML += `
       <div class="year-card">
         <div class="year-card-name">${esc(y.name)}</div>
+        ${school}
         <div class="year-card-credits">${fmt(e)}</div>
         ${p > 0 ? `<div class="year-card-planned">+${fmt(p)} planned</div>` : ''}
         <div class="year-card-sub">${cnt} course${cnt!==1?'s':''}</div>
@@ -320,7 +307,9 @@ function openReqCourses(reqId) {
   navigateTo('courses', { reqId });
 }
 
-// ── Courses ───────────────────────────────────────────────────
+// ═════════════════════════════════════════════════════════════
+// COURSES
+// ═════════════════════════════════════════════════════════════
 function setupCourses() {
   document.getElementById('btn-add-course').addEventListener('click', () => openCourseModal());
   document.getElementById('filter-year').addEventListener('change', renderCourses);
@@ -366,28 +355,52 @@ function renderCourses() {
 
   tbody.innerHTML = courses.map(c => {
     const gClass = ['A','B','C','D','F','P'].includes(c.grade) ? c.grade : '';
-    const statusBadge = c.planned
-      ? `<span class="status-badge planned">Planned</span>`
-      : `<span class="status-badge earned">Earned</span>`;
+
+    // (#2) Status dropdown instead of static badge
+    const statusSelect = `
+      <select class="status-select ${c.planned?'sel-planned':'sel-earned'}"
+              onchange="handleStatusChange('${c.id}', this.value)"
+              title="Change status">
+        <option value="earned"  ${!c.planned?'selected':''}>✓ Earned</option>
+        <option value="planned" ${ c.planned?'selected':''}>◷ Planned</option>
+      </select>`;
+
     const typeBadge = c.type && c.type !== 'Standard'
       ? `<span class="type-badge type-${c.type}">${esc(c.type)}</span>`
       : (c.type === 'Standard' ? '<span class="type-badge type-std">Std</span>' : '—');
 
+    // (#3) Category + sub-req with completion indicator
+    const req = getReq(c.reqId);
     let catDisplay = esc(getReqName(c.reqId));
-    if (c.subReqId) {
-      const sub = getReq(c.reqId)?.subReqs?.find(sr => sr.id === c.subReqId);
+    if (c.subReqId && req) {
+      const sub = req.subReqs?.find(sr => sr.id === c.subReqId);
       if (sub) catDisplay += `<br><span class="subreq-label">${esc(sub.name)}</span>`;
+    }
+    // Name-match sub-req indicator in course name column
+    let srMatchHtml = '';
+    if (req) {
+      const matchedSr = req.subReqs?.find(sr =>
+        sr.name.trim().toLowerCase() === c.name.trim().toLowerCase()
+      );
+      if (matchedSr) {
+        const st = subReqStatus(req, matchedSr);
+        if (st) {
+          srMatchHtml = `<span class="sr-match-tag ${st==='earned'?'sr-match-earned':'sr-match-planned'}">
+            ${st==='earned'?'✓':'◷'} Sub-req
+          </span>`;
+        }
+      }
     }
 
     return `
     <tr class="${c.planned?'row-planned':''}">
-      <td class="td-course-name">${esc(c.name)}</td>
+      <td class="td-course-name">${esc(c.name)}${srMatchHtml}</td>
       <td class="td-year">${esc(getYearName(c.yearId))}</td>
       <td class="col-center"><strong>${fmt(c.credits)}</strong></td>
       <td class="col-center">${c.grade?`<span class="grade-badge ${gClass}">${esc(c.grade)}</span>`:'—'}</td>
       <td class="col-center">${typeBadge}</td>
       <td class="td-cat">${catDisplay}</td>
-      <td class="col-center">${statusBadge}</td>
+      <td class="col-center">${statusSelect}</td>
       <td>
         <div class="action-btns">
           <button class="btn-icon" onclick="openCourseModal('${c.id}')" title="Edit">
@@ -400,6 +413,70 @@ function renderCourses() {
       </td>
     </tr>`;
   }).join('');
+}
+
+// (#2) Handle status dropdown change
+function handleStatusChange(courseId, newStatus) {
+  const course = state.courses.find(c => c.id === courseId);
+  if (!course) return;
+
+  if (newStatus === 'earned' && course.planned) {
+    // Planned → Earned: open grade modal
+    openEarnedModal(courseId);
+  } else if (newStatus === 'planned' && !course.planned) {
+    // Earned → Planned: immediate flip
+    course.planned = true;
+    saveData(); renderAll();
+    toast('Course marked as Planned.', 'success');
+  }
+}
+
+// (#2) Modal shown when flipping planned → earned
+function openEarnedModal(courseId) {
+  const c = state.courses.find(x => x.id === courseId);
+  if (!c) return;
+
+  const gradeOpts = GRADES.map(g =>
+    `<option value="${g}" ${c.grade===g?'selected':''}>${g}</option>`
+  ).join('');
+
+  document.getElementById('modal-title').textContent = 'Mark as Earned';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="earned-modal-info">
+      <div class="earned-course-name">${esc(c.name)}</div>
+      <div class="earned-course-meta">${fmt(c.credits)} credits · ${esc(getYearName(c.yearId))} · ${esc(getReqName(c.reqId))}</div>
+    </div>
+    <div class="status-change-banner">
+      <span class="status-badge planned" style="font-size:.78rem">◷ Planned</span>
+      <span class="status-arrow">→</span>
+      <span class="status-badge earned" style="font-size:.78rem">✓ Earned</span>
+    </div>
+    <div class="form-group" style="margin-top:16px">
+      <label for="em-grade">Grade Received</label>
+      <select id="em-grade">
+        <option value="">— Select grade —</option>
+        ${gradeOpts}
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" id="modal-cancel">Cancel</button>
+      <button class="btn btn-primary" id="em-save">Save as Earned</button>
+    </div>`;
+
+  document.getElementById('modal-cancel').addEventListener('click', () => {
+    closeModal();
+    // Reset dropdown visually
+    renderCourses();
+  });
+  document.getElementById('em-save').addEventListener('click', () => {
+    const grade = document.getElementById('em-grade').value;
+    c.planned = false;
+    c.grade   = grade || c.grade;
+    saveData(); closeModal(); renderAll();
+    toast('Course marked as Earned!', 'success');
+  });
+
+  openModal();
 }
 
 function openCourseModal(courseId) {
@@ -497,17 +574,18 @@ function deleteCourse(id) {
   saveData(); renderAll(); toast('Course deleted.');
 }
 
-// ── Stats ─────────────────────────────────────────────────────
+// ═════════════════════════════════════════════════════════════
+// STATS
+// ═════════════════════════════════════════════════════════════
 function renderStats() {
   const earned    = totalEarned();
   const planned   = totalPlanned();
   const required  = totalRequired();
   const remaining = Math.max(0, required - earned);
   const metCount  = state.requirements.filter(r => creditsEarnedForReq(r.id) >= r.credits && r.credits > 0).length;
-  // (#12) No rounding — exact percentage
-  const pct = required > 0 ? (earned / required) * 100 : 0;
+  const pct  = required > 0 ? (earned / required) * 100 : 0;
   const yearsW = state.years.filter(y => state.courses.some(c => c.yearId===y.id && !c.planned));
-  const avg = yearsW.length > 0 ? earned / yearsW.length : 0;
+  const avg  = yearsW.length > 0 ? earned / yearsW.length : 0;
 
   document.getElementById('stat-total-courses').textContent     = state.courses.length;
   document.getElementById('stat-credits-earned').textContent    = fmt(earned);
@@ -519,8 +597,8 @@ function renderStats() {
   document.getElementById('stat-grad-year').textContent         = state.student.gradYear || '—';
 
   // Bar chart
-  const byYear   = creditsByYear();
-  const maxC = Math.max(...state.years.map(y=>(byYear[y.id]?.earned||0)+(byYear[y.id]?.planned||0)), 1);
+  const byYear = creditsByYear();
+  const maxC   = Math.max(...state.years.map(y=>(byYear[y.id]?.earned||0)+(byYear[y.id]?.planned||0)), 1);
   document.getElementById('bar-chart-years').innerHTML = state.years.length === 0
     ? '<p class="text-muted" style="font-size:.85rem;padding:20px 0">No years defined.</p>'
     : state.years.map(y => {
@@ -539,7 +617,7 @@ function renderStats() {
         </div>`;
       }).join('');
 
-  // Requirement breakdown (#10 — gold bar for planned)
+  // Requirement breakdown — sub-req chips with status (#3)
   document.getElementById('req-breakdown').innerHTML = state.requirements.length === 0
     ? '<p class="text-muted" style="font-size:.85rem">No requirements defined.</p>'
     : state.requirements.map(req => {
@@ -551,8 +629,13 @@ function renderStats() {
 
         const subH = (req.subReqs||[]).length
           ? `<div class="breakdown-subreqs">${req.subReqs.map(sr => {
-              const cr = Number(sr.credits)>0 ? ` (${fmt(sr.credits)})` : '';
-              return `<span class="subreq-chip sm">${esc(sr.name)}${cr}</span>`;
+              const status = subReqStatus(req, sr);
+              const cr     = Number(sr.credits)>0 ? ` (${fmt(sr.credits)})` : '';
+              const cls    = status==='earned'  ? 'subreq-chip sm sr-met'
+                           : status==='planned' ? 'subreq-chip sm sr-planned'
+                           : 'subreq-chip sm';
+              const icon   = status==='earned' ? '✓ ' : status==='planned' ? '◷ ' : '';
+              return `<span class="${cls}">${icon}${esc(sr.name)}${cr}</span>`;
             }).join('')}</div>` : '';
 
         return `
@@ -566,36 +649,36 @@ function renderStats() {
         </div>`;
       }).join('');
 
-  // Grade distribution (#11 — show planned grades in gold)
+  // Grade distribution
   const gradesE = {}, gradesP = {};
   state.courses.forEach(c => {
     if (!c.grade) return;
     if (c.planned) gradesP[c.grade] = (gradesP[c.grade]||0) + 1;
     else           gradesE[c.grade] = (gradesE[c.grade]||0) + 1;
   });
-  const allGrades = [...new Set([...Object.keys(gradesE), ...Object.keys(gradesP)])];
-  const orderedGrades = GRADES.filter(g => allGrades.includes(g));
+  const orderedGrades = GRADES.filter(g => gradesE[g] || gradesP[g]);
   document.getElementById('grade-dist').innerHTML = orderedGrades.length
-    ? orderedGrades.map(g => {
-        const earned  = gradesE[g] || 0;
-        const planned = gradesP[g] || 0;
-        const plannedNote = planned > 0 ? `<div class="grade-planned-note">+${planned}</div>` : '';
-        return `
+    ? orderedGrades.map(g => `
         <div class="grade-dist-item">
-          <div class="grade-dist-count">${earned}</div>
-          ${plannedNote}
+          <div class="grade-dist-count">${gradesE[g]||0}</div>
+          ${gradesP[g] ? `<div class="grade-planned-note">+${gradesP[g]}</div>` : ''}
           <div class="grade-dist-label">${g}</div>
-        </div>`;
-      }).join('')
+        </div>`).join('')
     : '<p class="text-muted" style="font-size:.85rem">No grade data available.</p>';
 }
 
-// ── Settings ──────────────────────────────────────────────────
+// ═════════════════════════════════════════════════════════════
+// SETTINGS
+// ═════════════════════════════════════════════════════════════
 function setupSettings() {
   document.getElementById('btn-save-student').addEventListener('click', () => {
-    state.student.name     = document.getElementById('student-name').value.trim();
+    state.student.name    = document.getElementById('student-name').value.trim();
     state.student.gradYear = document.getElementById('grad-year').value.trim();
-    saveData(); renderDashboard(); toast('Student info saved.', 'success');
+    state.student.school  = document.getElementById('student-school').value.trim();
+    saveData(); renderDashboard();
+    // Auto-fill school in year add field
+    document.getElementById('new-year-school').value = state.student.school;
+    toast('Student info saved.', 'success');
   });
   document.getElementById('btn-add-year').addEventListener('click', addYear);
   document.getElementById('new-year-name').addEventListener('keydown', e => { if(e.key==='Enter') addYear(); });
@@ -607,15 +690,26 @@ function setupSettings() {
 }
 
 function renderSettings() {
-  document.getElementById('student-name').value = state.student.name    || '';
-  document.getElementById('grad-year').value    = state.student.gradYear || '';
+  document.getElementById('student-name').value   = state.student.name    || '';
+  document.getElementById('grad-year').value      = state.student.gradYear || '';
+  document.getElementById('student-school').value = state.student.school  || '';
 
-  // Years
+  // Pre-fill school in add-year input if empty
+  const nySchool = document.getElementById('new-year-school');
+  if (!nySchool.value && state.student.school) nySchool.value = state.student.school;
+
+  // Years list — show school name (#4)
   document.getElementById('years-list').innerHTML = state.years.length
     ? state.years.map(y => `
       <div class="list-item">
-        <span class="list-item-name">${esc(y.name)}</span>
+        <div class="list-item-name-group">
+          <span class="list-item-name">${esc(y.name)}</span>
+          ${y.school ? `<span class="list-item-school">${esc(y.school)}</span>` : ''}
+        </div>
         <div class="list-item-actions">
+          <button class="btn-icon" onclick="openEditYearModal('${y.id}')" title="Edit year">
+            <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </button>
           <button class="btn-icon delete" onclick="deleteYear('${y.id}')" title="Delete year">
             <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
           </button>
@@ -623,13 +717,18 @@ function renderSettings() {
       </div>`).join('')
     : '<p class="text-muted" style="font-size:.85rem;padding:6px 0">No years added yet.</p>';
 
-  // Requirements — unified icon buttons on all sizes (#2)
+  // Requirements list
   document.getElementById('reqs-list').innerHTML = state.requirements.length
     ? state.requirements.map(r => {
         const subList = (r.subReqs||[]).map(sr => {
-          const cr = Number(sr.credits)>0 ? `${fmt(sr.credits)} cr` : '0 cr';
+          const status = subReqStatus(r, sr);
+          const cr     = Number(sr.credits)>0 ? `${fmt(sr.credits)} cr` : '0 cr';
+          const statusDot = status==='earned'  ? '<span class="sr-dot sr-dot-earned" title="Requirement met">✓</span>'
+                          : status==='planned' ? '<span class="sr-dot sr-dot-planned" title="Course planned">◷</span>'
+                          : '<span class="sr-dot sr-dot-none" title="Not started">○</span>';
           return `
           <div class="subreq-item">
+            ${statusDot}
             <span class="subreq-item-name">${esc(sr.name)}</span>
             <span class="subreq-item-credits">${cr}</span>
             <div class="subreq-item-actions">
@@ -674,6 +773,38 @@ function renderSettings() {
   document.getElementById('total-req-credits').textContent = fmt(totalRequired());
 }
 
+// ── Edit Year Modal (#4) ──────────────────────────────────────
+function openEditYearModal(yearId) {
+  const y = state.years.find(x => x.id === yearId);
+  if (!y) return;
+  document.getElementById('modal-title').textContent = 'Edit School Year';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="form-group">
+      <label for="edit-year-name">Year / Grade Label *</label>
+      <input type="text" id="edit-year-name" value="${esc(y.name)}" placeholder='e.g. "9th Grade"' />
+    </div>
+    <div class="form-group" style="margin-top:12px">
+      <label for="edit-year-school">School Name</label>
+      <input type="text" id="edit-year-school" value="${esc(y.school||'')}" placeholder="e.g. Valley High School" />
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" id="modal-cancel">Cancel</button>
+      <button class="btn btn-primary" id="modal-save-year">Save Changes</button>
+    </div>`;
+  document.getElementById('modal-cancel').addEventListener('click', closeModal);
+  document.getElementById('modal-save-year').addEventListener('click', () => {
+    const name   = document.getElementById('edit-year-name').value.trim();
+    const school = document.getElementById('edit-year-school').value.trim();
+    if (!name) { toast('Please enter a year label.', 'error'); return; }
+    y.name   = name;
+    y.school = school;
+    saveData(); closeModal(); renderAll();
+    toast('Year updated.', 'success');
+  });
+  openModal();
+  document.getElementById('edit-year-name').focus();
+}
+
 // ── Edit Req Modal ────────────────────────────────────────────
 function openEditReqModal(reqId) {
   const req = state.requirements.find(r => r.id === reqId);
@@ -693,24 +824,20 @@ function openEditReqModal(reqId) {
       <button class="btn btn-primary" id="modal-save-req">Save Changes</button>
     </div>`;
   document.getElementById('modal-cancel').addEventListener('click', closeModal);
-  document.getElementById('modal-save-req').addEventListener('click', () => saveEditReq(reqId));
+  document.getElementById('modal-save-req').addEventListener('click', () => {
+    const name    = document.getElementById('edit-req-name').value.trim();
+    const credits = parseFloat(document.getElementById('edit-req-credits').value);
+    if (!name) { toast('Please enter a requirement name.', 'error'); return; }
+    if (isNaN(credits)||credits<0) { toast('Please enter a valid credit amount.', 'error'); return; }
+    req.name = name; req.credits = credits;
+    saveData(); closeModal(); renderAll();
+    toast('Requirement updated.', 'success');
+  });
   openModal();
   document.getElementById('edit-req-name').focus();
 }
 
-function saveEditReq(reqId) {
-  const name    = document.getElementById('edit-req-name').value.trim();
-  const credits = parseFloat(document.getElementById('edit-req-credits').value);
-  if (!name) { toast('Please enter a requirement name.', 'error'); return; }
-  if (isNaN(credits)||credits<0) { toast('Please enter a valid credit amount.', 'error'); return; }
-  const req = state.requirements.find(r => r.id === reqId);
-  if (!req) return;
-  req.name = name; req.credits = credits;
-  saveData(); closeModal(); renderAll();
-  toast('Requirement updated.', 'success');
-}
-
-// ── Edit Sub-Req Modal (#7) ───────────────────────────────────
+// ── Edit Sub-Req Modal ────────────────────────────────────────
 function openEditSubReqModal(reqId, subId) {
   const req = state.requirements.find(r => r.id === reqId);
   const sr  = req?.subReqs?.find(s => s.id === subId);
@@ -721,7 +848,11 @@ function openEditSubReqModal(reqId, subId) {
       <label for="edit-sub-name">Sub-Requirement Name *</label>
       <input type="text" id="edit-sub-name" value="${esc(sr.name)}" placeholder="e.g. Algebra I Required" />
     </div>
-    <div class="form-group" style="margin-top:12px">
+    <p class="settings-hint" style="margin-top:6px;font-size:.78rem">
+      <i class="fa-solid fa-circle-info" style="color:var(--blue-lite)"></i>
+      This name is compared to course names to detect automatic completion.
+    </p>
+    <div class="form-group" style="margin-top:10px">
       <label for="edit-sub-credits">Credits (0 if informational)</label>
       <input type="number" id="edit-sub-credits" value="${sr.credits||0}" min="0" step="0.5" />
     </div>
@@ -730,24 +861,19 @@ function openEditSubReqModal(reqId, subId) {
       <button class="btn btn-primary" id="modal-save-sub">Save Changes</button>
     </div>`;
   document.getElementById('modal-cancel').addEventListener('click', closeModal);
-  document.getElementById('modal-save-sub').addEventListener('click', () => saveEditSubReq(reqId, subId));
+  document.getElementById('modal-save-sub').addEventListener('click', () => {
+    const name    = document.getElementById('edit-sub-name').value.trim();
+    const credits = parseFloat(document.getElementById('edit-sub-credits').value) || 0;
+    if (!name) { toast('Please enter a name.', 'error'); return; }
+    sr.name = name; sr.credits = credits;
+    saveData(); closeModal(); renderAll();
+    toast('Sub-requirement updated.', 'success');
+  });
   openModal();
   document.getElementById('edit-sub-name').focus();
 }
 
-function saveEditSubReq(reqId, subId) {
-  const name    = document.getElementById('edit-sub-name').value.trim();
-  const credits = parseFloat(document.getElementById('edit-sub-credits').value) || 0;
-  if (!name) { toast('Please enter a name.', 'error'); return; }
-  const req = state.requirements.find(r => r.id === reqId);
-  const sr  = req?.subReqs?.find(s => s.id === subId);
-  if (!req || !sr) return;
-  sr.name = name; sr.credits = credits;
-  saveData(); closeModal(); renderAll();
-  toast('Sub-requirement updated.', 'success');
-}
-
-// ── Sub-req form toggle ───────────────────────────────────────
+// ── Sub-req form ──────────────────────────────────────────────
 function toggleSubReqForm(reqId) {
   const form = document.getElementById(`subreq-form-${reqId}`);
   if (!form) return;
@@ -766,7 +892,7 @@ function addSubReq(reqId) {
     toast('Sub-requirement already exists.', 'error'); return;
   }
   req.subReqs.push({ id: uid(), name, credits });
-  saveData(); renderSettings(); renderDashboard();
+  saveData(); renderAll();
   toast('Sub-requirement added.', 'success');
 }
 
@@ -775,16 +901,16 @@ function deleteSubReq(reqId, subId) {
   if (!req) return;
   req.subReqs = (req.subReqs||[]).filter(sr => sr.id !== subId);
   state.courses.forEach(c => { if (c.reqId===reqId && c.subReqId===subId) c.subReqId=''; });
-  saveData(); renderSettings(); renderAll();
-  toast('Sub-requirement removed.');
+  saveData(); renderAll(); toast('Sub-requirement removed.');
 }
 
 // ── Years / Requirements ──────────────────────────────────────
 function addYear() {
-  const name = document.getElementById('new-year-name').value.trim();
+  const name   = document.getElementById('new-year-name').value.trim();
+  const school = document.getElementById('new-year-school').value.trim() || state.student.school || '';
   if (!name) { toast('Please enter a year name.', 'error'); return; }
   if (state.years.find(y=>y.name.toLowerCase()===name.toLowerCase())) { toast('Year already exists.', 'error'); return; }
-  state.years.push({ id: uid(), name });
+  state.years.push({ id: uid(), name, school });
   document.getElementById('new-year-name').value = '';
   saveData(); renderAll(); toast('Year added.', 'success');
 }
@@ -822,11 +948,10 @@ function deleteReq(reqId) {
 // ── Import / Export ───────────────────────────────────────────
 function exportData() {
   const a = Object.assign(document.createElement('a'), {
-    href: URL.createObjectURL(new Blob([JSON.stringify(state,null,2)], {type:'application/json'})),
+    href: URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'})),
     download: `gradtracker-${new Date().toISOString().slice(0,10)}.json`
   });
-  a.click();
-  toast('Data exported.', 'success');
+  a.click(); toast('Data exported.', 'success');
 }
 
 function importData(e) {
@@ -837,6 +962,8 @@ function importData(e) {
     try {
       const parsed = JSON.parse(ev.target.result);
       if (!confirm('This will replace all current data. Continue?')) return;
+      if (parsed.student && !parsed.student.school) parsed.student.school = '';
+      if (parsed.years) parsed.years = parsed.years.map(y => ({school:'',...y}));
       if (parsed.requirements) parsed.requirements = parsed.requirements.map(r => ({ ...r, subReqs:(r.subReqs||[]).map(sr=>({credits:0,...sr})) }));
       Object.assign(state, parsed);
       saveData(); renderAll(); toast('Data imported.', 'success');
@@ -848,7 +975,7 @@ function importData(e) {
 
 function clearData() {
   if (!confirm('This will permanently delete ALL data. Are you sure?')) return;
-  state = { student:{name:'',gradYear:''}, years:[], requirements:[], courses:[] };
+  state = { student:{name:'',gradYear:'',school:''}, years:[], requirements:[], courses:[] };
   saveData(); renderAll(); toast('All data cleared.');
 }
 
@@ -865,7 +992,7 @@ document.getElementById('modal-close').addEventListener('click', closeModal);
 document.getElementById('modal-overlay').addEventListener('click', e => {
   if (e.target === document.getElementById('modal-overlay')) closeModal();
 });
-document.addEventListener('keydown', e => { if (e.key==='Escape') { closeModal(); closeDotsMenu(); } });
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
 
 // ── Toast ──────────────────────────────────────────────────────
 let _toastTimer;

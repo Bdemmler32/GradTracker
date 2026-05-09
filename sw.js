@@ -1,5 +1,5 @@
-/* GradTracker v1.3.0 — Service Worker */
-const CACHE_NAME = 'gradtracker-v1.3.0';
+/* GradTracker v1.4.0 — Service Worker */
+const CACHE_NAME = 'gradtracker-v1.4.0';
 const PRECACHE = ['./', './index.html', './styles.css', './app.js', './manifest.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(PRECACHE))); self.skipWaiting(); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k!==CACHE_NAME).map(k=>caches.delete(k))))); self.clients.claim(); });
