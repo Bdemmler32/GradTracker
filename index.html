@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#003d7a" />
+  <meta name="description" content="Graduation Credit Tracker – track your requirements, courses, and progress." />
+  <title>GradTracker</title>
+  <link rel="manifest" href="manifest.json" />
+  <!-- Font Awesome for school-circle-check icon (#13) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── SIDEBAR ─────────────────────────────────────────────── -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <!-- FA school-circle-check (#13) -->
+      <i class="fa-solid fa-school-circle-check sidebar-fa-icon"></i>
+      <span class="logo-text">GradTracker</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active" data-page="dashboard">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Dashboard
+      </a></li>
+      <li><a href="#" class="nav-link" data-page="courses">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Courses
+      </a></li>
+      <li><a href="#" class="nav-link" data-page="stats">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        Statistics
+      </a></li>
+      <li><a href="#" class="nav-link" data-page="settings">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a></li>
+    </ul>
+    <div class="sidebar-version">v1.3.0</div>
+  </nav>
+
+  <!-- ── MOBILE TOPBAR ────────────────────────────────────────── -->
+  <header class="topbar">
+    <i class="fa-solid fa-school-circle-check topbar-fa-icon"></i>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="topbar-title">GradTracker</span>
+  </header>
+
+  <!-- ── MAIN CONTENT ─────────────────────────────────────────── -->
+  <main class="main-content" id="main-content">
+
+    <!-- DASHBOARD -->
+    <section class="page active" id="page-dashboard">
+      <div class="page-header">
+        <h1 id="dash-heading">Dashboard</h1>
+        <p class="page-subtitle">Your graduation progress at a glance</p>
+      </div>
+
+      <div id="no-requirements-notice" class="notice-card hidden">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <strong>Get Started</strong>
+          <p>Set up your graduation requirements in <a href="#" data-page="settings" class="inline-link">Settings</a>, then add your courses in the <a href="#" data-page="courses" class="inline-link">Courses</a> tab.</p>
+        </div>
+      </div>
+
+      <div class="card overall-card">
+        <div class="overall-info">
+          <div>
+            <div class="overall-label">Total Credits Earned</div>
+            <div class="overall-credits"><span id="dash-earned">0</span> / <span id="dash-required">0</span></div>
+            <div class="overall-planned" id="dash-planned-wrap">+ <span id="dash-planned">0</span> planned</div>
+          </div>
+          <div class="overall-pct-wrap">
+            <div class="overall-pct" id="dash-pct">0%</div>
+            <!-- (#9) planned pct below main -->
+            <div class="overall-pct-planned" id="dash-pct-with-planned"></div>
+          </div>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="dash-progress-bar" style="width:0%"></div>
+          <div class="progress-bar-planned" id="dash-planned-bar" style="width:0%"></div>
+        </div>
+        <div class="progress-legend">
+          <span class="legend-item"><span class="legend-dot earned"></span> Earned</span>
+          <span class="legend-item" id="legend-planned-item"><span class="legend-dot planned"></span> Planned</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">Requirements Progress <small class="section-hint">click to view courses</small></h2>
+      <div class="req-grid" id="dash-req-grid"></div>
+
+      <h2 class="section-title">Credits by Year</h2>
+      <div class="year-cards" id="dash-year-cards"></div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="page" id="page-courses">
+      <div class="page-header">
+        <h1>Courses</h1>
+        <p class="page-subtitle">Add and manage courses from your transcript</p>
+      </div>
+      <div class="toolbar">
+        <button class="btn btn-primary" id="btn-add-course">+ Add Course</button>
+        <div class="filters-row">
+          <div class="filter-group">
+            <label for="filter-year">Year</label>
+            <select id="filter-year" class="select-sm"><option value="">All Years</option></select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-req">Category</label>
+            <select id="filter-req" class="select-sm"><option value="">All</option></select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-status">Status</label>
+            <select id="filter-status" class="select-sm">
+              <option value="">All</option>
+              <option value="earned">Earned</option>
+              <option value="planned">Planned</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Year</th>
+              <th class="col-center">Credits</th>
+              <th class="col-center">Grade</th>
+              <th class="col-center">Type</th>
+              <th>Category</th>
+              <th class="col-center">Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="courses-tbody">
+            <tr class="empty-row"><td colspan="8">No courses added yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- STATISTICS -->
+    <section class="page" id="page-stats">
+      <div class="page-header">
+        <h1>Statistics</h1>
+        <p class="page-subtitle">Detailed analysis of your academic record</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-label">Total Courses</div><div class="stat-value" id="stat-total-courses">0</div></div>
+        <div class="stat-card stat-highlight-blue"><div class="stat-label">Credits Earned</div><div class="stat-value" id="stat-credits-earned">0</div></div>
+        <div class="stat-card stat-highlight-red"><div class="stat-label">Credits Remaining</div><div class="stat-value" id="stat-credits-remaining">0</div></div>
+        <div class="stat-card stat-highlight-gold"><div class="stat-label">Credits Planned</div><div class="stat-value" id="stat-credits-planned">0</div></div>
+        <div class="stat-card"><div class="stat-label">Requirements Met</div><div class="stat-value" id="stat-reqs-met">0 / 0</div></div>
+        <div class="stat-card"><div class="stat-label">Completion</div><div class="stat-value" id="stat-completion">0%</div></div>
+        <div class="stat-card"><div class="stat-label">Avg Credits / Year</div><div class="stat-value" id="stat-avg-credits">0</div></div>
+        <div class="stat-card"><div class="stat-label">Grad Year</div><div class="stat-value" id="stat-grad-year">—</div></div>
+      </div>
+
+      <h2 class="section-title">Credits Earned per Year</h2>
+      <div class="bar-chart-wrap"><div class="bar-chart" id="bar-chart-years"></div></div>
+
+      <h2 class="section-title">Requirement Breakdown</h2>
+      <div class="req-breakdown" id="req-breakdown"></div>
+
+      <h2 class="section-title">Grade Distribution</h2>
+      <div class="grade-dist" id="grade-dist"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="page" id="page-settings">
+      <div class="page-header">
+        <h1>Settings</h1>
+        <p class="page-subtitle">Configure your graduation requirements and school years</p>
+      </div>
+
+      <div class="settings-section">
+        <h2>Student Information</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student-name">Student Name</label>
+            <input type="text" id="student-name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="grad-year">Expected Graduation Year</label>
+            <input type="number" id="grad-year" placeholder="e.g. 2025" min="2000" max="2040" />
+          </div>
+        </div>
+        <button class="btn btn-primary" id="btn-save-student">Save Student Info</button>
+      </div>
+
+      <div class="settings-section">
+        <h2>School Years</h2>
+        <p class="settings-hint">Define the years/grades you want to track (e.g. "9th Grade", "Freshman Year", "2022–2023").</p>
+        <div class="years-list" id="years-list"></div>
+        <div class="add-row">
+          <input type="text" id="new-year-name" placeholder="e.g. 9th Grade or 2022–2023" />
+          <button class="btn btn-secondary" id="btn-add-year">+ Add Year</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h2>Graduation Requirements</h2>
+        <p class="settings-hint">Add requirement categories with their credit totals. Use the <strong>pencil</strong> to edit, <strong>+</strong> to add sub-requirements, and <strong>trash</strong> to delete.</p>
+        <div class="reqs-list" id="reqs-list"></div>
+        <div class="add-row">
+          <input type="text" id="new-req-name" placeholder="Category name (e.g. Mathematics)" />
+          <input type="number" id="new-req-credits" placeholder="Credits" min="0" step="0.5" class="input-credits-sm" />
+          <button class="btn btn-secondary" id="btn-add-req">+ Add</button>
+        </div>
+        <div class="total-credits-display">
+          Total Required Credits: <strong id="total-req-credits">0</strong>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <h2>Data Management</h2>
+        <div class="data-btns">
+          <button class="btn btn-outline" id="btn-export">⬇ Export (JSON)</button>
+          <label class="btn btn-outline" for="import-file">⬆ Import (JSON)</label>
+          <input type="file" id="import-file" accept=".json" style="display:none" />
+          <button class="btn btn-danger" id="btn-clear">🗑 Clear All Data</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── MODAL ────────────────────────────────────────────────── -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h3 id="modal-title">Modal</h3>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ── THREE-DOT DROPDOWN ───────────────────────────────────── -->
+  <div class="dots-menu hidden" id="dots-menu">
+    <button class="dots-item" id="dots-edit">✏️ Edit</button>
+    <button class="dots-item" id="dots-add-sub">＋ Add Sub-Req</button>
+    <button class="dots-item dots-danger" id="dots-delete">🗑 Delete</button>
+  </div>
+
+  <!-- ── TOAST ────────────────────────────────────────────────── -->
+  <div class="toast hidden" id="toast"></div>
+
+  <!-- ── ONBOARDING OVERLAY (#8) ──────────────────────────────── -->
+  <div class="onboard-overlay hidden" id="onboard-overlay">
+    <div class="onboard-modal">
+      <div class="onboard-icon"><i class="fa-solid fa-school-circle-check"></i></div>
+      <h2 class="onboard-title">Welcome to GradTracker</h2>
+      <p class="onboard-desc">Track every credit on your path to graduation. Let's get you set up in just a few steps.</p>
+      <div class="onboard-step" id="onboard-step-1">
+        <div class="form-group">
+          <label for="ob-name">Your Name</label>
+          <input type="text" id="ob-name" placeholder="e.g. Alex Johnson" autocomplete="name" />
+        </div>
+        <div class="form-group" style="margin-top:12px">
+          <label for="ob-grad-year">Expected Graduation Year</label>
+          <input type="number" id="ob-grad-year" placeholder="e.g. 2026" min="2020" max="2040" />
+        </div>
+        <div class="onboard-actions">
+          <button class="btn btn-primary btn-full" id="ob-next">Continue → Set Up Requirements</button>
+          <button class="btn btn-outline btn-full" id="ob-skip" style="margin-top:8px">Skip for now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
