@@ -2,7 +2,7 @@
   "name": "GradTracker",
   "short_name": "GradTracker",
   "description": "Track your graduation requirements, courses, and credits.",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#003d7a",

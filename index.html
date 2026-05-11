@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#003d7a" />
-  <meta name="description" content="Graduation Credit Tracker – track your requirements, courses, and progress." />
+  <meta name="description" content="GradTracker — Graduation credit and pathway tracker." />
   <title>GradTracker</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
@@ -12,51 +12,105 @@
 </head>
 <body>
 
-  <!-- ── MOBILE GATE (#1) ─────────────────────────────────────── -->
+  <!-- ── MOBILE GATE ───────────────────────────────────────────── -->
   <div class="mobile-gate" id="mobile-gate">
     <i class="fa-solid fa-school-circle-check mobile-gate-icon"></i>
-    <div class="mobile-gate-logo"><span>Grad</span><span class="gold">Tracker</span></div>
+    <div class="mobile-gate-logo">Grad<span class="gold">Tracker</span></div>
     <h2 class="mobile-gate-title">Desktop Required</h2>
-    <p class="mobile-gate-msg">GradTracker is designed for desktop use.<br>Please <strong>enable Desktop Mode</strong> in your browser settings, or open this on a desktop or laptop computer for the full experience.</p>
+    <p class="mobile-gate-msg">GradTracker is designed for desktop use.<br>Please <strong>enable Desktop Mode</strong> in your browser settings, or open on a desktop or laptop computer.</p>
     <div class="mobile-gate-steps">
       <div class="gate-step"><strong>Chrome / Edge:</strong> Tap ⋮ menu → "Desktop site"</div>
-      <div class="gate-step"><strong>Safari:</strong> Tap <i class="fa-solid fa-arrow-up-from-bracket" style="font-size:.85em"></i> → "Request Desktop Website"</div>
+      <div class="gate-step"><strong>Safari:</strong> Tap <i class="fa-solid fa-arrow-up-from-bracket"></i> → "Request Desktop Website"</div>
       <div class="gate-step"><strong>Firefox:</strong> Tap ⋮ menu → "Request Desktop Site"</div>
     </div>
   </div>
 
-  <!-- ── SIDEBAR ──────────────────────────────────────────────── -->
+  <!-- ── SIDEBAR ───────────────────────────────────────────────── -->
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-logo">
       <i class="fa-solid fa-school-circle-check sidebar-fa-icon"></i>
-      <!-- (#5) "Tracker" in gold -->
-      <span class="logo-text"><span>Grad</span><span class="logo-gold">Tracker</span></span>
+      <span class="logo-text">Grad<span class="logo-gold">Tracker</span></span>
     </div>
+
     <ul class="nav-links">
-      <li><a href="#" class="nav-link active" data-page="dashboard">
-        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        Dashboard
+      <!-- Core pages -->
+      <li><a href="#" class="nav-link" data-page="dashboard">
+        <i class="fa-solid fa-gauge-high nav-icon"></i>Dashboard
       </a></li>
       <li><a href="#" class="nav-link" data-page="courses">
-        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        Courses
+        <i class="fa-solid fa-book-open nav-icon"></i>Courses
       </a></li>
       <li><a href="#" class="nav-link" data-page="stats">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        Statistics
+        <i class="fa-solid fa-chart-bar nav-icon"></i>Statistics
       </a></li>
-      <li><a href="#" class="nav-link" data-page="settings">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        Settings
+
+      <!-- ── Graduation Pathways (collapsible) ─────────────────── -->
+      <li class="nav-group" id="group-pathways">
+        <a href="#" class="nav-link nav-group-header" data-group="pathways" data-page="pathways-overview">
+          <i class="fa-solid fa-route nav-icon"></i>
+          <span class="nav-group-label">Graduation Pathways</span>
+          <i class="fa-solid fa-chevron-down nav-chevron" id="chevron-pathways"></i>
+        </a>
+        <ul class="nav-sub" id="sub-pathways">
+          <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-overview">
+            <i class="fa-solid fa-gauge-high nav-sub-icon"></i>Overview
+            <span class="pathway-status-dot dot-none" id="pdot-overall"></span>
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-keystones">
+            <i class="fa-solid fa-pencil nav-sub-icon"></i>Keystone Exams
+            <span class="pathway-status-dot dot-none" id="pdot-keystones"></span>
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-standardized">
+            <i class="fa-solid fa-chart-bar nav-sub-icon"></i>SAT / ACT / PSAT
+            <span class="pathway-status-dot dot-none" id="pdot-standardized"></span>
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-advanced">
+            <i class="fa-solid fa-graduation-cap nav-sub-icon"></i>Advanced Coursework
+            <span class="pathway-status-dot dot-none" id="pdot-advanced"></span>
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-career">
+            <i class="fa-solid fa-briefcase nav-sub-icon"></i>Career &amp; Military
+            <span class="pathway-status-dot dot-none" id="pdot-career"></span>
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-projection">
+            <i class="fa-solid fa-map-signs nav-sub-icon"></i>Projection &amp; Next Steps
+          </a></li>
+        </ul>
+      </li>
+
+      <!-- ── Settings (collapsible) ────────────────────────────── -->
+      <li class="nav-group" id="group-settings">
+        <a href="#" class="nav-link nav-group-header" data-group="settings" data-page="settings-student">
+          <i class="fa-solid fa-gear nav-icon"></i>
+          <span class="nav-group-label">Settings</span>
+          <i class="fa-solid fa-chevron-down nav-chevron" id="chevron-settings"></i>
+        </a>
+        <ul class="nav-sub" id="sub-settings">
+          <li><a href="#" class="nav-link nav-sub-link" data-page="settings-student">
+            <i class="fa-solid fa-user nav-sub-icon"></i>Student Information
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="settings-requirements">
+            <i class="fa-solid fa-list-check nav-sub-icon"></i>Credit Requirements
+          </a></li>
+          <li><a href="#" class="nav-link nav-sub-link" data-page="settings-benchmarks">
+            <i class="fa-solid fa-sliders nav-sub-icon"></i>Testing Benchmarks
+          </a></li>
+        </ul>
+      </li>
+
+      <!-- Data Management (standalone) -->
+      <li><a href="#" class="nav-link" data-page="data-management">
+        <i class="fa-solid fa-database nav-icon"></i>Data Management
       </a></li>
     </ul>
-    <div class="sidebar-version">v1.4.0</div>
+
+    <div class="sidebar-version">v1.5.0</div>
   </nav>
 
-  <!-- ── MAIN CONTENT ─────────────────────────────────────────── -->
+  <!-- ── MAIN CONTENT ──────────────────────────────────────────── -->
   <main class="main-content" id="main-content">
 
-    <!-- DASHBOARD -->
+    <!-- ═══════════════ DASHBOARD ═══════════════ -->
     <section class="page active" id="page-dashboard">
       <div class="page-header">
         <h1 id="dash-heading">Dashboard</h1>
@@ -67,7 +121,7 @@
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <div>
           <strong>Get Started</strong>
-          <p>Set up your graduation requirements in <a href="#" data-page="settings" class="inline-link">Settings</a>, then add your courses in the <a href="#" data-page="courses" class="inline-link">Courses</a> tab.</p>
+          <p>Set up your graduation requirements in <a href="#" data-page="settings-requirements" class="inline-link">Credit Requirements</a>, then add your courses in the <a href="#" data-page="courses" class="inline-link">Courses</a> tab.</p>
         </div>
       </div>
 
@@ -100,7 +154,7 @@
       <div class="year-cards" id="dash-year-cards"></div>
     </section>
 
-    <!-- COURSES -->
+    <!-- ═══════════════ COURSES ═══════════════ -->
     <section class="page" id="page-courses">
       <div class="page-header">
         <h1>Courses</h1>
@@ -109,38 +163,26 @@
       <div class="toolbar">
         <button class="btn btn-primary" id="btn-add-course">+ Add Course</button>
         <div class="filters-row">
-          <div class="filter-group">
-            <label for="filter-year">Year</label>
-            <select id="filter-year" class="select-sm"><option value="">All Years</option></select>
-          </div>
-          <div class="filter-group">
-            <label for="filter-req">Category</label>
-            <select id="filter-req" class="select-sm"><option value="">All</option></select>
-          </div>
-          <div class="filter-group">
-            <label for="filter-status">Status</label>
+          <div class="filter-group"><label for="filter-year">Year</label>
+            <select id="filter-year" class="select-sm"><option value="">All Years</option></select></div>
+          <div class="filter-group"><label for="filter-req">Category</label>
+            <select id="filter-req" class="select-sm"><option value="">All</option></select></div>
+          <div class="filter-group"><label for="filter-status">Status</label>
             <select id="filter-status" class="select-sm">
               <option value="">All</option>
               <option value="earned">Earned</option>
               <option value="planned">Planned</option>
-            </select>
-          </div>
+            </select></div>
         </div>
       </div>
       <div class="table-wrap">
         <table class="data-table">
-          <thead>
-            <tr>
-              <th>Course Name</th>
-              <th>Year</th>
-              <th class="col-center">Credits</th>
-              <th class="col-center">Grade</th>
-              <th class="col-center">Type</th>
-              <th>Category</th>
-              <th class="col-center">Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
+          <thead><tr>
+            <th>Course Name</th><th>Year</th>
+            <th class="col-center">Credits</th><th class="col-center">Grade</th>
+            <th class="col-center">Type</th><th>Category</th>
+            <th class="col-center">Status</th><th>Actions</th>
+          </tr></thead>
           <tbody id="courses-tbody">
             <tr class="empty-row"><td colspan="8">No courses added yet.</td></tr>
           </tbody>
@@ -148,7 +190,7 @@
       </div>
     </section>
 
-    <!-- STATISTICS -->
+    <!-- ═══════════════ STATISTICS ═══════════════ -->
     <section class="page" id="page-stats">
       <div class="page-header">
         <h1>Statistics</h1>
@@ -172,37 +214,174 @@
       <div class="grade-dist" id="grade-dist"></div>
     </section>
 
-    <!-- SETTINGS -->
-    <section class="page" id="page-settings">
-      <div class="page-header">
-        <h1>Settings</h1>
-        <p class="page-subtitle">Configure your graduation requirements and school years</p>
-      </div>
+    <!-- ═══════════════ PATHWAY PAGES ═══════════════ -->
 
-      <!-- (#4) Student info — added Current School -->
-      <div class="settings-section">
-        <h2>Student Information</h2>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="student-name">Student Name</label>
-            <input type="text" id="student-name" placeholder="Your name" />
-          </div>
-          <div class="form-group">
-            <label for="grad-year">Expected Graduation Year</label>
-            <input type="number" id="grad-year" placeholder="e.g. 2025" min="2000" max="2040" />
+    <!-- Pathways Overview -->
+    <section class="page" id="page-pathways-overview">
+      <div class="page-header">
+        <h1>Graduation Pathways</h1>
+        <p class="page-subtitle">Pennsylvania Act 158 of 2018 — Multiple Pathways to Graduation</p>
+      </div>
+      <div id="eligibility-banner" class="eligibility-banner not-eligible">
+        <i class="fa-solid fa-circle-info elig-icon"></i>
+        <div class="banner-text">
+          <strong id="eligibility-title">Pathway Eligibility: Not Yet Determined</strong>
+          <span id="eligibility-detail">Complete at least one full pathway to meet graduation requirements.</span>
+        </div>
+      </div>
+      <div class="info-callout">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>Under <strong>Act 158 of 2018</strong>, Pennsylvania students must demonstrate readiness through at least one of four pathways. Satisfying <strong>any single pathway completely</strong> meets the graduation requirement.</div>
+      </div>
+      <h2 class="section-title">Pathway Status</h2>
+      <div class="pathway-grid" id="pathway-overview-grid"></div>
+      <h2 class="section-title">Overall Progress</h2>
+      <div class="card" id="pathway-progress-card"></div>
+    </section>
+
+    <!-- Keystones -->
+    <section class="page" id="page-pathways-keystones">
+      <div class="page-header">
+        <h1>Keystone Exams</h1>
+        <p class="page-subtitle">Score Proficient or Advanced on all three subjects</p>
+      </div>
+      <div class="info-callout">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>All three subjects must reach <strong>Proficient</strong> or higher. Multiple sittings allowed — best qualifying score per subject is used. Benchmarks are set in <a href="#" data-page="settings-benchmarks" class="inline-link">Testing Benchmarks</a>.</div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3><i class="fa-solid fa-pencil"></i> Subject Status</h3>
+          <span id="keystone-pathway-badge" class="subject-badge badge-none">Not Met</span>
+        </div>
+        <div id="keystone-subjects"></div>
+      </div>
+      <h2 class="section-title">Score Log</h2>
+      <div class="card">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:12px">
+          <button class="btn btn-secondary btn-sm" onclick="openPathwayModal('keystone')"><i class="fa-solid fa-plus"></i> Log Score</button>
+        </div>
+        <table class="log-table">
+          <thead><tr><th>Subject</th><th>Date</th><th>Score</th><th class="col-center">Performance Level</th><th class="col-center">Status</th><th></th></tr></thead>
+          <tbody id="keystone-log-tbody"><tr class="empty-row"><td colspan="6">No scores logged yet.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Standardized Tests -->
+    <section class="page" id="page-pathways-standardized">
+      <div class="page-header">
+        <h1>SAT / ACT / PSAT</h1>
+        <p class="page-subtitle">Meet PA benchmark scores on at least one standardized test</p>
+      </div>
+      <div class="info-callout">
+        <i class="fa-solid fa-circle-info"></i>
+        <div><strong>SAT:</strong> 480 EBRW + 530 Math (both required). <strong>ACT:</strong> 18 English, 22 Math, 23 Reading, 23 Science (all four). <strong>PSAT 10:</strong> 430 EBRW + 480 Math. Best scores per section tracked. Edit benchmarks in <a href="#" data-page="settings-benchmarks" class="inline-link">Testing Benchmarks</a>.</div>
+      </div>
+      <div class="card"><div class="card-header"><h3><i class="fa-solid fa-chart-bar"></i> SAT</h3><span id="sat-badge" class="subject-badge badge-none">Not Met</span></div><div id="sat-subjects"></div></div>
+      <div class="card"><div class="card-header"><h3><i class="fa-solid fa-chart-bar"></i> ACT</h3><span id="act-badge" class="subject-badge badge-none">Not Met</span></div><div id="act-subjects"></div></div>
+      <div class="card"><div class="card-header"><h3><i class="fa-solid fa-chart-bar"></i> PSAT 10 / 8–9</h3><span id="psat-badge" class="subject-badge badge-none">Not Met</span></div><div id="psat-subjects"></div></div>
+      <h2 class="section-title">Score Log</h2>
+      <div class="card">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:12px">
+          <button class="btn btn-secondary btn-sm" onclick="openPathwayModal('standardized')"><i class="fa-solid fa-plus"></i> Log Score</button>
+        </div>
+        <table class="log-table">
+          <thead><tr><th>Test</th><th>Date</th><th>Section</th><th class="col-center">Score</th><th class="col-center">Benchmark</th><th class="col-center">Met?</th><th></th></tr></thead>
+          <tbody id="standardized-log-tbody"><tr class="empty-row"><td colspan="7">No scores logged yet.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Advanced Coursework -->
+    <section class="page" id="page-pathways-advanced">
+      <div class="page-header">
+        <h1>Advanced Coursework</h1>
+        <p class="page-subtitle">One qualifying advanced course or program satisfies this pathway</p>
+      </div>
+      <div class="info-callout">
+        <i class="fa-solid fa-circle-info"></i>
+        <div><strong>AP</strong> score ≥ 3 · <strong>IB</strong> score ≥ 4 · <strong>Dual Enrollment</strong> grade C or better · <strong>CTE Concentration</strong> completion · <strong>SAT Subject Test</strong> ≥ 630. Only <em>one</em> qualifying entry is required.</div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Advanced Coursework Log</h3>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span id="advanced-badge" class="subject-badge badge-none">Not Met</span>
+            <button class="btn btn-secondary btn-sm" onclick="openPathwayModal('advanced')"><i class="fa-solid fa-plus"></i> Add Entry</button>
           </div>
         </div>
+        <table class="log-table">
+          <thead><tr><th>Course / Program</th><th>Type</th><th>Term</th><th class="col-center">Score / Grade</th><th class="col-center">Threshold</th><th class="col-center">Qualifies?</th><th></th></tr></thead>
+          <tbody id="advanced-log-tbody"><tr class="empty-row"><td colspan="7">No entries logged yet.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Career & Military -->
+    <section class="page" id="page-pathways-career">
+      <div class="page-header">
+        <h1>Career &amp; Military Readiness</h1>
+        <p class="page-subtitle">One qualifying activity satisfies this pathway</p>
+      </div>
+      <div class="info-callout">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>Any <em>one</em> qualifies: <strong>Internship/Co-op</strong> (65+ paid hrs) · <strong>Military Enlistment</strong> · <strong>Industry Credential</strong> · <strong>Volunteering</strong> (200+ hrs, evidence-based) · <strong>PA-Approved Program</strong>.</div>
+      </div>
+      <div id="career-activity-blocks"></div>
+      <div style="display:flex;justify-content:flex-end;margin-top:4px">
+        <button class="btn btn-secondary" onclick="openPathwayModal('career')"><i class="fa-solid fa-plus"></i> Log Activity</button>
+      </div>
+    </section>
+
+    <!-- Projection -->
+    <section class="page" id="page-pathways-projection">
+      <div class="page-header">
+        <h1>Projection &amp; Next Steps</h1>
+        <p class="page-subtitle">Your fastest routes to graduation eligibility</p>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-card-title"><i class="fa-solid fa-list-check"></i> Pathway Checklist</div>
+          <div id="proj-checklist"></div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-card-title"><i class="fa-solid fa-star"></i> Recommended Next Steps</div>
+          <div class="next-steps-list" id="proj-next-steps"></div>
+        </div>
+      </div>
+      <h2 class="section-title">Planned Events</h2>
+      <div class="card">
+        <div class="card-header">
+          <h3><i class="fa-solid fa-calendar-days"></i> Upcoming Test &amp; Activity Windows</h3>
+          <button class="btn btn-secondary btn-sm" onclick="openPathwayModal('plan-event')"><i class="fa-solid fa-plus"></i> Add Event</button>
+        </div>
+        <div class="timeline-row" id="proj-timeline"></div>
+      </div>
+      <h2 class="section-title">Scenario: If Planned Events Succeed</h2>
+      <div class="card" id="proj-scenario"></div>
+    </section>
+
+    <!-- ═══════════════ SETTINGS PAGES ═══════════════ -->
+
+    <!-- Student Information -->
+    <section class="page" id="page-settings-student">
+      <div class="page-header">
+        <h1>Student Information</h1>
+        <p class="page-subtitle">Your personal details and school years</p>
+      </div>
+      <div class="settings-section">
+        <h2>Student Details</h2>
         <div class="form-row">
-          <div class="form-group">
-            <label for="student-school">Current School</label>
-            <input type="text" id="student-school" placeholder="e.g. Valley High School" />
-          </div>
-          <div class="form-group"><!-- spacer --></div>
+          <div class="form-group"><label for="student-name">Student Name</label><input type="text" id="student-name" placeholder="Your name" /></div>
+          <div class="form-group"><label for="grad-year">Expected Graduation Year</label><input type="number" id="grad-year" placeholder="e.g. 2025" min="2000" max="2040" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="student-school">Current School</label><input type="text" id="student-school" placeholder="e.g. Valley High School" /></div>
+          <div class="form-group"></div>
         </div>
         <button class="btn btn-primary" id="btn-save-student">Save Student Info</button>
       </div>
-
-      <!-- School Years — with school name field -->
       <div class="settings-section">
         <h2>School Years</h2>
         <p class="settings-hint">Define the years/grades you want to track. Each year can have its own school name (auto-filled from Current School above).</p>
@@ -213,7 +392,14 @@
           <button class="btn btn-secondary" id="btn-add-year">+ Add Year</button>
         </div>
       </div>
+    </section>
 
+    <!-- Credit Requirements -->
+    <section class="page" id="page-settings-requirements">
+      <div class="page-header">
+        <h1>Credit Requirements</h1>
+        <p class="page-subtitle">Graduation requirement categories and credit totals</p>
+      </div>
       <div class="settings-section">
         <h2>Graduation Requirements</h2>
         <p class="settings-hint">Add requirement categories with their credit totals. Use the <strong>pencil</strong> to edit, <strong>+</strong> to add sub-requirements, and <strong>trash</strong> to delete.</p>
@@ -227,21 +413,92 @@
           Total Required Credits: <strong id="total-req-credits">0</strong>
         </div>
       </div>
+    </section>
 
+    <!-- Testing Benchmarks -->
+    <section class="page" id="page-settings-benchmarks">
+      <div class="page-header">
+        <h1>Testing Benchmarks</h1>
+        <p class="page-subtitle">PA Act 158 benchmark scores — editable if your district differs</p>
+      </div>
       <div class="settings-section">
-        <h2>Data Management</h2>
-        <div class="data-btns">
-          <button class="btn btn-outline" id="btn-export">⬇ Export (JSON)</button>
-          <label class="btn btn-outline" for="import-file">⬆ Import (JSON)</label>
-          <input type="file" id="import-file" accept=".json" style="display:none" />
-          <button class="btn btn-danger" id="btn-clear">🗑 Clear All Data</button>
+        <h2>Keystone Exam Benchmarks</h2>
+        <div class="info-callout" style="margin-bottom:14px">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>PA statewide defaults: Algebra I Proficient ≥ 736, Literature ≥ 1500, Biology ≥ 800. Performance level is auto-calculated from your score when logging.</span>
         </div>
+        <table class="benchmark-table">
+          <thead><tr><th>Subject</th><th>Proficient (≥)</th><th>Advanced (≥)</th></tr></thead>
+          <tbody>
+            <tr><td>Algebra I</td><td><input type="number" id="bm-alg-prof" /></td><td><input type="number" id="bm-alg-adv" /></td></tr>
+            <tr><td>Literature</td><td><input type="number" id="bm-lit-prof" /></td><td><input type="number" id="bm-lit-adv" /></td></tr>
+            <tr><td>Biology</td><td><input type="number" id="bm-bio-prof" /></td><td><input type="number" id="bm-bio-adv" /></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="settings-section">
+        <h2>SAT Benchmarks</h2>
+        <table class="benchmark-table">
+          <thead><tr><th>Section</th><th>Benchmark (≥)</th></tr></thead>
+          <tbody>
+            <tr><td>Evidence-Based Reading &amp; Writing (EBRW)</td><td><input type="number" id="bm-sat-ebrw" /></td></tr>
+            <tr><td>Math</td><td><input type="number" id="bm-sat-math" /></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="settings-section">
+        <h2>ACT Benchmarks</h2>
+        <table class="benchmark-table">
+          <thead><tr><th>Section</th><th>Benchmark (≥)</th></tr></thead>
+          <tbody>
+            <tr><td>English</td><td><input type="number" id="bm-act-english" /></td></tr>
+            <tr><td>Math</td><td><input type="number" id="bm-act-math" /></td></tr>
+            <tr><td>Reading</td><td><input type="number" id="bm-act-reading" /></td></tr>
+            <tr><td>Science</td><td><input type="number" id="bm-act-science" /></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="settings-section">
+        <h2>PSAT 10 Benchmarks</h2>
+        <table class="benchmark-table">
+          <thead><tr><th>Section</th><th>Benchmark (≥)</th></tr></thead>
+          <tbody>
+            <tr><td>EBRW</td><td><input type="number" id="bm-psat-ebrw" /></td></tr>
+            <tr><td>Math</td><td><input type="number" id="bm-psat-math" /></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:4px">
+        <button class="btn btn-primary" onclick="saveBenchmarks()"><i class="fa-solid fa-floppy-disk"></i> Save Benchmarks</button>
+        <button class="btn btn-outline" onclick="resetBenchmarks()">Reset to PA Defaults</button>
+      </div>
+    </section>
+
+    <!-- Data Management -->
+    <section class="page" id="page-data-management">
+      <div class="page-header">
+        <h1>Data Management</h1>
+        <p class="page-subtitle">Export, import, or reset all GradTracker data</p>
+      </div>
+      <div class="settings-section">
+        <h2>Export &amp; Import</h2>
+        <p class="settings-hint">All data — credits, pathways, benchmarks — is stored in a single JSON file.</p>
+        <div class="data-btns">
+          <button class="btn btn-outline" id="btn-export"><i class="fa-solid fa-download"></i> Export (JSON)</button>
+          <label class="btn btn-outline" for="import-file"><i class="fa-solid fa-upload"></i> Import (JSON)</label>
+          <input type="file" id="import-file" accept=".json" style="display:none" />
+        </div>
+      </div>
+      <div class="settings-section">
+        <h2>Reset Data</h2>
+        <p class="settings-hint">Permanently delete all data including courses, years, requirements, pathway logs, and benchmarks.</p>
+        <button class="btn btn-danger" id="btn-clear"><i class="fa-solid fa-trash"></i> Clear All Data</button>
       </div>
     </section>
 
   </main>
 
-  <!-- ── MODAL ────────────────────────────────────────────────── -->
+  <!-- ── MODAL ──────────────────────────────────────────────────── -->
   <div class="modal-overlay hidden" id="modal-overlay">
     <div class="modal" id="modal">
       <div class="modal-header">
@@ -252,27 +509,18 @@
     </div>
   </div>
 
-  <!-- ── TOAST ────────────────────────────────────────────────── -->
+  <!-- ── TOAST ──────────────────────────────────────────────────── -->
   <div class="toast hidden" id="toast"></div>
 
-  <!-- ── ONBOARDING ───────────────────────────────────────────── -->
+  <!-- ── ONBOARDING ─────────────────────────────────────────────── -->
   <div class="onboard-overlay hidden" id="onboard-overlay">
     <div class="onboard-modal">
       <div class="onboard-icon"><i class="fa-solid fa-school-circle-check"></i></div>
       <h2 class="onboard-title">Welcome to Grad<span class="gold">Tracker</span></h2>
-      <p class="onboard-desc">Track every credit on your path to graduation. Let's get you set up in just a few steps.</p>
-      <div class="form-group">
-        <label for="ob-name">Student Name</label>
-        <input type="text" id="ob-name" placeholder="e.g. Alex Johnson" autocomplete="name" />
-      </div>
-      <div class="form-group" style="margin-top:12px">
-        <label for="ob-school">Current School</label>
-        <input type="text" id="ob-school" placeholder="e.g. Valley High School" />
-      </div>
-      <div class="form-group" style="margin-top:12px">
-        <label for="ob-grad-year">Expected Graduation Year</label>
-        <input type="number" id="ob-grad-year" placeholder="e.g. 2026" min="2020" max="2040" />
-      </div>
+      <p class="onboard-desc">Track every credit and pathway on your road to graduation. Let's get you set up.</p>
+      <div class="form-group"><label for="ob-name">Student Name</label><input type="text" id="ob-name" placeholder="e.g. Alex Johnson" autocomplete="name" /></div>
+      <div class="form-group" style="margin-top:12px"><label for="ob-school">Current School</label><input type="text" id="ob-school" placeholder="e.g. Valley High School" /></div>
+      <div class="form-group" style="margin-top:12px"><label for="ob-grad-year">Expected Graduation Year</label><input type="number" id="ob-grad-year" placeholder="e.g. 2026" min="2020" max="2040" /></div>
       <div class="onboard-actions">
         <button class="btn btn-primary btn-full" id="ob-next" style="margin-top:20px">Continue → Set Up Requirements</button>
         <button class="btn btn-outline btn-full" id="ob-skip" style="margin-top:8px">Skip for now</button>
