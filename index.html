@@ -55,11 +55,11 @@
             <span class="pathway-status-dot dot-none" id="pdot-overall"></span>
           </a></li>
           <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-p1">
-            <i class="fa-solid fa-pencil nav-sub-icon"></i>Pathway 1 – Proficiency
+            <i class="fa-solid fa-pencil nav-sub-icon"></i>Pathway 1 – Keystone Proficiency
             <span class="pathway-status-dot dot-none" id="pdot-p1"></span>
           </a></li>
           <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-p2">
-            <i class="fa-solid fa-calculator nav-sub-icon"></i>Pathway 2 – Composite
+            <i class="fa-solid fa-calculator nav-sub-icon"></i>Pathway 2 – Keystone Composite
             <span class="pathway-status-dot dot-none" id="pdot-p2"></span>
           </a></li>
           <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-p3">
@@ -67,7 +67,7 @@
             <span class="pathway-status-dot dot-none" id="pdot-p3"></span>
           </a></li>
           <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-p4">
-            <i class="fa-solid fa-chart-bar nav-sub-icon"></i>Pathway 4 – Alternative
+            <i class="fa-solid fa-chart-bar nav-sub-icon"></i>Pathway 4 – Alternative Assessment
             <span class="pathway-status-dot dot-none" id="pdot-p4"></span>
           </a></li>
           <li><a href="#" class="nav-link nav-sub-link" data-page="pathways-p5">
@@ -104,7 +104,7 @@
         <i class="fa-solid fa-database nav-icon"></i>Data Management
       </a></li>
     </ul>
-    <div class="sidebar-version">v1.6.0</div>
+    <div class="sidebar-version">v1.7.0</div>
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -130,7 +130,8 @@
           <div>
             <div class="overall-label">Total Credits Earned</div>
             <div class="overall-credits"><span id="dash-earned">0</span> / <span id="dash-required">0</span></div>
-            <div class="overall-planned" id="dash-planned-wrap">+ <span id="dash-planned">0</span> planned</div>
+            <div class="overall-working" id="dash-working-wrap"><i class="fa-solid fa-bolt"></i> <span id="dash-working">0</span> working on</div>
+            <div class="overall-planned" id="dash-planned-wrap"><i class="fa-solid fa-clock"></i> <span id="dash-planned">0</span> planned</div>
           </div>
           <div class="overall-pct-wrap">
             <div class="overall-pct" id="dash-pct">0%</div>
@@ -139,10 +140,12 @@
         </div>
         <div class="progress-bar-wrap">
           <div class="progress-bar" id="dash-progress-bar" style="width:0%"></div>
+          <div class="progress-bar-working" id="dash-working-bar" style="width:0%"></div>
           <div class="progress-bar-planned" id="dash-planned-bar" style="width:0%"></div>
         </div>
         <div class="progress-legend">
           <span class="legend-item"><span class="legend-dot earned"></span> Earned</span>
+          <span class="legend-item" id="legend-working-item"><span class="legend-dot working"></span> Working On</span>
           <span class="legend-item" id="legend-planned-item"><span class="legend-dot planned"></span> Planned</span>
         </div>
       </div>
@@ -185,7 +188,10 @@
           <select id="filter-req" class="select-sm"><option value="">All</option></select></div>
         <div class="filter-group"><label for="filter-status">Status</label>
           <select id="filter-status" class="select-sm">
-            <option value="">All</option><option value="earned">Earned</option><option value="planned">Planned</option>
+            <option value="">All</option>
+            <option value="earned">✓ Earned</option>
+            <option value="working">⚡ Working On</option>
+            <option value="planned">◷ Planned</option>
           </select></div>
       </div>
       <div class="table-wrap">
@@ -197,7 +203,7 @@
             <th class="col-center">Status</th><th>Actions</th>
           </tr></thead>
           <tbody id="courses-tbody">
-            <tr class="empty-row"><td colspan="8">No courses added yet.</td></tr>
+            <tr class="empty-row"><td colspan="9">No courses added yet.</td></tr>
           </tbody>
         </table>
       </div>
@@ -210,6 +216,7 @@
         <div class="stat-card"><div class="stat-label">Total Courses</div><div class="stat-value" id="stat-total-courses">0</div></div>
         <div class="stat-card stat-highlight-blue"><div class="stat-label">Credits Earned</div><div class="stat-value" id="stat-credits-earned">0</div></div>
         <div class="stat-card stat-highlight-red"><div class="stat-label">Credits Remaining</div><div class="stat-value" id="stat-credits-remaining">0</div></div>
+        <div class="stat-card stat-highlight-orange"><div class="stat-label">Working On</div><div class="stat-value" id="stat-credits-working">0</div></div>
         <div class="stat-card stat-highlight-gold"><div class="stat-label">Credits Planned</div><div class="stat-value" id="stat-credits-planned">0</div></div>
         <div class="stat-card"><div class="stat-label">Requirements Met</div><div class="stat-value" id="stat-reqs-met">0 / 0</div></div>
         <div class="stat-card"><div class="stat-label">Completion</div><div class="stat-value" id="stat-completion">0%</div></div>
