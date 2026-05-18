@@ -277,8 +277,6 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 .req-card:hover .req-card-click-hint svg { stroke:var(--blue-lite); }
 
 /* ── Year cards ────────────────────────────────────────────── */
-.year-cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(155px,1fr)); gap:11px; }
-.year-card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:13px; text-align:center; }
 .year-card-name    { font-size:.73rem; text-transform:uppercase; letter-spacing:.07em; color:var(--gray-600); margin-bottom:3px; }
 .year-card-school  { font-size:.68rem; color:var(--gray-400); margin-bottom:5px; font-style:italic; }
 .year-card-credits { font-size:1.6rem; font-weight:700; color:var(--blue-dark); }
@@ -391,18 +389,6 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 .bar-work-label { font-size:.63rem; color:var(--working); font-weight:600; display:block; }
 
 .req-breakdown { display:flex; flex-direction:column; gap:10px; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:17px 19px; margin-bottom:8px; }
-.req-row { display:grid; grid-template-columns:195px 1fr 108px; align-items:center; gap:12px; }
-.req-row-name { font-size:.81rem; font-weight:600; color:var(--gray-800); }
-.breakdown-subreqs { display:flex; flex-wrap:wrap; gap:3px; margin-top:3px; }
-.req-row-bar-wrap { height:9px; background:var(--gray-200); border-radius:99px; overflow:hidden; display:flex; }
-.req-row-bar { height:100%; border-radius:99px 0 0 99px; background:var(--blue-lite); flex-shrink:0; transition:width .5s ease; }
-.req-row-bar.done    { background:var(--green); }
-.req-row-bar-working { height:100%; background:var(--working); opacity:.88; flex-shrink:0; transition:width .5s ease; }
-.req-row-bar-gold    { height:100%; background:var(--gold); opacity:.9; flex-shrink:0; transition:width .5s ease; }
-.req-row-credits  { font-size:.78rem; color:var(--gray-600); text-align:right; white-space:nowrap; }
-.work-inline { color:var(--working); font-size:.71rem; margin-left:3px; font-weight:600; }
-.plan-inline { color:var(--gold);    font-size:.71rem; margin-left:3px; }
-
 .grade-dist { display:flex; gap:10px; flex-wrap:wrap; background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:17px 19px; }
 .grade-dist-item { text-align:center; min-width:54px; }
 .grade-dist-count { font-size:1.6rem; font-weight:700; color:var(--blue-dark); }
@@ -470,7 +456,50 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 .next-step-item i { margin-top:2px; color:var(--blue-lite); flex-shrink:0; }
 .next-step-item.priority { background:var(--gold-light); border-color:#f0c040; }
 .next-step-item.priority i { color:var(--gold); }
-/* Other/Electives card — dashed border, muted */
+/* (#1) Still needed line in req cards */
+.req-card-needed {
+  font-size:.71rem; color:var(--gray-400); margin-top:2px;
+  display:flex; align-items:center; gap:4px;
+}
+.req-card-needed i { font-size:.65rem; }
+
+/* (#3) Total remaining in overall-card */
+.overall-remaining {
+  font-size:.76rem; color:var(--danger); font-weight:600; margin-top:3px;
+}
+
+/* (#6) Year cards match req-grid column widths exactly */
+.year-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:11px;
+}
+.year-card {
+  background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:13px; text-align:center; cursor:pointer;
+  transition:box-shadow var(--transition), transform var(--transition);
+  border-left:4px solid var(--gray-200);
+}
+.year-card:hover { box-shadow:var(--shadow-md); transform:translateY(-2px); border-left-color:var(--blue-lite); }
+
+/* (#7) Proportional breakdown bars */
+.req-row { display:grid; grid-template-columns:195px 1fr 140px; align-items:center; gap:10px; }
+.req-row-bar-outer { background:transparent; border-radius:99px; overflow:visible; }
+.req-row-bar-wrap  { height:9px; background:var(--gray-200); border-radius:99px; overflow:hidden; display:flex; }
+
+/* (#2) Gap view remaining bar segment */
+.req-row-bar-remaining { height:100%; background:var(--danger-light); border:1px solid var(--danger); opacity:.7; flex-shrink:0; border-radius:0 99px 99px 0; box-sizing:border-box; }
+.req-row-remaining { color:var(--danger); font-size:.71rem; margin-right:4px; font-weight:600; }
+
+.req-row-name { font-size:.81rem; font-weight:600; color:var(--gray-800); }
+.breakdown-subreqs { display:flex; flex-wrap:wrap; gap:3px; margin-top:3px; }
+.req-row-bar { height:100%; border-radius:99px 0 0 99px; background:var(--blue-lite); flex-shrink:0; transition:width .5s ease; }
+.req-row-bar.done    { background:var(--green); }
+.req-row-bar-working { height:100%; background:var(--working); opacity:.88; flex-shrink:0; transition:width .5s ease; }
+.req-row-bar-gold    { height:100%; background:var(--gold); opacity:.9; flex-shrink:0; transition:width .5s ease; }
+.req-row-credits  { font-size:.78rem; color:var(--gray-600); text-align:right; white-space:nowrap; }
+.work-inline { color:var(--working); font-size:.71rem; margin-left:3px; font-weight:600; }
+.plan-inline { color:var(--gold);    font-size:.71rem; margin-left:3px; }
 .req-card-other { border-left-color: var(--gray-300); }
 .req-card-other:hover { border-left-color: var(--gray-400); }
 
@@ -514,7 +543,9 @@ input:focus,select:focus,textarea:focus { border-color:var(--blue-lite); box-sha
 .list-item-name-group { flex:1; min-width:0; display:flex; flex-direction:column; gap:1px; }
 .list-item-name   { font-weight:600; color:var(--gray-800); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .list-item-school { font-size:.7rem; color:var(--gray-400); font-style:italic; }
-.list-item-credits { font-size:.76rem; color:var(--gray-600); white-space:nowrap; flex-shrink:0; }
+/* Credits and actions are right-aligned together */
+.list-item-right  { display:flex; align-items:center; gap:8px; margin-left:auto; flex-shrink:0; }
+.list-item-credits { font-size:.76rem; color:var(--gray-600); white-space:nowrap; }
 .list-item-actions { display:flex; gap:4px; flex-shrink:0; }
 
 .subreq-list { border:1px solid var(--gray-200); border-top:none; background:var(--white); border-radius:0 0 var(--radius-sm) var(--radius-sm); overflow:hidden; }

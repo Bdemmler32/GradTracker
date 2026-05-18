@@ -472,6 +472,8 @@ function renderDashboard() {
     const pctW=req.credits>0?Math.min(100-pct,(w/req.credits)*100):0;
     const pctP=req.credits>0?Math.min(100-pct-pctW,(p/req.credits)*100):0;
     const complete=e>=req.credits&&req.credits>0;
+    // (#1) still needed after earned+working+planned
+    const stillNeeded=Math.max(0,req.credits-e-w-p);
     const subHtml=(req.subReqs||[]).length?`
       <div class="req-card-subreqs">${req.subReqs.map(sr=>{
         const st=subReqStatus(req,sr);
@@ -481,13 +483,14 @@ function renderDashboard() {
         return `<span class="${cls}">${icon}${esc(sr.name)}${cr}</span>`;
       }).join('')}</div>`:''  ;
     const notesHtml=w>0||p>0?`<div class="req-card-projected">${w>0?`<span class="proj-working"><i class="fa-solid fa-bolt"></i> ${fmt(w)} working</span>`:''} ${p>0?`<span class="proj-planned"><i class="fa-solid fa-clock"></i> ${fmt(p)} planned</span>`:''}</div>`:'';
+    const neededHtml=!complete&&stillNeeded>0?`<div class="req-card-needed"><i class="fa-solid fa-hourglass-half"></i> ${fmt(stillNeeded)} still needed</div>`:'';
     grid.innerHTML+=`
       <div class="req-card ${complete?'complete':''}" role="button" tabindex="0"
            onclick="openReqCourses('${req.id}')" onkeydown="if(event.key==='Enter')openReqCourses('${req.id}')">
         <span class="req-badge">${complete?'✓ Met':fmt(pct)+'%'}</span>
         <div class="req-card-name">${esc(req.name)}</div>
         <div class="req-card-credits">${fmt(e)} <span>/ ${fmt(req.credits)} credits</span></div>
-        ${notesHtml}${subHtml}
+        ${notesHtml}${neededHtml}${subHtml}
         <div class="req-card-bar-wrap">
           <div class="req-card-bar" style="width:${pct}%"></div>
           <div class="req-card-bar working-seg" style="width:${pctW}%"></div>
@@ -524,27 +527,64 @@ function renderDashboard() {
       </div>`;
   }
 
-  // Year cards
+  // Year cards — (#4) clickable to filter courses, (#6) match req-grid column sizing
   const yearCards=document.getElementById('dash-year-cards');
   yearCards.innerHTML='';
   const byYear=creditsByYear();
   state.years.forEach(y=>{
     const {earned:e,working:w,planned:p}=byYear[y.id]||{earned:0,working:0,planned:0};
     const cnt=state.courses.filter(co=>co.yearId===y.id).length;
-    yearCards.innerHTML+=`<div class="year-card">
+    yearCards.innerHTML+=`<div class="year-card" role="button" tabindex="0"
+         onclick="openYearCourses('${y.id}')" onkeydown="if(event.key==='Enter')openYearCourses('${y.id}')">
       <div class="year-card-name">${esc(y.name)}</div>
       ${y.school?`<div class="year-card-school">${esc(y.school)}</div>`:''}
       <div class="year-card-credits">${fmt(e)}</div>
       ${w>0?`<div class="year-card-working"><i class="fa-solid fa-bolt"></i> ${fmt(w)} working</div>`:''}
       ${p>0?`<div class="year-card-planned"><i class="fa-solid fa-clock"></i> ${fmt(p)} planned</div>`:''}
       <div class="year-card-sub">${cnt} course${cnt!==1?'s':''}</div>
+      <div class="req-card-click-hint" style="margin-top:6px">
+        <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        View courses
+      </div>
     </div>`;
   });
   if(!state.years.length&&state.requirements.length>0)
     yearCards.innerHTML='<p class="text-muted" style="font-size:.85rem">No school years defined yet.</p>';
+
+  // (#3) Total remaining in overall-card
+  const totalRemaining=Math.max(0,required-earned-working-planned);
+  const remEl=document.getElementById('dash-total-remaining');
+  if(remEl){
+    if(totalRemaining>0&&required>0){
+      remEl.textContent=`${fmt(totalRemaining)} credits still needed`;
+      remEl.style.display='block';
+    } else {
+      remEl.style.display='none';
+    }
+  }
 }
 
 function openReqCourses(reqId){courseReqFilter=reqId;navigateTo('courses',{reqId});}
+
+// (#4) Filter courses by year
+let _yearFilter='';
+function openYearCourses(yearId){
+  _yearFilter=yearId;
+  navigateTo('courses');
+  // Apply year filter after navigation renders the page
+  const fyEl=document.getElementById('filter-year');
+  if(fyEl){fyEl.value=yearId;renderCourses();}
+  _yearFilter='';
+}
+
+// (#2) Stats view toggle state
+let _statsView='progress'; // 'progress' | 'gap'
+function toggleStatsView(){
+  _statsView=_statsView==='progress'?'gap':'progress';
+  const btn=document.getElementById('stats-view-toggle');
+  if(btn){btn.textContent=_statsView==='gap'?'Show Progress View':'Show Gap View';}
+  renderStats();
+}
 
 // ══════════════════════════════════════════════════════════════
 // COURSES  (Batch 2+5 — status dropdown + catalog display)
@@ -1171,27 +1211,57 @@ function renderStats() {
         </div>`;
       }).join('');
 
+  // (#7) Proportional bars: find max credits across all requirements
+  const maxReqCredits=Math.max(...state.requirements.map(r=>Number(r.credits||0)),1);
+
+  // (#2) Update toggle button label
+  const toggleBtn=document.getElementById('stats-view-toggle');
+  if(toggleBtn)toggleBtn.textContent=_statsView==='gap'?'Show Progress View':'Show Gap View';
+
   document.getElementById('req-breakdown').innerHTML=!state.requirements.length
     ?'<p class="text-muted" style="font-size:.85rem">No requirements defined.</p>'
     :state.requirements.map(req=>{
         const e=creditsEarnedForReq(req.id),w=creditsWorkingForReq(req.id),p=creditsPlannedForReq(req.id);
-        const pct=req.credits>0?Math.min(100,(e/req.credits)*100):0;
-        const pctW=req.credits>0?Math.min(100-pct,(w/req.credits)*100):0;
-        const pctP=req.credits>0?Math.min(100-pct-pctW,(p/req.credits)*100):0;
+        const remaining=Math.max(0,req.credits-e-w-p);
         const done=e>=req.credits&&req.credits>0;
+
+        // (#7) Container width proportional to this req's credits vs the largest req
+        const containerPct=(req.credits/maxReqCredits)*100;
+
+        // (#2) Gap view: bar shows remaining; Progress view: bar shows earned/working/planned
+        let barHtml;
+        if(_statsView==='gap'){
+          const remPct=req.credits>0?(remaining/req.credits)*100:0;
+          const coveredPct=100-remPct;
+          barHtml=`
+            <div class="req-row-bar ${done?'done':''}" style="width:${coveredPct}%"></div>
+            ${remaining>0?`<div class="req-row-bar-remaining" style="width:${remPct}%"></div>`:''}`;
+        } else {
+          const pct=req.credits>0?Math.min(100,(e/req.credits)*100):0;
+          const pctW=req.credits>0?Math.min(100-pct,(w/req.credits)*100):0;
+          const pctP=req.credits>0?Math.min(100-pct-pctW,(p/req.credits)*100):0;
+          barHtml=`
+            <div class="req-row-bar ${done?'done':''}" style="width:${pct}%"></div>
+            <div class="req-row-bar-working" style="width:${pctW}%"></div>
+            <div class="req-row-bar-gold" style="width:${pctP}%"></div>`;
+        }
+
+        const creditLabel=_statsView==='gap'
+          ?`${remaining>0?`<span class="req-row-remaining">${fmt(remaining)} needed</span>`:''} / ${fmt(req.credits)}`
+          :`${fmt(e)}${w>0?`<span class="work-inline"><i class="fa-solid fa-bolt"></i> ${fmt(w)}</span>`:''}${p>0?`<span class="plan-inline"><i class="fa-solid fa-clock"></i> ${fmt(p)}</span>`:''} / ${fmt(req.credits)}`;
+
         const subH=(req.subReqs||[]).length?`<div class="breakdown-subreqs">${req.subReqs.map(sr=>{
           const st=subReqStatus(req,sr);const cr=Number(sr.credits)>0?` (${fmt(sr.credits)})`:'';
           const cls=st==='earned'?'subreq-chip sm sr-met':st==='working'?'subreq-chip sm sr-working':st==='planned'?'subreq-chip sm sr-planned':'subreq-chip sm';
           return `<span class="${cls}">${st==='earned'?'<i class="fa-solid fa-check"></i> ':st==='working'?'<i class="fa-solid fa-bolt"></i> ':st==='planned'?'<i class="fa-solid fa-clock"></i> ':''}${esc(sr.name)}${cr}</span>`;
         }).join('')}</div>`:'';
+
         return `<div class="req-row">
           <div class="req-row-name">${esc(req.name)}${subH}</div>
-          <div class="req-row-bar-wrap">
-            <div class="req-row-bar ${done?'done':''}" style="width:${pct}%"></div>
-            <div class="req-row-bar-working" style="width:${pctW}%"></div>
-            <div class="req-row-bar-gold" style="width:${pctP}%"></div>
+          <div class="req-row-bar-outer" style="width:${containerPct}%">
+            <div class="req-row-bar-wrap">${barHtml}</div>
           </div>
-          <div class="req-row-credits">${fmt(e)}${w>0?`<span class="work-inline"><i class="fa-solid fa-bolt"></i> ${fmt(w)}</span>`:''}${p>0?`<span class="plan-inline"><i class="fa-solid fa-clock"></i> ${fmt(p)}</span>`:''} / ${fmt(req.credits)}</div>
+          <div class="req-row-credits">${creditLabel}</div>
         </div>`;
       }).join('');
 
@@ -1492,7 +1562,7 @@ function renderSettingsRequirements(){
   document.getElementById('reqs-list').innerHTML=state.requirements.length
     ?state.requirements.map(r=>{
         const subList=(r.subReqs||[]).map(sr=>{const status=subReqStatus(r,sr),cr=Number(sr.credits)>0?`${fmt(sr.credits)} cr`:'0 cr';const dot=status==='earned'?'<span class="sr-dot sr-dot-earned">✓</span>':status==='working'?'<span class="sr-dot sr-dot-working"><i class="fa-solid fa-bolt"></i></span>':status==='planned'?'<span class="sr-dot sr-dot-planned"><i class="fa-solid fa-clock"></i></span>':'<span class="sr-dot sr-dot-none">○</span>';return `<div class="subreq-item">${dot}<span class="subreq-item-name">${esc(sr.name)}</span><span class="subreq-item-credits">${cr}</span><div class="subreq-item-actions"><button class="btn-icon" onclick="openEditSubReqModal('${r.id}','${sr.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button class="btn-icon delete" onclick="deleteSubReq('${r.id}','${sr.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></div></div>`;}).join('');
-        return `<div class="req-list-block" id="req-block-${r.id}"><div class="list-item req-list-item"><span class="list-item-name">${esc(r.name)}</span><span class="list-item-credits">${fmt(r.credits)} cr</span><div class="list-item-actions"><button class="btn-icon" onclick="openEditReqModal('${r.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button class="btn-icon" onclick="toggleSubReqForm('${r.id}')"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><button class="btn-icon delete" onclick="deleteReq('${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></div></div>${subList?`<div class="subreq-list">${subList}</div>`:''}<div class="subreq-add-form hidden" id="subreq-form-${r.id}"><input type="text" id="subreq-name-${r.id}" placeholder='Name (e.g. "Algebra I Required")' /><input type="number" id="subreq-credits-${r.id}" placeholder="Credits" min="0" step="0.5" class="input-credits-sm" /><button class="btn btn-secondary btn-sm" onclick="addSubReq('${r.id}')">Add</button><button class="btn btn-outline btn-sm" onclick="toggleSubReqForm('${r.id}')">Cancel</button></div></div>`;
+        return `<div class="req-list-block" id="req-block-${r.id}"><div class="list-item req-list-item"><span class="list-item-name">${esc(r.name)}</span><div class="list-item-right"><span class="list-item-credits">${fmt(r.credits)} cr</span><div class="list-item-actions"><button class="btn-icon" onclick="openEditReqModal('${r.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button class="btn-icon" onclick="toggleSubReqForm('${r.id}')"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><button class="btn-icon delete" onclick="deleteReq('${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></div></div></div>${subList?`<div class="subreq-list">${subList}</div>`:''}<div class="subreq-add-form hidden" id="subreq-form-${r.id}"><input type="text" id="subreq-name-${r.id}" placeholder='Name (e.g. "Algebra I Required")' /><input type="number" id="subreq-credits-${r.id}" placeholder="Credits" min="0" step="0.5" class="input-credits-sm" /><button class="btn btn-secondary btn-sm" onclick="addSubReq('${r.id}')">Add</button><button class="btn btn-outline btn-sm" onclick="toggleSubReqForm('${r.id}')">Cancel</button></div></div>`;
       }).join('')
     :'<p class="text-muted" style="font-size:.85rem;padding:6px 0">No requirements added yet.</p>';
   document.getElementById('total-req-credits').textContent=fmt(totalRequired());

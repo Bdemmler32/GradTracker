@@ -132,6 +132,7 @@
             <div class="overall-credits"><span id="dash-earned">0</span> / <span id="dash-required">0</span></div>
             <div class="overall-working" id="dash-working-wrap"><i class="fa-solid fa-bolt"></i> <span id="dash-working">0</span> working on</div>
             <div class="overall-planned" id="dash-planned-wrap"><i class="fa-solid fa-clock"></i> <span id="dash-planned">0</span> planned</div>
+            <div class="overall-remaining" id="dash-total-remaining" style="display:none"></div>
           </div>
           <div class="overall-pct-wrap">
             <div class="overall-pct" id="dash-pct">0%</div>
@@ -226,6 +227,10 @@
       <h2 class="section-title">Credits Earned per Year</h2>
       <div class="bar-chart-wrap"><div class="bar-chart" id="bar-chart-years"></div></div>
       <h2 class="section-title">Requirement Breakdown</h2>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:.8rem;color:var(--gray-600)">Bar widths are proportional to each category's credit total.</span>
+        <button id="stats-view-toggle" class="btn btn-outline btn-sm" onclick="toggleStatsView()">Show Gap View</button>
+      </div>
       <div class="req-breakdown" id="req-breakdown"></div>
       <h2 class="section-title">Grade Distribution</h2>
       <div class="grade-dist" id="grade-dist"></div>
