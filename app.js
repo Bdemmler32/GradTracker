@@ -1,9 +1,7 @@
 /* ============================================================
-   GradTracker v1.7.0
-   BATCH 1+2: Tri-state status system (earned/working/planned)
-   BATCH 3+4: Catalog infrastructure + two-path Add Course modal
-   BATCH 5:   Catalog-aware course display
-   BATCH 6:   Status rewire across all renders
+   GradTracker v1.7.4
+   - Exploring status (4th status, excluded from all calculations)
+   - Updated PA Keystone benchmark defaults
    ============================================================ */
 'use strict';
 
@@ -11,15 +9,16 @@ const STORAGE_KEY = 'gradtracker_data_v1';
 
 const DEFAULT_BENCHMARKS = {
   keystone: {
-    algebra:    { prof:736,  adv:748,  bb:659  },
-    literature: { prof:1500, adv:1547, bb:1340 },
-    biology:    { prof:800,  adv:841,  bb:722  }
+    algebra:    { prof:1500, adv:1546, bb:1438 },
+    literature: { prof:1500, adv:1584, bb:1443 },
+    biology:    { prof:1500, adv:1549, bb:1459 }
   },
   p4: { act:21, asvab:31, psat:970, sat:1010 }
 };
 
 // ── State ─────────────────────────────────────────────────────
-// courses[].status: 'earned' | 'working' | 'planned'
+// courses[].status: 'earned' | 'working' | 'planned' | 'exploring'
+// 'exploring' is excluded from ALL credit calculations — scratchpad only
 // courses[].catalogRef: null | { catalogId, courseId }
 let state = {
   student:      { name:'', gradYear:'', school:'' },
@@ -48,7 +47,7 @@ function saveData() { localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }
 // ── Constants ─────────────────────────────────────────────────
 const GRADES            = ['A','B','C','D','F','P','NP','W','I','AU'];
 const COURSE_TYPES      = ['Standard','VC','BC','AC'];
-const COURSE_STATUSES   = ['earned','working','planned'];
+const COURSE_STATUSES   = ['earned','working','planned','exploring'];
 const KEYSTONE_SUBJECTS = ['Algebra I','Literature','Biology'];
 const KEYSTONE_KEYS     = ['algebra','literature','biology'];
 
@@ -262,10 +261,13 @@ function getReqName(id) { return getReq(id)?.name||'Uncategorized'; }
 // earned   = status === 'earned'
 // working  = status === 'working'  (counts toward projected/in-progress)
 // planned  = status === 'planned'  (future intent)
-function isEarned(c)  { return c.status==='earned'; }
-function isWorking(c) { return c.status==='working'; }
-function isPlanned(c) { return c.status==='planned'; }
-function isNotEarned(c){ return c.status!=='earned'; }
+function isEarned(c)    { return c.status==='earned'; }
+function isWorking(c)   { return c.status==='working'; }
+function isPlanned(c)   { return c.status==='planned'; }
+function isExploring(c) { return c.status==='exploring'; }
+function isNotEarned(c) { return c.status!=='earned'; }
+// Courses that count toward any credit calculation (exploring is excluded)
+function countsToward(c){ return c.status!=='exploring'; }
 
 function creditsEarnedForReq(reqId)  { return state.courses.filter(c=>c.reqId===reqId&&isEarned(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
 function creditsWorkingForReq(reqId) { return state.courses.filter(c=>c.reqId===reqId&&isWorking(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
@@ -291,9 +293,10 @@ function creditsByYear() {
 }
 
 // Sub-req status with working support
+// Sub-req status — exploring courses never satisfy a sub-req
 function subReqStatus(req,sr) {
   const n=sr.name.trim().toLowerCase();
-  const m=state.courses.filter(c=>c.reqId===req.id&&c.name.trim().toLowerCase()===n);
+  const m=state.courses.filter(c=>c.reqId===req.id&&c.name.trim().toLowerCase()===n&&!isExploring(c));
   if(m.some(isEarned))  return 'earned';
   if(m.some(isWorking)) return 'working';
   if(m.some(isPlanned)) return 'planned';
@@ -504,7 +507,7 @@ function renderDashboard() {
   });
 
   // (#9) "Other" virtual card — uncategorized courses (no reqId)
-  const otherCourses=state.courses.filter(c=>!c.reqId);
+  const otherCourses=state.courses.filter(c=>!c.reqId&&!isExploring(c));
   if(otherCourses.length){
     const oE=otherCourses.filter(isEarned).reduce((s,c)=>s+Number(c.credits||0),0);
     const oW=otherCourses.filter(isWorking).reduce((s,c)=>s+Number(c.credits||0),0);
@@ -613,16 +616,17 @@ function renderCourses() {
   let courses=state.courses.slice();
   if(fyEl.value)   courses=courses.filter(c=>c.yearId===fyEl.value);
   if(frEl.value)   courses=courses.filter(c=>c.reqId===frEl.value);
-  if(savedS==='earned')  courses=courses.filter(c=>isEarned(c));
-  if(savedS==='working') courses=courses.filter(c=>isWorking(c));
-  if(savedS==='planned') courses=courses.filter(c=>isPlanned(c));
+  if(savedS==='earned')     courses=courses.filter(c=>isEarned(c));
+  if(savedS==='working')    courses=courses.filter(c=>isWorking(c));
+  if(savedS==='planned')    courses=courses.filter(c=>isPlanned(c));
+  if(savedS==='exploring')  courses=courses.filter(c=>isExploring(c));
 
   const tbody=document.getElementById('courses-tbody');
   if(!courses.length){tbody.innerHTML='<tr class="empty-row"><td colspan="9">No courses match the current filters.</td></tr>';return;}
 
   const yo=state.years.reduce((m,y,i)=>{m[y.id]=i;return m;},{});
   courses.sort((a,b)=>{
-    const order={'earned':0,'working':1,'planned':2};
+    const order={'earned':0,'working':1,'planned':2,'exploring':3};
     const od=(order[a.status]??0)-(order[b.status]??0);
     if(od!==0)return od;
     return(yo[a.yearId]??99)-(yo[b.yearId]??99);
@@ -632,9 +636,10 @@ function renderCourses() {
     const gClass=['A','B','C','D','F','P'].includes(c.grade)?c.grade:'';
     const status=c.status||'earned';
     const statusSel=`<select class="status-select sel-${status}" onchange="handleStatusChange('${c.id}',this.value)">
-      <option value="earned"  ${status==='earned' ?'selected':''}>✓ Earned</option>
-      <option value="working" ${status==='working'?'selected':''}><i class="fa-solid fa-bolt"></i> Working On</option>
-      <option value="planned" ${status==='planned'?'selected':''}><i class="fa-solid fa-clock"></i> Planned</option>
+      <option value="earned"    ${status==='earned'    ?'selected':''}>✓ Earned</option>
+      <option value="working"   ${status==='working'   ?'selected':''}>Working On</option>
+      <option value="planned"   ${status==='planned'   ?'selected':''}>Planned</option>
+      <option value="exploring" ${status==='exploring' ?'selected':''}>Exploring</option>
     </select>`;
     const typeBadge=c.type&&c.type!=='Standard'?`<span class="type-badge type-${c.type}">${esc(c.type)}</span>`:c.type==='Standard'?'<span class="type-badge type-std">Std</span>':'—';
 
@@ -643,12 +648,12 @@ function renderCourses() {
     if(c.subReqId&&req){const sub=req.subReqs?.find(sr=>sr.id===c.subReqId);if(sub)catDisplay+=`<br><span class="subreq-label">${esc(sub.name)}</span>`;}
 
     let srMatch='';
-    if(req){const mSr=req.subReqs?.find(sr=>sr.name.trim().toLowerCase()===c.name.trim().toLowerCase());if(mSr){const st=subReqStatus(req,mSr);if(st)srMatch=`<span class="sr-match-tag sr-match-${st}">${st==='earned'?'<i class="fa-solid fa-check"></i>':st==='working'?'<i class="fa-solid fa-bolt"></i>':'<i class="fa-solid fa-clock"></i>'} Sub-req</span>`;}}
+    if(req&&!isExploring(c)){const mSr=req.subReqs?.find(sr=>sr.name.trim().toLowerCase()===c.name.trim().toLowerCase());if(mSr){const st=subReqStatus(req,mSr);if(st)srMatch=`<span class="sr-match-tag sr-match-${st}">${st==='earned'?'<i class="fa-solid fa-check"></i>':st==='working'?'<i class="fa-solid fa-bolt"></i>':'<i class="fa-solid fa-clock"></i>'} Sub-req</span>`;}}
 
-    // Catalog action icon (no badge in name cell — #8)
+    // Catalog action icon (no badge in name cell)
     const hasCatalogLink=!!c.catalogRef;
 
-    const rowCls=status==='earned'?'':status==='working'?'row-working':'row-planned';
+    const rowCls=status==='earned'?'':status==='working'?'row-working':status==='exploring'?'row-exploring':'row-planned';
     return `<tr class="${rowCls}">
       <td class="td-course-name">${esc(c.name)}${srMatch}</td>
       <td class="td-year">${esc(getYearName(c.yearId))}</td>
@@ -677,14 +682,16 @@ function handleStatusChange(courseId, newStatus) {
   } else {
     course.status=newStatus;
     saveData();renderAll();
-    toast(`Course marked as ${newStatus==='working'?'Working On':'Planned'}.`,'success');
+    const labels={working:'Working On',planned:'Planned',exploring:'Exploring'};
+    toast(`Course marked as ${labels[newStatus]||newStatus}.`,'success');
   }
 }
 
 function openEarnedModal(courseId, fromStatus) {
   const c=state.courses.find(x=>x.id===courseId);if(!c)return;
   const gradeOpts=GRADES.map(g=>`<option value="${g}" ${c.grade===g?'selected':''}>${g}</option>`).join('');
-  const fromLabel=fromStatus==='working'?'<i class="fa-solid fa-bolt"></i> Working On':'<i class="fa-solid fa-clock"></i> Planned';
+  const fromLabels={working:'Working On',planned:'Planned',exploring:'Exploring'};
+  const fromLabel=fromLabels[fromStatus]||fromStatus;
   document.getElementById('modal-title').textContent='Mark as Earned';
   document.getElementById('modal-body').innerHTML=`
     <div class="earned-modal-info"><div class="earned-course-name">${esc(c.name)}</div>
@@ -897,7 +904,7 @@ async function openCatalogCourseForm(courseId) {
     return `<option value="${r.id}" ${sel?'selected':''}>${esc(r.name)}</option>${subs}`;
   }).join('');
   // Fix #6: FA icons for status options
-  const statusOpts=`<option value="planned" ${existingCourse?.status==='planned'?'selected':''}>Planned</option><option value="working" ${existingCourse?.status==='working'?'selected':''}>Working On</option><option value="earned" ${existingCourse?.status==='earned'||!existingCourse?'selected':''}>Earned</option>`;
+  const statusOpts=`<option value="planned" ${existingCourse?.status==='planned'?'selected':''}>Planned</option><option value="working" ${existingCourse?.status==='working'?'selected':''}>Working On</option><option value="exploring" ${existingCourse?.status==='exploring'?'selected':''}>Exploring</option><option value="earned" ${existingCourse?.status==='earned'||!existingCourse?'selected':''}>Earned</option>`;
   const gradeOpts=GRADES.map(g=>`<option value="${g}" ${existingCourse?.grade===g?'selected':''}>${g}</option>`).join('');
 
   // Merge options only shown when linking existing course
@@ -1115,9 +1122,10 @@ function openCourseModal(courseId) {
   const typeOpts=COURSE_TYPES.map(t=>`<option value="${t}" ${(c?.type||'Standard')===t?'selected':''}>${t}</option>`).join('');
   const curStatus=c?.status||'earned';
   const statusOpts=[
-    {v:'earned',l:'✓ Earned'},
-    {v:'working',l:'Working On'},
-    {v:'planned',l:'Planned'}
+    {v:'earned',    l:'✓ Earned'},
+    {v:'working',   l:'Working On'},
+    {v:'planned',   l:'Planned'},
+    {v:'exploring', l:'Exploring'}
   ].map(s=>`<option value="${s.v}" ${curStatus===s.v?'selected':''}>${s.l}</option>`).join('');
 
   document.getElementById('modal-body').innerHTML=`
@@ -1267,7 +1275,7 @@ function renderStats() {
 
   const gradesE={},gradesW={},gradesP={};
   state.courses.forEach(c=>{
-    if(!c.grade)return;
+    if(!c.grade||isExploring(c))return;  // exploring excluded from grade dist
     if(isEarned(c))  gradesE[c.grade]=(gradesE[c.grade]||0)+1;
     else if(isWorking(c)) gradesW[c.grade]=(gradesW[c.grade]||0)+1;
     else if(isPlanned(c)) gradesP[c.grade]=(gradesP[c.grade]||0)+1;

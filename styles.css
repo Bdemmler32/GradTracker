@@ -32,6 +32,9 @@
   --working:      #e06c00;
   --working-light:#fff0e0;
   --working-bdr:  #f4a35a;
+  --exploring:      #7c3aed;
+  --exploring-light:#f3effe;
+  --exploring-bdr:  #c4b5fd;
 
   --sidebar-w:  268px;
   --radius:     10px;
@@ -322,15 +325,18 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 .td-cat   { min-width:110px; }
 
 .status-select { appearance:none; -webkit-appearance:none; border:none; border-radius:99px; padding:4px 11px; font-family:var(--font); font-size:.7rem; font-weight:700; cursor:pointer; outline:none; transition:background var(--transition); min-width:96px; text-align:center; }
-.status-select.sel-earned  { background:#eaf4e0; color:var(--green); border:1.5px solid #b6dfa0; }
-.status-select.sel-working { background:var(--working-light); color:var(--working); border:1.5px solid var(--working-bdr); }
-.status-select.sel-planned { background:var(--gold-light); color:#7a4e00; border:1.5px solid var(--planned-bdr); }
+.status-select.sel-earned    { background:#eaf4e0; color:var(--green); border:1.5px solid #b6dfa0; }
+.status-select.sel-working   { background:var(--working-light); color:var(--working); border:1.5px solid var(--working-bdr); }
+.status-select.sel-planned   { background:var(--gold-light); color:#7a4e00; border:1.5px solid var(--planned-bdr); }
+.status-select.sel-exploring { background:var(--exploring-light); color:var(--exploring); border:1.5px solid var(--exploring-bdr); }
 .status-select:hover { opacity:.85; }
 
-.row-working td { background:#fff5ee!important; }
+.row-working   td { background:#fff5ee!important; }
 .row-working:hover td { background:#ffe8d0!important; }
-.row-planned td { background:#fffcf2!important; }
+.row-planned   td { background:#fffcf2!important; }
 .row-planned:hover td { background:#fff8e0!important; }
+.row-exploring td { background:var(--exploring-light)!important; opacity:.9; }
+.row-exploring:hover td { background:#ede5fe!important; opacity:1; }
 
 /* Catalog badge in course name cell */
 .catalog-badge {
@@ -700,7 +706,8 @@ input:focus,select:focus,textarea:focus { border-color:var(--blue-lite); box-sha
 
 /* Status badge in earned modal (tri-state) */
 .status-badge { display:inline-block; padding:3px 9px; border-radius:99px; font-size:.7rem; font-weight:700; white-space:nowrap; }
-.status-badge.sel-earned  { background:#eaf4e0; color:var(--green); }
-.status-badge.sel-working { background:var(--working-light); color:var(--working); border:1px solid var(--working-bdr); }
-.status-badge.sel-planned { background:var(--gold-light); color:#7a4e00; border:1px solid var(--planned-bdr); }
+.status-badge.sel-earned    { background:#eaf4e0; color:var(--green); }
+.status-badge.sel-working   { background:var(--working-light); color:var(--working); border:1px solid var(--working-bdr); }
+.status-badge.sel-planned   { background:var(--gold-light); color:#7a4e00; border:1px solid var(--planned-bdr); }
+.status-badge.sel-exploring { background:var(--exploring-light); color:var(--exploring); border:1px solid var(--exploring-bdr); }
 .status-arrow { font-size:1.1rem; color:var(--gray-400); }
