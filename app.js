@@ -1,4723 +1,1684 @@
-{
-  "school": "Pennsylvania Cyber Charter School",
-  "school_id": "PA-CYBER",
-  "catalog_year": "2026-2027",
-  "catalog_id": "PA-CYBER_2026-2027",
-  "courses": [
-    {
-      "course_id": "ENGLISH-9",
-      "course_name": "English 9",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "English 9 is an integrated curriculum. Each unit contains thematically related lessons in five domains: reading and the study of liter ature, reading informational text, writing, speaking and listening, and language study, including word knowledge and grammar skills. Topics are presented in ways that help young adolescents relate literacy skills to other aspects of their lives. Writing assignments include narrative, expository, and persuasive/argumentative modes and emphasize the use of details and reasoning to support ideas. Course lessons guide students through the stages of research and demonstrate how to evaluate, integrate, and share the in formation gathered. Vocabulary development instruction is integrated into literature and informational text lessons. Students in the Blended Classroom will read two extended texts independently throughout the course; both will be self-selected by the student. These selections include Romeo and Juliet, To Kill a Mockingbird, Fahrenheit 451, Speak, Monster, and Of Mice and Men. Students in the Virtual Classroom will read three required texts: Fahrenheit 451, Romeo and Juliet, and To Kill a Mockingbird."
-    },
-    {
-      "course_id": "ENGLISH-10",
-      "course_name": "English 10",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "English 9",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "English 10 is an integrated curriculum, with each unit consisting of thematically related lessons in five domains: analyzing literature, analyzing informational text, writing, speaking and listening, and language study, including word knowledge and grammar skills. Literature study in this course focuses on the analysis of different forms of literature as well as the evaluation of various modes and forms of writing. Writing assignments required in this course include fiction, expository, persuasive, and analytical modes, empha sizing the use of details, evidence, and reasoning to support ideas. Course lessons guide students through the stages of a rigorous research process and demonstrate how to evaluate, integrate, and share the information gathered during research. Students are re quired to share their ideas and analysis using several different modes, including oral and multimedia presentations, and informative speeches. Vocabulary development instruction is integrated into literature and informational text lessons. Students in the Blended Classroom will read two extended texts independently throughout the course; both will be self-selected by the student. These se lections include Animal Farm, Night, The Catcher in the Rye, The Bean Trees, Lord of the Flies, and Farewell to Manzanar. Students in the Virtual Classroom will read three required texts: Twelfth Night, Night, and Animal Farm."
-    },
-    {
-      "course_id": "ENGLISH-11",
-      "course_name": "English 11",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "English 9, English 10",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "English 11 is an American literature course. Course units are organized through periods in literary history, with a focus on historical eras and literary movements. As students read foundational works of literature and other historical documents, they will review and extend skills in five domains: analyzing literature, analyzing informational text, writing, speaking and listening, and language study, including word knowledge and grammar skills. Each literature lesson provides students with an opportunity to review basic analysis skills before applying those skills to works of literature or key historical documents. Writing assignments in this course include nar rative, reflective, persuasive, analytical, and research-based modes. Students in the Blended Classroom will read two extended texts independently throughout the course; both will be self-selected by the student. These selections include The Great Gatsby, The Scarlet Letter, A Lesson Before Dying, and The Crucible. Students in the Virtual Classroom will read three required texts: The Scarlet Letter, The Great Gatsby, and The Crucible."
-    },
-    {
-      "course_id": "AP-ENGLISH-LANGUAGE-AND-COMPOSITION",
-      "course_name": "AP English Language and Composition",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "English 9, English 10, Letter grade of B or higher in previous English courses",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": true,
-      "details": "Being able to communicate effectively is one of the most important skills any student can learn. It is essential to every profession and in every field of study. The focus of this course is on the most common form of communication in today\u2019s world: writing. While other English classes focus on reading and analyzing texts to determine what the author is trying to say, AP English Language and Composition looks at how the author is conveying their message. Students will analyze various texts and the choices authors make as well as studying various strategies of effective writing. Students will also practice these skills in their own writing, mirroring the experience of a first-year college writing course. While this course is specifically aligned to prepare students to pass the AP Lan guage and Composition test, the larger emphasis is on improving student writing through rigorous analysis, reflection, revision, criticism, and feedback. This is a College Board-approved Advanced Placement Course, and students may receive college credit by earning a sufficient score on the AP Exam."
-    },
-    {
-      "course_id": "AP-ENGLISH-LITERATURE-AND-COMPOSITION",
-      "course_name": "AP English Literature and Composition",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "English 9, English 10, Letter grade of B or higher in previous English courses",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": true,
-      "details": "Maturity of Thought - Devotedness to Learning - Willingness to Transcend: these are the core tenets of Advanced Placement En glish Literature. Adherence to these will allow one to become a distinguished student of literature, composition, and everything in between. This course follows all of the curricular guidelines set forth by the College Board\u2019s AP Course Description, and will allow students to study key authors, ideologies, and contexts while responding in writing. Students may receive college credit based upon completion of the course and a sufficient score on the AP Exam. This course is designed to teach students college-level writing coupled with a distinct understanding of various literary genres. The introduction into these genres will take the class near and far, studying authors, poets, and dramatists of varied cultures and eras. Writing, discussion, and personal analysis will be the main modes of response. In order to study a piece of literature through critical analysis, a student must be able to understand, explain, and evaluate a text through a variety of narrative techniques. Featured texts include The Great Gatsby, The Namesake, Crime and Punishment, Brave New World, Wuthering Heights, and Much Ado About Nothing. These things and more will all be an important part of the collaborative study of literature. This course is a College Board-approved Advanced Placement course."
-    },
-    {
-      "course_id": "ENGLISH-COMPOSITION-CIHS",
-      "course_name": "English Composition (CIHS)",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "English Composition is a College In High School course that is offered in partnership with the Community College of Beaver Coun ty. In this course, students will read sample texts, practice expository writing, and learn the academic form of essays and research papers. Students will focus on the development of an academically sound and challenging thesis and resulting essay. The mechan ics of writing will be reviewed as needed. English Composition is a three college credit course."
-    },
-    {
-      "course_id": "TECHNICAL-WRITING",
-      "course_name": "Technical Writing",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Technical Writing focuses on written communication skills and documentation in the business environment. This course enables students to understand a variety of documents and allows them to perfect their technical writing abilities. From journal writing, email, and directional writing to memos and letter drafting, students encounter numerous types of technical writing and build upon their technical skills and knowledge."
-    },
-    {
-      "course_id": "CREATIVE-WRITING",
-      "course_name": "Creative Writing",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Creative Writing is designed to help students build a compelling and creative writing style. Students will focus on word nuances and precisions, while they write in a variety of short modes, including poems, song lyrics, prose poetry, short stories, and creative nonfiction. Creative Writing will allow students to expand their facility with language through the writing process, while giving them an opportunity to express themselves through different genres."
-    },
-    {
-      "course_id": "ENGLISH-GRAMMAR",
-      "course_name": "English Grammar",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "English Grammar covers sentence skills, parts of speech, modifiers and parallelism, punctuation and mechanics, and word usage. Students will have the opportunity to engage in the writing and revision process as part of English Grammar. In addition, students will master standard English so they can succeed in the classroom, the workplace, college, or a technical area. Students will also build a working vocabulary throughout the course"
-    },
-    {
-      "course_id": "SHORT-STORIES",
-      "course_name": "Short Stories",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Short Stories exposes students to the basic characteristics, writing style, and literary elements of a story. From characters, point of view, and setting to techniques such as suspense and irony, students learn how short stories provide readers with the opportunity to experience different storylines in a precise and defined format. Students become acquainted with the compact nature of the short story literary form and each author\u2019s ability to weave exciting, interesting narratives in such short, tight spaces. In this course, students learn the importance of being concise, recognizing that good literature does not necessarily have to be lengthy in order to be captivating."
-    },
-    {
-      "course_id": "AFRICAN-AMERICAN-LITERATURE",
-      "course_name": "African American Literature",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "English 9, English 10",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "This discussion and text-based course analyzes works written by African American authors from enslavement to the contemporary era. The course will examine a variety of influential Black and African American authors who helped to shape Black culture through out history. Both contemporary and historical texts will allow students to explore race and challenging social topics while also analyzing how history impacts our modern era. Students will study major works from African American Enslavement, Abolition, Re construction, the Progressive Age, the Harlem Renaissance, the Civil Rights Movement, the Black Arts Movement, the Black Wom en\u2019s Literary Renaissance, Modernism, Hip-Hop, and Contemporary Literature. Students will complete a presentation each semester on major Black figures, including artists, poets, scientists, and activists, to highlight Black voices throughout history. In addition to short stories, poems, novel excerpts, and other works selected from The Norton Anthology of African American Literature and An Anthology of Rap, students will read the novels Kindred, The Hate U Give, and Long Way Down, as well as the play A Raisin in the Sun. Students and parents considering this course are encouraged to contact the school for additional information regarding the assigned texts and their subject matter."
-    },
-    {
-      "course_id": "MYTHOLOGY",
-      "course_name": "Mythology",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Studying myths, folktales, legends, and other stories is a great way for students to explore literature. At the same time, these world stories allow students to celebrate art, music, psychology, science, and the history of the human condition. The first semester of this course, World Stories, looks at how humans in all parts of the ancient and early world shared stories. Students will read myths from six continents and learn how these stories were told through speech, art, and the written word. The second semester is Classical Mythology, and it focuses on the stories from ancient Greece and Rome. Students will learn about how classic myths have impacted Western literature and how we still use mythological allusions every day. Throughout the year-long course, students will build a strong foundation of cultural literacy, come to appreciate and respect the contributions of different world cultures, and have a choice in how they complete projects and writing assignments."
-    },
-    {
-      "course_id": "EXPLORING-YOUNG-ADULT-LITERATURE",
-      "course_name": "Exploring Young Adult Literature",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "English 9, English 10",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "This upper-level course will give students the opportunity to become lifelong readers by being exposed to quality young adult literature (YAL) and by being able to connect to teenage protagonists. Today, 21st century students face different issues than 20th century teenagers, and there is a plethora of YAL that can help the teens of today cope and resolve conflict in their own lives. Vari ous themes and coming-of-age issues will be addressed throughout this course, making the literature relatable and interesting. The course will explore themes of alienation, family issues, self-discovery, relationships, death, suicide, and survival. In Exploring Young Adult Literature, students will read eight novels, and the heavy reading load will require students to read outside of class. Students are expected to complete pre-class work prior to live sessions. Exploring Young Adult Literature will include the following texts: The Outsiders, Speak, We Were Liars, All the Bright Places, The Fault in Our Stars, Aristotle and Dante Discover the Secrets of the Uni verse, Long Way Down, and Every Last Word. Students and parents considering this course are encouraged to contact the school for additional information regarding the assigned texts and their subject matter."
-    },
-    {
-      "course_id": "LITERARY-EXPLORATIONS",
-      "course_name": "Literary Explorations",
-      "category": "English Language Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "English 9, English 10, English 11",
-      "grade_levels": [
-        "11"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "porary novels of today, literature is linked in a global, timeless communication that will continue on into the future. Literary Explo rations attempts to pinpoint and analyze some of these connections. Whether it is the wisdom of Plato, the predictions of Orwell, or the imagination of Tolkien, avid readers can find similar themes, ideas, and truths that help to define the world around us. By identifying linkages in literature, readers may find themselves making their own connections by observing the world around them, watching films or television, reading the newspaper, and conversing with others. Readings in the course include The Giver, Gather ing Blue, Messenger, Anthem, Fahrenheit 451, 1984, The Road, Walden Two, Beowulf, The Hobbit, The Silmarillion, and The Lord of the Rings trilogy."
-    },
-    {
-      "course_id": "ALGEBRA-I",
-      "course_name": "Algebra I",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Mathematics 7 or Mathematics 8",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "Algebra I is an exploration of variables, function patterns, graphs, and equations. Students are expected to describe and translate graphic, algebraic, numeric, and verbal representations of relations and use those representations to solve problems. Students are introduced to rational numbers, systems of equations and inequalities, data analysis and probability, the properties of exponents, factoring, and quadratic equations and functions. Algebra I provides a solid foundation for further study in mathematics by helping students develop computational, procedural, and problem-solving skills. Upon completion of this course, students will be required to take the Keystone Algebra I Exam."
-    },
-    {
-      "course_id": "ALGEBRA-IA",
-      "course_name": "Algebra IA",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Mathematics 8",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "Algebra IA introduces students to the world of Algebra through expressions and equations. Students will evaluate algebraic ex pressions, learn to solve and graph linear equations and inequalities, while also being introduced to functions, linear functions, and slope. Towards the end of Algebra IA, students will be introduced to systems of equations and inequalities. Algebra IA is designed for students who need additional time to master the concepts of the Algebra I course. Students will have the opportunity to take Alge bra I over a two-year time period by completing Algebra IA and then completing Algebra IB. Students will take the Keystone Exam at the completion of the Algebra IB course."
-    },
-    {
-      "course_id": "ALGEBRA-IB",
-      "course_name": "Algebra IB",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Algebra IA",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "Algebra IB is a continuation of the Algebra IA course. Students will continue working with systems of equations and inequalities, explore data analysis, and work with problems and applications that involve exponents, radical expressions, polynomials, factor ing, and rational expressions. Students will interact with course materials through online lessons, videos, interactive questions, and real-world applications. Students will take the Keystone Exam at the completion of the Algebra IB course. Students must successfully complete Algebra IA prior to taking Algebra IB."
-    },
-    {
-      "course_id": "GEOMETRY",
-      "course_name": "Geometry",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Algebra I",
-      "grade_levels": [
-        "9",
-        "10"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Geometry, students create a solid foundation in mathematics by studying and exploring a wide range of geometric concepts. Students study the basics of geometric equations and how these equations are present in daily life. They calculate perimeter and work directly with angles and arcs to evaluate the importance of geometric mathematics in construction. Course topics include angle relationships, parallel and perpendicular lines, congruence, bisectors, trigonometry, and transformations."
-    },
-    {
-      "course_id": "ALGEBRA-II",
-      "course_name": "Algebra II",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Algebra I",
-      "grade_levels": [
-        "10",
-        "11"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Algebra II, students analyze situations verbally, numerically, graphically, and symbolically. Students will become proficient at solving equations and inequalities. Students extend their knowledge of algebraic expressions, absolute value, functions, and graphs. The course covers multiple types of functions, including quadratic and trigonometric functions, along with function interpretation, complex numbers, and binomial expansion. Algebra II prepares students for more advanced mathematical concepts and content."
-    },
-    {
-      "course_id": "ADVANCED-STATISTICS",
-      "course_name": "Advanced Statistics",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Algebra I, Algebra II, Letter grade of B or higher in Algebra II or strong recommendation of teacher",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Advanced Statistics teaches methods and terminologies of descriptive and inferential statistics. Students who complete this course will be able to conduct their own analyses of standard one-sample or two-sample data sets, follow statistical reasoning, and read statistical reports with understanding. Additional topics include association and regression, causation and evidence, and probability. Introductory topics in linear regression and analysis of variance will also be discussed. This course uses college-level materials, and students are encouraged to take the course concurrently with Pre-Calculus or Calculus when possible."
-    },
-    {
-      "course_id": "STATISTICS-CIHS",
-      "course_name": "Statistics (CIHS)",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Algebra I, Algebra II, 11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Statistics is a College In High School course offered in partnership with Robert Morris University. This course is designed to give the student a general understanding of statistical tools as they are used in making decisions. The examples and exercises emphasize interpretation and are drawn from a wide range of actual situations. Excel computer software is used to simplify complex compu tations. The first section covers analysis decision-making through the use of summarized descriptive data, both ungrouped and grouped. This includes the study of frequency distributions, measures of central tendency, and measures of dispersion. The second section deals with more complex situations in decision-making with presentation of analysis of variance and chi-square testing with one and two variables and multiple outcomes of each variable. The third section introduces the concepts and theories of correla tion and linear regression and how these are used in statistical inference. Statistics is offered in the Fall and Spring semesters and is a three college credit course."
-    },
-    {
-      "course_id": "PRECALCULUS",
-      "course_name": "Pre-Calculus",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Algebra I, Geometry, Algebra II, Pre-Calculus",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Students in this course will study the calculus of a single variable. It is a rigorous mathematics course that builds on the student\u2019s understanding of polynomial, trigonometric, exponential, and logarithmic functions. These functions are studied intensely through an investigation of limits, derivatives, and integration. Emphasis is placed on real-world applications that utilize a numerical, graphi cal, and analytical approach."
-    },
-    {
-      "course_id": "AP-CALCULUS-AB",
-      "course_name": "AP Calculus AB",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "BC": 1.0
-      },
-      "prerequisites": "Algebra I, Geometry, Algebra II, Pre-Calculus, Letter grade of A recommended in all previous mathematics courses",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": true,
-      "details": "AP Calculus AB is an accelerated course meant to prepare students who plan to take the Advanced Placement Calculus AP exam. Emphasis is placed upon the multi-representational approach to calculus where problems and their solutions are explored and interpreted graphically, numerically, analytically, and verbally. Students will be required to explain their answers in written form and will be asked to compare their written responses to the AP grading rubric. Students will develop a deeper understanding of very small and very large numbers, use representations to model and interpret mathematical phenomena, use integrals to solve differ ential equations, solve real-world exponential growth and decay problems, and compute volumes of irregular shapes. In addition, students will judge the meaning, utility, and reasonableness of the results of symbol manipulation, including those carried out by technology. This course is a College Board-approved Advanced Placement course and AP Calculus AB covers all required College Board topics."
-    },
-    {
-      "course_id": "CONSUMER-MATHEMATICS",
-      "course_name": "Consumer Mathematics",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Consumer Mathematics shows students how math is used in everyday life. Students will review addition, subtraction, multiplication, and division of whole numbers, as well as fractions and decimals. The course instructs students on how to perform practical tasks such as calculating earnings from a job, shopping for and working with food, buying clothing, managing a household, purchasing and maintaining a car, and understanding interest rates. Consumer Mathematics teaches problem-solving strategies and alternate methods of computation to solve a wide range of consumer problems."
-    },
-    {
-      "course_id": "MATH-ESSENTIALS",
-      "course_name": "Math Essentials",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Math Essentials helps students strengthen key math skills while connecting those concepts to everyday life. Students will practice core arithmetic operations, explore the properties of addition and multiplication, and learn strategies for solving equations. Students will also learn about ratios, rates, and proportions, and discover practical applications for each. Students will review their geometry knowledge through the study of triangles, quadrilaterals, area, surface area, and volume."
-    },
-    {
-      "course_id": "BUSINESS-MATHEMATICS",
-      "course_name": "Business Mathematics",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Algebra I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Business Mathematics, students discover a variety of basic mathematical concepts and tools for real-word mathematical appli cation including algebraic equations, formulas, operations using fractions, decimals, and percentages. This course shows students how to work with percentages to solve application problems and how to research investment and insurance options. Students learn to graph a function from an equation and work with ratios and proportions. Additionally, students explore the proper methods of preparing and analyzing income statements and balance sheets. They also study the ways in which to calculate real estate loan payments and learn to read and interpret graphs to represent data in the business world. This course also discusses mean, median, and mode as it relates to the distribution of data."
-    },
-    {
-      "course_id": "FINANCIAL-LITERACY",
-      "course_name": "Financial Literacy",
-      "category": "Mathematics",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Financial Literacy explores aspects of personal finance and prepares students for their financial future. This course focuses on earning income, spending, saving, investing, managing credit, and managing risk using real-world applications. Financial Literacy is a required course for graduation and may be used for mathematics or elective credit."
-    },
-    {
-      "course_id": "BIOLOGY",
-      "course_name": "Biology",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "Biology invites students to explore the essence of life, from the cellular to the ecological level, using real-world phenomena, modeling, and scientific investigations. Students will examine how life is organized and functions, including mechanisms of homeo stasis and the transfer of energy and matter within organisms and their environments. Through modeling, students will compare cellular reproduction with the reproduction of multicellular organisms. Biology also explores the complexities of genetics and gene expression, highlighting their role in the theory of evolution. Additionally, students discuss the concept of ecology, learning about its principles, the interactions that occur within ecosystems, the biosphere, and how humans have impacted ecosystems thus far. Upon completion of this course, students will be required to take the Keystone Biology exam."
-    },
-    {
-      "course_id": "AP-BIOLOGY",
-      "course_name": "AP Biology",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Biology, Chemistry, Letter grade of B or higher in all previous science courses.",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": true,
-      "details": "AP Biology serves as an equivalent to a two-semester introductory college Biology course. Students enrolling in this course must have taken Biology in a previous school year; it is not a first-year Biology course. Students taking this course may be eligible for college credit upon successful completion of the course and a sufficient score on the AP Biology exam administered by the Col lege Board. This course differs from a traditional high school biology course by the resources used, the range and depth of topics covered, laboratory work, and the time and effort required by students. AP Biology covers the four big ideas in biology, evolution and cellular processes, energy and communication, genetics and information transfer, and interactions. Students will understand how the process of evolution drives the diversity and unity of life. Biological systems that utilize free energy and molecular build ing blocks to grow, to reproduce, and to maintain dynamic homeostasis will be examined. Students will develop an understanding of how living systems store, retrieve, transmit, and respond to information essential to life processes. Finally, students will be able to describe how biological systems interact, and these systems and their interactions possess complex properties. This course is a College Board-approved Advanced Placement course."
-    },
-    {
-      "course_id": "PRINCIPLES-OF-BIOLOGY-CIHS",
-      "course_name": "Principles of Biology (CIHS)",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Principles of Biology is a College In High School course offered in partnership with the Community College of Beaver County. This course provides lecture and laboratory experience through a survey of the biological sciences with an emphasis on reproduction, environmental biology, evolution, human genetics, and anatomical systems. Principles of Biology is a four college credit course. It is offered in the fall semester only."
-    },
-    {
-      "course_id": "ENVIRONMENTAL-SCIENCE-CIHS",
-      "course_name": "Environmental Science (CIHS)",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Biology, 11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Environmental Science is a College In High School course offered in partnership with Robert Morris University. The course is a study of interrelationships that equips students with the necessary information to understand the complex arena of environmental con cerns, problems, and alternative courses of action. Questions of human populations and their interaction with the environment, as well as basic ecological principles, environmental ethics, resource use, and conservation are addressed. This course concludes with alternatives we might use to build a society capable of living on Earth with less harmful impacts. Principles of scientific inquiry are integrated throughout the course. Environmental Science is a three college credit course that is offered in the spring semester only."
-    },
-    {
-      "course_id": "EARTH-SCIENCE",
-      "course_name": "Earth Science",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Earth Science, students learn the importance of scientific inquiry and how to communicate the results of scientific investigations. This engaging course takes students on a journey through Earth using real-world phenomena, modeling, and interactive projects. Students will explore the structure and theoretical origins of the universe, the sun, and the solar system. Earth Science also includes the study of weather, the water cycle, the atmosphere, and pollution. In addition, the course covers the physical structure of the Earth and Earth\u2019s tectonic system, including the rock cycle, tectonic activity, mountain building, weathering, and erosion. Students will study geologic history, including the evolution of Earth\u2019s atmosphere, the geologic time scale, and the fossil record. Earth Sci ence explores natural resources and the effects of human population on those natural resources."
-    },
-    {
-      "course_id": "ENVIRONMENTAL-SCIENCE",
-      "course_name": "Environmental Science",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Environmental Science builds a strong foundation in core ecological concepts while examining real-world issues related to sus tainability, energy and pollution, and environmental policy. Through inquiry investigations, students will learn about human impact on the environment, earth systems, and more. This course encourages critical thinking and problem-solving, giving students the opportunity to learn how science connects to their lives."
-    },
-    {
-      "course_id": "PHYSICAL-SCIENCE",
-      "course_name": "Physical Science",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Algebra I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Students enrolled in Physical Science are introduced to the principles of chemistry and physics so that they may develop a better understanding of atoms and chemical and nuclear interactions. Students explore properties and states of matter. They will inves tigate chemical bonds and reactions as well as the development of the periodic table. An outline of modern atomic theory and organic and nuclear chemistry are also discussed. Additionally, students study Newton\u2019s laws of motion while considering the inter actions between motion, forces, energy, and thermodynamics."
-    },
-    {
-      "course_id": "PHYSICS",
-      "course_name": "Physics",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Algebra I, Algebra II",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Physics students begin their studies by exploring measurement and motion. Students will explore scientific notation, significant digits, gravity, Newton\u2019s laws of motion, circular motion, and the International System of Units. Mathematical concepts such as graphing and trigonometry will be applied in order to solve physical problems during these units of study. During the second half of the course, students will further their exploration of mechanics while exploring harmonic motion, wave properties, and optics. Stu dents will learn the basics of thermodynamics and fluids and explore the principles of electricity and magnetism. The area known as Modern Physics, which includes topics such as the photoelectric effect, nuclear science, and relativity, concludes the course."
-    },
-    {
-      "course_id": "CHEMISTRY",
-      "course_name": "Chemistry",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "Biology, Algebra I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Chemistry gives students a deeper understanding of the world around them as they investigate how chemistry is involved in ev eryday life. Students explore fundamental chemistry content and concepts, including the metric system, the periodic table, atomic structures, bonding, chemical reactions, and nuclear reactions. They apply their knowledge and science process skills through labs that use common household objects in order to explore the practicality of chemistry. This course requires students to use funda mental algebra skills to solve problems. Course topics include the atom, defining matter, acids and bases, polar bonds and mole cules, solutions, ionic bonding, thermochemistry, and nuclear reactions."
-    },
-    {
-      "course_id": "ASTRONOMY",
-      "course_name": "Astronomy",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Astronomy, students begin by discussing basic astronomical concepts and discoveries throughout history. They take an in-depth look at the first moments of the universe by studying the Big Bang. From there, they investigate the evolution of the universe, be ginning with the first atoms and moving on to explore elements, stars, solar systems, and galaxies. Students gather information to determine if there is a possibility of life on other planets and in other solar systems. In this course, students analyze the major space missions that have led to the modern study of cosmology, and they explore the possibilities of where this field may take scientists in the future."
-    },
-    {
-      "course_id": "BIOINFORMATICS",
-      "course_name": "Bioinformatics",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Algebra I, Biology",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Bioinformatics was developed by Better Educators of Science for Tomorrow (B.E.S.T.) of the Pittsburgh Supercomputing Center at Carnegie Mellon University. Students will discover how concepts from math, biology, and chemistry are applied to the functions of DNA, RNA, and protein production and function. In addition, students will learn how to make use of the data generated by the Hu man Genome Project. Students will learn how to search and compare genetic data from different organisms utilizing several DNA and protein identification programs currently being used in medical, forensic, agricultural, and other life science research. The goal of this class is to introduce students interested in pursuing a degree in life sciences to possible career fields that are just beginning to evolve."
-    },
-    {
-      "course_id": "CUTTING-EDGE-SCIENCE",
-      "course_name": "Cutting Edge Science",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Biology",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Cutting Edge Science explores popular topics in the biological sciences and will offer students the opportunity to utilize analytical science, biology, and anatomy. Cutting Edge Science is a course that requires scientific research and will involve in-class discus sions and presentations. Students will learn about new trends in research and technology and how each of these fields impacts their everyday life. Students will discuss topics such as health and disease within a population with students learning how to utilize data to solve real-world issues. Additional topics include sports medicine and forensics. New cutting-edge sciences and technology will also be explored as they appear in current events."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-ENGINEERING",
-      "course_name": "Introduction to Engineering",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "Algebra I, Geometry",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "The Introduction to Engineering course provides students with an overview of the field of engineering and the primary processes and procedures used by engineers. Students will explore engineering careers and their impacts on society, and they will learn how mathematics and science are used in the field of engineering. They will examine different engineering disciplines, the engineering design process, and different engineering styles and methods used in the field. Students will take part in hands-on learning as they work through a real-life design problem and solve it through the steps of the engineering design process. They will then create a presentation to demonstrate their solution to the design problem."
-    },
-    {
-      "course_id": "MARINE-SCIENCE",
-      "course_name": "Marine Science",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Marine Science, students will discover the vast network of life that exists beneath the ocean\u2019s surface and study the impact that humans have on the oceans. Major course concepts include animals of the sea; habitats and ecology; plankton, plants, and algae; and life at extremes. This course will also explore intelligence in the seas and futures in Marine Science. About 70% of the Earth is covered by water and even today, much of the world\u2019s oceans remain unexplored. This course will help students begin to under stand the importance of our oceans and the life and systems they contain."
-    },
-    {
-      "course_id": "MEDICINE",
-      "course_name": "Medicine",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "Biology",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Medicine provides students with an introduction to healthcare with an emphasis on modern, clinical medicine. Students review ba sic human anatomy and physiology by studying the various body systems and then study major health concerns affecting people in the U.S. and the world. This comprehensive course examines such topics as nutrition, infectious diseases, cancer, traumatic injuries, and healthcare career opportunities. Additional topics in this course include medical ethics, reproductive rights, and mental illness. This course is intended for students in grades 11 and 12 and is recommended for students interested in pursuing a career in the medical field."
-    },
-    {
-      "course_id": "RENEWABLE-ENERGY",
-      "course_name": "Renewable Energy",
-      "category": "Science",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "The earth\u2019s population is growing rapidly, and we need to find new, innovative ways to ensure that we are able to provide for our global energy needs. Students will look at the reasons why sustainability is important, take a balanced and evidence-based look at climate change, and learn new ways that we can harness renewable resources. In this course, students will look at a variety of top ics surrounding renewable energy sources including wind, solar, hydro, and bio energies. Additionally, students will investigate the effect of different energy processes on the environment and ecological cycles. The course will wrap up with a look into practices to promote conservation of biodiversity."
-    },
-    {
-      "course_id": "CIVICS",
-      "course_name": "Civics",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Civics offers students an introduction to the foundation of the democratic government of the United States and the basic principles of the judicial system. In this course, students explore what it means to be a citizen, as well as the structure of the legislative, execu tive, and judicial branches of the United States government. Students also look at the characteristics of state and local governments throughout the country to examine the organization and responsibilities of these branches. In this course, students explore the components of the American economy, including its foundations and how it interacts with other economies worldwide. Additional topics addressed in this course include the party system, international relations, citizen rights and responsibilities, local govern ments, the function of government, the free market, and the United States Constitution."
-    },
-    {
-      "course_id": "AMERICAN-HISTORY",
-      "course_name": "American History",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "American History covers the discovery, development, and growth of the United States. The first half of the course is a survey of the struggle to build the United States of America from the colonial period to the beginning of the twentieth century. By means of reading, analyzing, and applying historical data, students come to appreciate the forces that shaped our history and character as an American people. Students also explore research methods and determine accurate sources of data from the past. The second half of American History begins with a study of American life before the 1929 Stock Market crash and how the Roaring Twenties influenced society in the late 19th through early 20th centuries. Students will examine the causes and consequences of the Great Depression and move into a detailed study of World War II with an emphasis on America\u2019s role in the conflict. The course contin ues with an analysis of the Cold War struggle and America\u2019s rise as a superpower. The Civil Rights and Women\u2019s Rights movements, pollution and the environment, and American domestic and foreign policy will be examined. This course concludes with a summary of current events and issues."
-    },
-    {
-      "course_id": "WORLD-HISTORY",
-      "course_name": "World History",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "World History allows students to investigate significant events, people, and places from prehistoric to modern times and consider their historical relevance. In this wide-ranging course, students learn how the world and its inhabitants were shaped over time, and, in the process, gain a better understanding of the role that geography plays in world history. Topics will include the ancient world, medieval Europe, the age of exploration, the age of revolution, Imperialism, the emergence of new nations, and the modern world."
-    },
-    {
-      "course_id": "AP-UNITED-STATES-HISTORY",
-      "course_name": "AP United States History",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Letter grade of B or higher in all previous social studies courses",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": true,
-      "details": "Advanced Placement United States History will provide students with a complete and thorough understanding of the \u2018full circle\u2019 nature of American History. By design, American History is inherently a story of cause and effect. Students are expected to be involved in the learning process and committed to putting forth their best effort. This entails reading and writing on a daily basis, in class as well as independently. American history will be approached in a multifaceted method. Students will explore concepts in an analytical manner and emphasis will be placed on achieving a \u2018true transfer of knowledge\u2019. There will be extensive use of technolo gy throughout the class when it assists in the development and understanding of the concepts of American history. A student may place out of an introductory college history course based upon completion of the course and a satisfactory score on the AP United States History exam. This is a College Board-approved Advanced Placement course."
-    },
-    {
-      "course_id": "AMERICAN-NATIONAL-GOVERNMENT-CIHS",
-      "course_name": "American National Government (CIHS)",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "American National Government is a College In High School Course that is offered in partnership with the Community College of Beaver County. This course considers the evolution of the principles, form, and operation of our governmental systems with special emphasis on constitutional issues and the various means for resolving conflicts. American National Government is offered in the fall and spring semesters and is a three college credit course."
-    },
-    {
-      "course_id": "WESTERN-CIVILIZATION-I-CIHS",
-      "course_name": "Western Civilization I (CIHS)",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit (Fall Only)"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Western Civilization I is a College In High School Course that is offered in partnership with the Community College of Beaver County. This is a survey course of the civilization of the West, focusing on the development of the Paleolithic man to 1500. Political and cultural changes are emphasized. Western Civilization is offered in the fall semester only and is a three college credit course."
-    },
-    {
-      "course_id": "WESTERN-CIVILIZATION-II-CIHS",
-      "course_name": "Western Civilization II (CIHS)",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit (Spring Only)"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Western Civilization II is a College In High School Course that is offered in partnership with the Community College of Beaver County. This is a survey course of the civilization of the West, focusing on the development of 1500 to the present. Political and cultural changes are emphasized. Western Civilization II is offered in the spring semester only and is a three college credit course."
-    },
-    {
-      "course_id": "PRINCIPLES-OF-SOCIOLOGY-CIHS",
-      "course_name": "Principles of Sociology (CIHS)",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "11th Grade or higher, 3.0 GPA, and recommendation of Academic Advisor",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Principles of Sociology is a College In High School Course that is offered in partnership with Robert Morris University. This course is a basic introduction to the field of sociology, which enables students to see and understand the social world and their place in it in new ways. Students will become familiar with basic sociological concepts and social institutions, explore different explanations for social phenomena, and learn about the methods sociologists use to answer questions about society. This course is offered in the fall and spring semesters and is a three college credit course."
-    },
-    {
-      "course_id": "CULTURAL-EXPLORATIONS",
-      "course_name": "Cultural Explorations",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Cultural Explorations will examine culturally significant time periods in world history. Each class topic will be covered in depth for a nine-week period. Students will study Ancient Greece, Ancient Rome, the Ancient Americas (Maya, Aztec, and Inca), and the Middle Ages. In addition to reading historical fiction, students will be introduced to the time periods by reading biographies, classic litera ture, and primary source documents to highlight important people and events. Students will participate in class discussions, design projects, and present their work to peers."
-    },
-    {
-      "course_id": "ECONOMICS",
-      "course_name": "Economics",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Basic economic theory and its impact on everyday life are the foundation of this course. Students will learn about basic economic features such as scarcity, opportunity cost, efficiency, and trade-offs, as well the factors of production. Major topics in this course include wealth distribution, financial markets, multinational corporations, money and banking, supply and demand, and economics and democratic development. Economics is an upper-level course suggested for 12th-grade students."
-    },
-    {
-      "course_id": "ANCIENT-HISTORY",
-      "course_name": "Ancient History",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Ancient History explores political, cultural, and economic themes that occurred from the beginnings of known history in ancient civilizations throughout Africa, the Americas, Asia, and Europe to the 1500s. Other topics discussed in the framework of Ancient History will be war, art, science and technology, religion and philosophy, and daily life through both individual narratives and collec tive experiences. These themes and topics will be considered to develop knowledge about the past and to relate ancient history to the development of the world today."
-    },
-    {
-      "course_id": "WORLD-CULTURES",
-      "course_name": "World Cultures",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "World Cultures explains global geography, history, and culture to students. In this course, students study the major political powers of each era and discover how the world\u2019s earliest civilizations developed through the Age of Exploration to the Industrial Revolution. In the second half of the course, students examine a world at war, navigating the Great War, nationalist movements in Russia and Asia, World War II, the Cold War, Third World independence, and struggles for democracy. The course closes with discussions of current global issues, such as terrorism, technology, economy, pollution, and renewable energy."
-    },
-    {
-      "course_id": "WORLD-GEOGRAPHY",
-      "course_name": "World Geography",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "BC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "BC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In World Geography, students will learn the basic skills of map reading and development, geographic technology, and the recog nition of geographic themes to make sense of the world. The course examines world regions including the nations, people, and cultures of each region. This course explores the Americas, Europe, Eurasia, Central and Southwest Asia, South Asia, Africa, East Asia, and the Pacific."
-    },
-    {
-      "course_id": "AFRICAN-AMERICAN-HISTORY",
-      "course_name": "African American History",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "African American History introduces students to the study of African American life, culture, and history. This course covers enslavement, life as a slave, and emancipation. It also discusses African American involvement in major wars, the civil rights movement, major societal contributions, and life in modern society. Students will examine the Nat Turner Rebellion, Jim Crow laws, civil rights amendments to the Constitution, the Harlem Renaissance, the growth of civil rights organizations, and the election of Barack Obama to the Presidency. This course describes the influential role of African Americans in U.S. History."
-    },
-    {
-      "course_id": "PSYCHOLOGY",
-      "course_name": "Psychology",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Psychology, students explore the science of explaining and controlling human behavior. Psychology plays an integral part in everyday life because all decisions, relations, and emotions are closely tied to behavior and genetics. Within this course, students look at behavior and consider prominent psychologists who have made impressive and monumental discoveries through testing, research projects, and proving theories. Students study everything from the anatomy of the brain to psychological disorders. This course includes units on thinking and intelligence, sensation and perception, identity and personality, psychological methods, ther apy, and social psychology."
-    },
-    {
-      "course_id": "SOCIOLOGY",
-      "course_name": "Sociology",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "BC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Sociology, students explore the various topics and sociological terminology necessary for understanding and exploring the field. Students investigate major sociological perspectives and the famous sociologists who invented and contributed to them. Addition ally, students determine how researchers perform valid and reliable sociological studies. This course is ideal for students who are interested in pursuing post-secondary careers in sociology, psychology, law, or other social sciences."
-    },
-    {
-      "course_id": "PENNSYLVANIA-HISTORY",
-      "course_name": "Pennsylvania History",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Pennsylvania History, students explore the geography, history, culture, and government of Pennsylvania. This course examines Pennsylvania\u2019s role in the founding of the United States, the Civil War, and the Industrial Revolution. Students will also study the state\u2019s significance in modern times."
-    },
-    {
-      "course_id": "1960S-AMERICA",
-      "course_name": "1960s America",
-      "category": "Social Studies",
-      "sub_category": null,
-      "type": [
-        "BC"
-      ],
-      "credits_raw": {
-        "BC": "0.5 credit"
-      },
-      "credits": {
-        "BC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Have you ever wondered what life was like in the 1960s? This course allows students to experience what life was like during this exciting and monumental decade. 1960s America will cover the social, political, and cultural movements and changes that oc curred during the decade. Some of the topics explored within this course include the transition from the 1950s Post-War boom to the 1960s Radical Movement, the Vietnam War, and civil rights. This course also focuses on many significant headlines of the 1960s, which include the assassinations of Robert Kennedy, President John F. Kennedy, and Dr. Martin Luther King, Jr., as well as the Space Race, music of the 1960s, and the effects of pop culture. Through this course, students look at different historical events and deter mine how these events impacted American citizens during this decade and afterwards. This course delivers in-depth content on the 1960s and gives each student a realistic perspective of this decade."
-    },
-    {
-      "course_id": "AMERICAN-MUSIC-APPRECIATION",
-      "course_name": "American Music Appreciation",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Music in America has a rich history. In American Music Appreciation, students will navigate this unique combination of culture and creativity that spawned jazz, rock and roll, and hip hop. From early church music to 21st century pop, students will gain a new understanding of the key developments, people and genres in American music. Some lessons in this course may contain mature themes and subject matter."
-    },
-    {
-      "course_id": "ART-AND-VISUAL-CULTURE",
-      "course_name": "Art and Visual Culture",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In order to provide a comprehensive study of art, students in Art and Visual Culture analyze and interpret artwork created by others, examine the concepts of aesthetics and art criticism, and explore the practical application of art in a variety of careers. Art and Vi sual Culture spotlights drawing as a form of communication and introduces students to the elements of art and principles of design through hands-on activities. Students sharpen their observation skills using a variety of art media. Through practice and experimen tation, students become adept at using basic techniques and processes to depict the world around them and express their thoughts and feelings."
-    },
-    {
-      "course_id": "ART-HISTORY",
-      "course_name": "Art History",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Art History is an introductory art course that focuses on the art and architecture of the ancient Near East and Europe. The course begins with a brief overview of the fundamental methods of art including the meaning, purposes, and styles of art; the art elements and principles of design; and the various media used to create artwork. It then follows a chronological timeline. The timeline shows how art and world events have influenced each other from the prehistoric period to the early medieval era. There is a large focus on the art and architecture of Europe and North America. Particular emphasis centers on viewing works of art within their historical and cultural context so that students learn to understand how these key achievements relate to the past and present world."
-    },
-    {
-      "course_id": "ART-HISTORY-I-30000-BCE-1900-CE",
-      "course_name": "Art History I: 30,000 BCE - 1900 CE",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Interpreting the origins of art from the earliest cave paintings gives a student a unique perspective on their own work. In Art Histo ry I, students will analyze various art forms including painting, sculpture, and architecture over changing periods of time. Students will build their own cultural inventory studying the social, political, and religious movements that affect art. Art History I is intended for students who are interested in learning more about western world history, the history of visual arts, or both. This course gives students a very thorough yet comprehensible introduction to art history through the study of visual arts from prehistoric times through 1900. Information is learned through various means including hands-on creation of original art inspired by application of information from the course. This course covers many works of fine art over the centuries. Some artists and their works could not be represented without showing partial nudity or suggestive content."
-    },
-    {
-      "course_id": "ART-HISTORY-II-1901-PRESENT",
-      "course_name": "Art History II: 1901 - Present",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Art History I: 30,000 BCE - 1900 CE",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Appreciating the cultural context of art in the modern era relies on analyzing artistic principles, abstract symbolism, and design techniques. Students in Art History II will explore the social, political, and religious trends from Post-Impressionism to street art and understand the formal and conceptual issues that foster changes in art throughout history. This course covers many works of fine art over the centuries. Some artists and their works could not be represented without showing partial nudity or suggestive content."
-    },
-    {
-      "course_id": "ARTS-AND-SOCIETY-I-4000-BCE-1750-CE",
-      "course_name": "Arts and Society I: 4000 BCE - 1750 CE",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Arts are not created in a vacuum. They are the result of the people and cultures that create them. Arts and Society I takes the student on a chronological walk through history, stopping along the way at a variety of historical, political, cultural, and artistic key moments. From 4000 BCE to 1750 CE, the student analyzes the relationship between societal culture and the arts being produced. This course covers time periods during world history that are controversial and full of change. Many sensitive subjects are covered, including politics and religion."
-    },
-    {
-      "course_id": "ARTS-AND-SOCIETY-II-1751PRESENT",
-      "course_name": "Arts and Society II: 1751-Present",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Arts and Society I: 4000 BCE - 1750 CE",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "How do the people and the cultures of society affect the art around them? Students in Arts and Society II step into history and explore key moments from 1751 to the present in politics, culture, and art. Arts and Society enhances students\u2019 global awareness as they learn to interpret these significant events and their impact on the arts. This course covers time periods during world history that are controversial and full of change. Many sensitive subjects are covered, including politics and religion."
-    },
-    {
-      "course_id": "BEGINNING-PIANO",
-      "course_name": "Beginning Piano",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None, however, students must provide their own instrument",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Beginning Piano is a hands-on class that introduces high school students to the piano. Students will learn about basic music theory, the parts of the piano, and the placement of notes on the keyboard. During this course, students will learn and perform a varied repertoire of music. Students must have regular access to a piano or keyboard to take this course."
-    },
-    {
-      "course_id": "CHOREOGRAPHY-AND-CHOREOGRAPHERS",
-      "course_name": "Choreography and Choreographers",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Choreography is a statement about society, culture, and history. Students in Choreography and Choreographers will gain insight into the creative processes involved in choreography and will trace the work of influential choreographers from the 16th century to the present. Some lessons in this course may contain mature themes and subject matter."
-    },
-    {
-      "course_id": "DANCE-AROUND-THE-WORLD",
-      "course_name": "Dance Around the World",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Throughout human history, some form of dance has evolved in every world population. Students in Dance Around the World will explore dance as a ritual, a religion, and a performed art from the primitive ages through the 19th century. Historic and cultural perspectives will be examined to study those influences on the work of today\u2019s choreographers and dancers."
-    },
-    {
-      "course_id": "DANCE-IN-AMERICA",
-      "course_name": "Dance in America",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "The history of American dance is complex and rich with innovation. Dance in America takes the student on a journey through the social and political climates that fostered its development. From early ballet companies to Broadway and music videos, numerous choreographers, artists, and dancers have contributed to the evolution of American dance."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-DIGITAL-PHOTOGRAPHY",
-      "course_name": "Introduction to Digital Photography",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Some previous knowledge and understanding of photography",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Capturing a special moment in a photograph is powerful. In Introduction to Digital Photography, students will study the history of photography as well as the basic operations of a digital camera. As they are introduced to different styles of photography and photographers, students will begin to develop their skills as well as their own voice in photography. This course is for anyone who wants a comprehensive overview of photography, beginning with photography standards and equipment. In this course, students will explore the history of photography, photographers who influenced the field, and technological advancements and their impact on the art. Students will also learn how to use a digital camera and explore the elements of lighting, composition, printing, resizing, and compiling a portfolio of work."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-DANCE-I",
-      "course_name": "Explorations in Dance I",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Grace, beauty, and the pursuit of excellence are hallmarks of ballet and modern dance companies. In Explorations in Dance I, students will study the foundations of the ballet style, from clothing and training to rehearsal and performance. Students will meet the artists on stage and behind the scenes who create the magic of ballet and modern dance. This course is for those interested in exploring the world of dance as it covers basic knowledge needed to understand how dance started and how it has evolved over time. Students will gain a foundation for study in dance, choreography, or theatrical productions."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-DANCE-II",
-      "course_name": "Explorations in Dance II",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Explorations in Dance I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "The bright lights of Broadway have showcased many dancers\u2019 talents. Students in Explorations in Dance II will be introduced to the audition process, learn about the roles of agents and unions, as well as explore some of the most exciting Broadway shows. This content is intended for students who want to expand upon what they learned in Explorations in Dance I. Explorations in Dance II expands and moves on to new dance techniques, along with the dance philosophies and innovations of notable choreographers, as well as the influence of specific Broadway shows and performances. The basics of jazz and tap dance are introduced, and the impact that dance has on musical theatre will be discussed."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-FILM-AND-TELEVISION",
-      "course_name": "Explorations in Film and Television",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "The culture of cinema and broadcast television tells a unique story of American history and innovation. Students in Explorations in Film and Television will be introduced to the technology, industry icons, and stars of the big and small screens. By studying and writing about film and television, students will analyze technological and cultural trends and understand how to be an informed viewer in the future."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-MEDIA-ARTS",
-      "course_name": "Explorations in Media Arts",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "From television to video games, media is everywhere. In Explorations in Media Arts, students will study the art behind the media, how it is created, the history of media, and the legal and ethical issues that arise while creating media arts. Students will apply criti cal thinking skills to creating web, video, animation, and graphic media projects."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-MUSIC-I",
-      "course_name": "Explorations in Music I",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Ability to read music",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Music can be simple, yet so complex. Students in Explorations in Music I study the basics of music, instrument families, music notation, and organization. By analyzing the ways music is connected to other disciplines and industries as well as training on basic terminology, students will progress in their understanding of music."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-MUSIC-II",
-      "course_name": "Explorations in Music II",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Ability to read music, Explorations in Music I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "How do you understand the music of a symphony or recognize a song from Japan? In Explorations in Music II, students will study the different forms of music and their instrumentations. Students are introduced to music from around the world and given a com prehensive overview of Western music from ancient times to the present, including art, folk, and popular genres. Students will be able to identify instruments and music from different cultures and different genres. This course is intended to help students become well-rounded musicians and listeners."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-MUSIC",
-      "course_name": "Explorations in Music",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Explorations in Music, students will discuss what music is, why we listen to music, and how music affects us. Students will study the basic elements of music, instrument families, active and passive listening, and how to read notes and rhythms. The forms and textures of different musical ensembles will also be examined. Students will learn about the development of different musical styles over the course of music history through exploration of different time periods and composers of music. The connections be tween music and other fields, such as math, politics, dance, theatre, science, will also be discussed. By analyzing the ways music is connected to other disciplines and industries as well as learning basic terminology, students will progress in their understanding of music. Lastly, we will take a look at the different careers in music."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-THEATRE-I",
-      "course_name": "Explorations in Theatre I",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "It\u2019s enjoyable to watch a well-done performance. Explorations in Theatre I helps the student understand the effort that goes into that performance. Through the perspective of the performer, the playwright, and the director, students will gain an appreciation of the artists who have contributed to both musical and non-musical performances and an understanding of the world of the actor. Major topics of study in the course include the lives and works of great playwrights such as William Shakespeare and Arthur Miller, major theatrical works and their ties to culture and humanity, the process of scriptwriting and revision, and the roles and duties of individuals in a theatrical production. Students will also have the opportunity to write, revise, and analyze a script. This course is intended to be introductory."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-THEATRE-II",
-      "course_name": "Explorations in Theatre II",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Explorations in Theatre I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Behind the actor are dozens of artists enhancing that performance. Students in Explorations in Theatre II will build a vocabulary of the people and the equipment that work behind the scenes in the theatre. This is a course for those who are interested in gaining further knowledge of all the technical aspects of theatre. Understanding the business aspects of producing a performance as well as the artistic considerations in technical production enhances future audience members\u2019 appreciation for the theatre. Major topics of study in the course include sound and light editing; the roles of production and stage managers; the dramaturge; costume, hair, and makeup design; set design; and prop construction. The course concludes with the student writing a script that incorporates all technical components of theatre."
-    },
-    {
-      "course_id": "EXPLORING-CINEMA",
-      "course_name": "Exploring Cinema",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Exploring Cinema introduces students to filmmaking and cinematic productions. The course explores the technology used to create a film and begins to build an aesthetic appreciation of films for the student. Students also are exposed to media art and the ethics of media creation to give a wider perspective on the different ways material is presented."
-    },
-    {
-      "course_id": "FASHION-DESIGN",
-      "course_name": "Fashion Design",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Fashion Design is an advanced course for students interested in learning the intricate process of how the fashion system works. Students will study the fashion business in sequential order from concept to consumer. They will examine all of the processes involved in the industry, from producing raw materials, apparel, and accessories to the retail stores that sell fashion merchandise to the public. Students learn that the decision-making process is complex and not just about the latest designers, styles, or trends of an era. In this course, students will explore the history of fashion, including the looks and creations of every era. They will discover the equipment, tools, and fabrics used to create fashion, and they will learn how technology is used in fashion. Students have an opportunity to express themselves and their style through the creation of their own fashion design sketches and mood boards. In this course, students will learn fashion terminology and how to forecast new and upcoming fashion trends."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-DANCE",
-      "course_name": "Introduction to Dance",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "What inspires choreographers and dancers? Students in Introduction to Dance will study the main elements of dance: space, time, and energy. They will discover how a choreographer uses these elements to create a dance piece and explore how dancers respond with their own creativity. This course is intended for students who are interested in dance but may also be wondering if it\u2019s the art form \u201cfor them.\u201d Introduction to Dance looks over many topics relating to dance, including several famous choreogra phers, common and popular dance forms historically and in modern times, as well as different kinds of dance techniques and stage effects. This course will teach students many of the basic steps of dance and give them opportunities to try it out for themselves."
-    },
-    {
-      "course_id": "MUSIC-APPRECIATION",
-      "course_name": "Music Appreciation",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Format-specific descriptions: AC: Music Appreciation exposes students to a large variety of music. Students will be able to explain personal music preferences and identify how music is impacted by technology, social values, and daily life of the composers. Students develop an understanding of the composer\u2019s intent and the ability to rationalize personal interpretation of music works. Similarities and contrasts in music throughout the eras are identified as well as how previous compositions impact future compositions. In this intermediate-level course, students will study music from the Medieval, Renaissance, Baroque, Classical, and Romantic Eras. They will also explore 20th century and contemporary music and its impact. VC: Music Appreciation introduces students to the theory and history of music. The course begins by studying musical form, texture, rhythm, and expression. Students will then explore musical genres from classic to contemporary. Students will learn to identify instruments, musical pieces, musical periods, and musical styles. Popular forms of American and world music, including folk, jazz, blues, modern, and forms of rock and roll will be examined. Students will grow in their understanding of music as they examine stylistic eras, important composers, and global musical perspectives."
-    },
-    {
-      "course_id": "MUSIC-AROUND-THE-WORLD",
-      "course_name": "Music Around the World",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Format-specific descriptions: AC: There is a vibrant chord of music that runs through every culture in the world. Students in Music Around the World will explore the music of Africa, Asia, Europe, and the Americas. From Finland to Mongolia to Zimbabwe, students will study the impact a country\u2019s history and societal values have on the music of that nation. This course studies various music throughout the world and its impact on other cultures, all while touching on the geography of the regions and the instruments used. VC: Music in a global society, with the technological advances that have been made in such a short time period, has changed the way we share and experience music. Until recently, most people did not experience different styles of music from all over the world, unless they traveled to a specific area and learned about that culture, including the native music. Now that there are many ways to watch and listen to music, music from cultures all over the world can be more easily consumed. In this introductory-level course, students will experience music from all different areas of the world. There is a vibrant chord of music that runs through every cul ture in the world. Students in this course will explore the music of Africa, Asia, Europe, and the Americas. From Finland to Mongolia to Zimbabwe, students will study the impact a country\u2019s history and societal values have on the music of that nation. Students will also learn about what music is, how it affects us, why we listen to it, the basic elements of it, and how it is shared. Music can influ ence our lives as well as the world around us."
-    },
-    {
-      "course_id": "MUSIC-THEORY-I",
-      "course_name": "Music Theory I",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Explorations in Music I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Learn to understand the beautiful language of music! In Music Theory I, students will learn the \u201calphabet\u201d that makes up music, in cluding music notation. How to read music and to follow the structure, including pitch, rhythm, harmony, scales, keys, and chords, empowers any avid music listener or future musician and is the cornerstone of this course. The study of music theory will help any musician improve as a player, a thinker, and a listener. The ability to understand and reflect upon what one is playing and listening to is invaluable. This course also begins to develop the students\u2019 musical ear. This advanced-level course covers higher-level concepts and would be appropriate for students who are more serious about their music study."
-    },
-    {
-      "course_id": "MUSIC-THEORY-II",
-      "course_name": "Music Theory II",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Music Theory I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Music Theory II, students will elevate music comprehension by understanding the concepts and rules of creating music. Music Theory II is both theoretical and practical, and encompasses advanced harmonic and rhythmic structures, instrumentations, and key changes. Through sight and sound, students will deepen their appreciation of music with a grasp of music theory. The study of music theory will help any musician improve as a player, as a thinking and understanding musician and listener. The ability to under stand and reflect upon what one is playing and listening to is invaluable. This course also begins to develop students\u2019 musical ear. This advanced-level class particularly focuses on harmonic function and analysis."
-    },
-    {
-      "course_id": "PHOTO-MANIPULATION",
-      "course_name": "Photo Manipulation",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Manipulating and altering an image to create a new work allows for a new interpretation. By using advanced software tools, includ ing Photoshop, students in Photo Manipulation will learn strategies for creating complex imagery. Students will acknowledge the principles of design, editing, and repairing still images or creating unique new concepts in their art. Photo manipulation skills are a basic requirement for many careers in art, advertising, media, advocacy, education, and design\u2014just to name a few. This course not only prepares the students to be competitive in the technological skills required for contemporary art, photography and design; it also gives them basic frameworks for design, editing, and composition. Students will become familiar with the field and with the options available to them."
-    },
-    {
-      "course_id": "PHOTOJOURNALISM",
-      "course_name": "Photojournalism",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "A powerful image can tell an eloquent story without any words. Students in Photojournalism will meet some of the pioneers who set the standards for this unique way of storytelling. As they study the principal types of photojournalism and the ethical responsibil ities a photojournalist has behind the lens, students will develop their own storytelling skills through their writing and their photo graphs. This course is designed for students interested in photography and photojournalism, including those who intend to pursue a career in photojournalism."
-    },
-    {
-      "course_id": "STUDIO-ARTS-I-TECHNIQUES-AND-TOOLS",
-      "course_name": "Studio Arts I: Techniques and Tools",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Creativity flourishes with the right foundation. In Studio Arts I, the student artist will lay the groundwork for their art by practic ing unique exercises to develop drawing, painting, and mixed media skills. Incorporating their knowledge of composition, design, colors, and forms, students will use the appropriate materials and tools to work from realism to abstract. This course is for students beginning a serious study of studio art techniques. A foundation of knowledge and skills will help students grow as artists while building a foundation for further study."
-    },
-    {
-      "course_id": "STUDIO-ARTS-II-CONCEPTS-AND-EXPRESSIONS",
-      "course_name": "Studio Arts II: Concepts and Expressions",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Studio Arts I: Techniques and Tools",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Developing a unique personal style and creating complex imagery is possible for any artist. Students in Studio Arts II will engage in techniques that take their work to a more sophisticated level. Analyzing other artists and their works will help the student artist find deeper meaning and new interpretations to create a cohesive result."
-    },
-    {
-      "course_id": "THE-STUDY-OF-CONTEMPORARY-MUSIC",
-      "course_name": "The Study of Contemporary Music",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "The Study of Contemporary Music introduces and explores the roots of contemporary American music. This course will focus on the social, technological, and artistic trends that helped create and shape music of the 1920s through present time. Learners will explore various genres and periods of music, including the early development of rock and roll in the 1950s, the evolution of popular music, the British invasion of the 1960s, and the many \u201cmutations\u201d of rock music in the 1970s. The second half of the course con tinues to explore the roots of contemporary American music. After completing this course, students will have gained a deeper un derstanding and appreciation for various forms of contemporary music, ranging from rock to jazz to country. Students will explore the history of each form and the role of music in the modern world."
-    },
-    {
-      "course_id": "THE-WORLD-OF-STEAM",
-      "course_name": "The World of STEAM",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Each aspect of the arts relies on science and technology. The arts, science, and technology are intertwined, now more than ever. In The World of STEAM, students will learn why the eye sees color, how a dancer uses gravity, and what makes a sound wave travel. Understanding the science behind the arts will elevate students to a new level of creativity."
-    },
-    {
-      "course_id": "THEATRE",
-      "course_name": "Theatre",
-      "category": "Fine Arts",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Theatre invites students to explore the history of theatre and the basic elements of stage production. This course highlights the technology used to create early and modern stage productions and the basic fundamentals of acting. Theatre provides students with a look at production elements such as stage lighting, sound, costume, and makeup. Students learn to apply voice and gesture skills in pantomimed and improvised scenarios, and they receive an overview of the responsibilities of the producer, director, and technical crew of a theatre production. Students develop insight into the motivations of a playwright in the development of a story, and they explore the careers and works of famous playwrights. Theatre provides a balanced educational experience for all students so that they can gain the inquiry and critical skills involved in clarifying theatrical perceptions and knowledge."
-    },
-    {
-      "course_id": "AMERICAN-SIGN-LANGUAGE-I",
-      "course_name": "American Sign Language I",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In American Sign Language (ASL) I, students will gain a foundation of ASL and of deaf culture. The ASL alphabet, numbers, basic vo cabulary, and grammar will be covered over the course of the year. Lesson topics include greetings, introducing yourself, identifying people, exchanging personal information, discussing living situations, talking about families, and talking about activities. Students will have a fundamental understanding of ASL reception and production skills. Lessons will also include how to use non-manual markers to indicate different types of sentences and questions."
-    },
-    {
-      "course_id": "AMERICAN-SIGN-LANGUAGE-II",
-      "course_name": "American Sign Language II",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "American Sign Language I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In American Sign Language (ASL) II, students will build on what they have learned in American Sign Language I. Students will expand their language skills to communicate in a wider array of situations, to further develop their language fluency and to advance their level of comprehension of ASL. Vocabulary and key grammar structures will be introduced using dialogues and narratives that are culturally appropriate. Various number types, expanded fingerspelling practice, space and semantic use of agreement or spatial verbs, and use of negation signs will be covered. Culture lessons will focus on behaviors and knowledge that enable students to act in appropriate linguistic and social ways and to gain more cultural insight into the deaf community."
-    },
-    {
-      "course_id": "FRENCH-I",
-      "course_name": "French I",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. French I is an introductory course designed for students who have little or no previous knowledge of the French language and cul ture. This course will allow students to acquire the tools necessary for communication and comprehension of the French language. Students explore the global francophone community, and they compare these different cultures to each other and to their own. This course primes students\u2019 fluency through various types of communications."
-    },
-    {
-      "course_id": "FRENCH-II",
-      "course_name": "French II",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "French I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In French II, students have the opportunity to review some of the structures from French I, but they also build their knowledge of the basic and intermediate French concepts. Students review the present tense of regular and irregular verbs, the pass\u00e9 compos\u00e9 with avoir and \u00eatre, and adjective agreement and placement. Students examine grammatical forms and are challenged to progress in their basic knowledge and speaking capabilities."
-    },
-    {
-      "course_id": "FRENCH-III",
-      "course_name": "French III",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "French I, French II",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In French III, students continue their study of the French language and popular French culture. They use larger vocabulary terms and explore a variety of literary texts that include the structures and vocabulary that they are learning. In this course, students study vocabulary, grammar, and culture in context through authentic literary and journalistic texts, putting these items into practice through written and spoken tasks."
-    },
-    {
-      "course_id": "FRENCH-IV",
-      "course_name": "French IV",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "French I, French II, French III",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. This intermediate-advanced course is geared toward developing a higher level of fluency in French. Students will continue to ex plore the Francophone world, making stops in France, and French-speaking and Francophone regions in Europe and in the Ameri cas. They will use new vocabulary to talk about the news, natural phenomena, environmental issues, politics, government services, fine arts, and traveling. Students will review the present, past, and future tenses along with the subjunctive mood. The student will also be able to use prepositions with infinitives, the passive voice, the comparative and superlative, as well as the past subjunctive. French literature will play an important role in this course. Students will be exposed to a variety of literary texts that utilize the struc tures and vocabulary that they will be learning. An opportunity to apply these structures to various written and recorded projects will be applied throughout the course. Vocabulary, grammar, and culture in context through authentic literary and journalistic texts will be examined over the course of the year."
-    },
-    {
-      "course_id": "GERMAN-I",
-      "course_name": "German I",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In German I, students are introduced to the basic and fundamental skills necessary for expressing common ideas in the German language. They learn to state daily activities and how to have an introductory conversation. These concepts build in theme and scope, allowing students to explore topics including daily activities, travel, needs, desires, and preferences in typical and increasing ly complex situations. The course provides a realistic context in which students can practice their newly acquired skills. German I also provides a considerably thorough study of grammatical skills, ranging from the most basic sentences to engaging and creative structures dealing with more interesting situations."
-    },
-    {
-      "course_id": "GERMAN-II",
-      "course_name": "German II",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "German I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. German II provides students with a comprehensive introduction to nouns and verbs and previously learned concepts. Students examine the case systems extensively and focus on verbs throughout this course. They learn different types of verbs and their conjugations in different grammatical tenses such as present, future, past simple, and present perfect. Students practice one of the most challenging aspects of German grammar\u2014verbs with accusative, dative, and genitive prepositions\u2014thoroughly. Students learn a large number of new vocabulary words and idioms to assist in their continual development of language."
-    },
-    {
-      "course_id": "GERMAN-III",
-      "course_name": "German III",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "German I, German II",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In German III, students continue their study of the German language and popular German culture. Students use larger vocabulary terms and explore a variety of literary texts that include the structures and vocabulary that they are learning. In this course, students study vocabulary, grammar, and culture in context through authentic literary and journalistic texts, putting these items into practice through written and spoken tasks."
-    },
-    {
-      "course_id": "MANDARIN-CHINESE-I",
-      "course_name": "Mandarin Chinese I",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. Mandarin Chinese is an introductory course to modern Standard Chinese, which includes the spoken language Mandarin and the written language of simplified characters. In addition to learning about Chinese culture, students learn the basics of Chinese pro nunciation through a beginner\u2019s vocabulary of Chinese characters using scenario-based examples. In this course, students get a glimpse of Chinese tradition and society through cultural tips. As the course progresses, students will explore rhetoric, reading and writing, personal applications, and phonetics. Students have the opportunity to learn about Chinese traditions, sports, employment, and shopping. Other topics include places in China, cultural comparisons, and cultural influence."
-    },
-    {
-      "course_id": "MANDARIN-CHINESE-II",
-      "course_name": "Mandarin Chinese II",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "Mandarin Chinese I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. Mandarin Chinese II is an intermediate-level course in which learners will continue to develop communication skills through listen ing, reading, speaking, and writing in the target language. The course presents modern Standard Chinese, Mandarin, as the spoken language and simplified characters as the written language. Students will recognize and apply vocabulary in Pinyin and Chinese characters in the context of common scenarios. Students will practice handwriting Chinese characters in complete sentences. Students will continue learning about Chinese tradition, language, and society to become more familiar with Chinese language and culture. In this course, students will learn about careers and work, nature, environment, travel, activities, and movies."
-    },
-    {
-      "course_id": "SPANISH-I",
-      "course_name": "Spanish I",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. Spanish I provides students with a strong foundation of the Spanish language and its cultural influences. From pronunciation to ba sic grammar and practical vocabulary, students gain a fundamental understanding of written and conversational Spanish. Students practice pronunciation sounds, greetings and introductions, questions, and present-tense verb conjugation. Students learn how to describe people, school, and pastime activities in addition to likes and dislikes. Spanish I presents information in a fun, interesting format that promotes learning and draws a link between the classroom and real-world situations."
-    },
-    {
-      "course_id": "SPANISH-II",
-      "course_name": "Spanish II",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "Spanish I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. Spanish II introduces complex grammatical components, such as reflexive verbs and the present progressive, preterite, and imper fect tenses, along with idiomatic expressions unique to the Spanish language. Building on an ever-growing lexicon, students incor porate concepts to form questions, express preferences and possession, discuss the past, and describe and compare people, plac es, and locations. Spanish II continues to build a foundation for students in their pursuit to learn and master the Spanish language."
-    },
-    {
-      "course_id": "SPANISH-III",
-      "course_name": "Spanish III",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit",
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0,
-        "AC": 1.0
-      },
-      "prerequisites": "Spanish I, Spanish II",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. In Spanish III, students acquire a more extensive topical vocabulary while gaining a higher understanding of complex grammatical structures, verb applications, and idiomatic expressions. This course allows students to increase their reading and listening compre hension as well as their fluency in speaking and writing in Spanish. Students describe, analyze, summarize, and explain ideas verbally and in writing using the Spanish language."
-    },
-    {
-      "course_id": "SPANISH-IV",
-      "course_name": "Spanish IV",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "Spanish I, Spanish II, Spanish III",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: World Languages Elective. This course will refine students\u2019 speaking, listening, and writing skills, as well as extend their understanding of Hispanic culture. Students will interact with various resources to continue to build knowledge and apply advanced grammar, syntax, and precise vocabulary to express themselves more accurately in a variety of contexts. Cross-cultural understanding is fostered and real-life applications are emphasized."
-    },
-    {
-      "course_id": "AP-SPANISH-LANGUAGE-AND-CULTURE",
-      "course_name": "AP Spanish Language and Culture",
-      "category": "Electives",
-      "sub_category": "World Languages Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "Spanish I, Spanish I, Spanish III",
-      "grade_levels": [
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": true,
-      "details": "Sub-category: World Languages Elective. In AP Spanish Language and Culture, students will use the three modes of communication\u2014interpretive, interpersonal, and pre sentational\u2014as defined by the World Readiness Standards for Learning Languages. Using the ACTFL Performance Descriptors for Language Learners, students will be provided opportunities to demonstrate their proficiency in each of the three modes. Each module is theme-based, providing ample opportunities to interpret multimodal texts, speak with and write to others, and present by speaking and writing for an audience. Themes in the first half of the course include families and communities, education and careers, entertainment and travel, global citizenship and human geography, lifestyle and traditions, social awareness, historical fig ures and ethnic identity. In order to demonstrate all three modes of communication, students will engage in discussions, personal opinion and persuasive essays, interpretation activities, and oral and audiovisual presentations. In the first half of the year, students will encounter similar tasks as found on the AP exam, but by the second half of the course the difficulty and complexity will have increased to match the exam\u2019s expectations. Themes in the second half of the year include technology, healthcare and medicine, architecture, beauty and creativity, personal beliefs and interests, fashion, design, literature and the arts, science and ethics, eco nomics, and philosophy and religion."
-    },
-    {
-      "course_id": "HEALTH",
-      "course_name": "Health",
-      "category": "Health",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Health, students discover how to make conscientious decisions when attempting to improve their overall health and wellness. From healthy lifestyles, diets, and exercise to responsibilities within individual families and larger communities, topics within the dis cipline of health are pertinent and applicable to all students. Throughout the course, students review concepts that promote safe, healthy, and active lifestyles. Major topics of study in this course include noncommunicable diseases, decision making, nutrition, communication, peer and family relationships, health services, and emotions. Students are required to complete this Health course for graduation."
-    },
-    {
-      "course_id": "HEALTH-LIVING-YOUR-BEST-LIFE",
-      "course_name": "Health: Living Your Best Life",
-      "category": "Health",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In Health: Living Your Best Life, students will explore the dimensions of good health by learning about the building blocks of nutrition and elements of physical fitness. Students will also engage in the study of personal safety, infectious and noninfectious diseases, substance use and abuse, and environmental health. This health elective does not count as the required health course for graduation."
-    },
-    {
-      "course_id": "HEALTH-MENTAL-HEALTH-AND-WELLBEING",
-      "course_name": "Health: Mental Health and Well-Being",
-      "category": "Health",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "In this course, students will explore how mental health and well-being impact our overall health. Students will learn how to develop and maintain healthy relationships and how to manage stress. Topics include neurodiversity, mental illness, the impacts of violence on mental health, and death and dying. This health elective does not count as the required health course for graduation."
-    },
-    {
-      "course_id": "PHYSICAL-EDUCATION-912",
-      "course_name": "Physical Education 9-12",
-      "category": "Physical Education",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.25 credit"
-      },
-      "credits": {
-        "AC": 0.25
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Pennsylvania Public School Law requires all students to complete an annual course in physical education. In compliance with the law, students in grades 9-12 are required to complete 72 hours of organized, supervised physical activity each school year. Students will receive a physical education kit that includes a workbook and items to complete different physical activities. Students are re quired to complete at least half of their physical education hours using the items they receive in the physical education kit. Students are also required to record their physical education hours in the PA Cyber Physical Education Log. Looking to have a little more fun in Physical Education? Students in grades 9-12 have the option to take Physical Education with a live instructor one day a week. Students can record this hour on their Physical Education log towards the completion of the 72-hour requirement."
-    },
-    {
-      "course_id": "ACCOUNTING",
-      "course_name": "Accounting",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. In this semester course, students will explore accounting, including investigating accounting careers. They will learn basic account ing skills and procedures both with and without a computer for general journals, general ledgers, cash payments journals, cash receipts journals, sales journals, accounts payable ledgers, and accounts receivable ledgers. In this course, students will also learn how to reconcile a bank statement and to prepare payroll records. This course covers the basic principles of financial accounting for individuals and for companies with attention to both the mathematical formulas and to the ethical side of accounting. Each unit has practical exercises including a project at the end of the unit."
-    },
-    {
-      "course_id": "ADVERTISING",
-      "course_name": "Advertising",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. Throughout Advertising, students discover various ways that advertising touches their lives. Students learn to identify what custom ers need and want so that various companies are able to advertise and sell a variety of products and services. Students will learn to identify customers\u2019 desires and discover what is needed to create, advertise, and sell products to fit these needs. This course guides students to develop the skills they need as consumers and advertisers. Some of the course topics include building client relation ships, advertising strategies, types of media, purchasing media, and creating a complete advertising plan. Advertising provides a solid foundation for those students contemplating careers in marketing, advertising, or other business-related fields."
-    },
-    {
-      "course_id": "BUSINESS-APPLICATIONS",
-      "course_name": "Business Applications",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Basic spreadsheet, word processing, and presentation software skills (i.e., Microsoft Office Suite)",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. In Business Applications, students focus on business software and the corresponding skills required in the business world. The course begins with an overview of computers, including hardware, software, and operating systems. Students explore spreadsheet, word processing, presentation, and database software and discover how to fulfill a customer request using these skills. They also study web-based applications and additional software packages and learn about Internet technology. Students investigate common security concerns and discover how to prevent security issues. Finally, students experience the software development cycle where they learn how various professionals utilize business applications. They discover the importance of moral and ethical responsibility in an online community. Students must possess basic spreadsheet, word processing, and presentation software skills before enter ing this course. Additionally, students must be independent learners, and they must be comfortable learning new technology and researching software features and functions."
-    },
-    {
-      "course_id": "BUSINESS-MANAGEMENT",
-      "course_name": "Business Management",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Introduction to Business",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. Business Management guides students through examples of their roles as wage earners, consumers, and citizens as they explore the wide, exciting world of business. Students examine topics ranging from extensive credit use to the role of government in the U.S. economy. Students are encouraged to take Introduction to Business as a prerequisite to Business Management, as Business Management dives deeper into the different aspects of managing a business successfully."
-    },
-    {
-      "course_id": "ENTREPRENEURSHIP",
-      "course_name": "Entrepreneurship",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. Students enrolled in this course will learn about the fundamentals of planning and operating a business. Students will identify the personal attributes needed to be a successful entrepreneur and will have the opportunity to research various business models. The planning, organizing, directing, and controlling functions of operating a business will also be studied. Students will understand the responsibilities and risks involved in being in charge of an organization. Students will also use their creativity to create and develop a hypothetical business plan using the fundamental information they learned throughout the course."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-BUSINESS",
-      "course_name": "Introduction to Business",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit",
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. In this course, students will learn their roles as wage earners, consumers, and citizens as they explore the wide, exciting world of business. Course topics range from the extensive use of credit to the role of government in the United States economy. Students will be introduced to insurance, investments, communication, transportation, labor, world trade, and other issues vital to succeed ing in today\u2019s economy. Tips on career planning and job seeking promise to be especially helpful."
-    },
-    {
-      "course_id": "MARKETING",
-      "course_name": "Marketing",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. In this course, students discover the various ways marketing, and consequently, advertising impact their lives. Marketing is geared toward introducing students to the study and implementation of market analysis, which focuses on the identification and fulfillment of customer needs. This course provides a solid foundation for students contemplating careers in marketing, advertising, or other business-related and commercial fields."
-    },
-    {
-      "course_id": "MONEY-MANAGEMENT",
-      "course_name": "Money Management",
-      "category": "Electives",
-      "sub_category": "Business Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Business Elective. Money Management offers guidance in responsible money management skills. Topics covered in this course include various methods and approaches to saving and investing money for retirement, developing a sound budget, and eliminating debt. Students will also learn about several types of insurance, career planning, and the ins-and-outs of real estate and mortgages. This course is intended to provide a sound foundation for a lifetime of wise financial decision-making."
-    },
-    {
-      "course_id": "CAREER-FORWARD-11",
-      "course_name": "Career Forward 11",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. Career Forward 11 provides students with a solid foundation for a successful post-secondary future. The course will focus on career awareness and exploration, employability skills, growth and advancement, and personal interests and career planning, as well as elements of financial literacy. Students will begin the course by exploring their abilities, aptitudes, and interests. Career Forward 11 uses the Xello online program to provide students with a variety of activities and the ability to learn more about the careers that interest them. This knowledge will assist students in creating a career path and a career plan that will be aligned to their personal interests and skills. Practical items such as resumes, cover letters, and interviewing skills will be addressed. Students will also learn how to increase skills in practical areas such as teamwork, media literacy, internet literacy, and decision-making. Whether students plan to seek a two-year degree, four-year degree, a military career, or employment, Career Forward 11 will provide all students information and practical advice for achieving those goals. Career Forward 11 is a required course for graduation."
-    },
-    {
-      "course_id": "CAREER-EXPLORATION-IN-DENTISTRY",
-      "course_name": "Career Exploration in Dentistry",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course introduces students to the exciting and varied career opportunities in the dentistry profession, from dental assistant all the way up through oral surgeon. Students will review the history of dentistry globally and in the United States and will learn key dental terminology. The course will introduce the roles and tasks of the profession as well as the skills and education required of nearly every member of the dental staff. Students will gain an understanding of what it takes to perform each position and how they work together. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "CAREER-EXPLORATION-IN-FINANCE",
-      "course_name": "Career Exploration in Finance",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course introduces students to the challenging world of finance and provides information about finance careers. Students will review key financial terms and examine various groups, positions, and roles within financial institutions. Resumes, interviews, and networking will also be introduced. Students will also discuss ethics on Wall Street and the role of finance within society. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "STARTUPS-AND-INNOVATION",
-      "course_name": "Startups and Innovation",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course explores the idea of pursuing passions in employment, emphasizing the value of an entrepreneurial mindset for a lasting career. It shows how skills in finding opportunities, creating value, and solving problems are essential in any setting, from startups to nonprofits."
-    },
-    {
-      "course_id": "CAREER-EXPLORATION-IN-HEALTHCARE",
-      "course_name": "Career Exploration in Healthcare",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course introduces students to the exciting and varied future career opportunities in the healthcare industry that will be in demand. The course will introduce the roles and tasks, identify education and skills needed, identify responsibilities of roles that support or supervise their role, analyze legal and ethical responsibilities, limitations, and implications for each of these professions. Healthcare roles explored in this course include physicians, physician assistants, pharmacists, physical therapists, healthcare infor mation technology managers, occupational therapists, technicians, dentists, paramedics, and nurses. This course involves interac tive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "CONSTRUCTION-FUNDAMENTALS-AND-CAREERS",
-      "course_name": "Construction Fundamentals and Careers",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course introduces students to some of the foundational elements of home construction and does a deep dive into careers, technology, and the future of construction. It also addresses some of the academic proficiencies that different careers in the field of construction will need to have. Later in the course, specific careers, career outlooks, and specialized education and training requirements will be covered. Students will discover the varied roles within the field as well as what it takes to own a construction company. Finally, the course delves into green construction and where the future of construction is headed. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "LEED-GREEN-ASSOCIATE",
-      "course_name": "LEED Green Associate",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course introduces students to the LEED process. LEED, or Leadership in Energy and Environmental Design, is the global stan dard for green building certification. Throughout the course, students will gain an understanding of the various components of green building. They will work through modules focused on integrative strategies, water efficiency, indoor environmental quality, and more. The theme of sustainability and sustainable construction is woven throughout each module, both in terms of physical environment and as it pertains to LEED certification."
-    },
-    {
-      "course_id": "EXPLORATIONS-IN-ARTS-CAREERS",
-      "course_name": "Explorations in Arts Careers",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. For every Broadway dancer, every television star, and every pop singer, there are countless people behind the scenes helping to make it happen. Explorations in Arts Careers introduces students to the skills that are part of the many fascinating careers in the arts. This course focuses on all types of art forms, such as music, dance, visual arts, film, and theater. Studying the arts creates independent and innovative thinkers, and many doors are open to an artist with the proper training. This course should be taken for those considering a career in the arts and is intended for students who may want to pursue an arts major in college or an artistic career path."
-    },
-    {
-      "course_id": "ROBOTICS-APPLICATIONS-AND-CAREERS",
-      "course_name": "Robotics: Applications and Careers",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course teaches students what a robot is and how it relates to other key technologies such as artificial intelligence and machine learning. The course then examines ten applications of robots and how they will change and impact various aspects of our lives and the economy. Will robots simply steal our jobs, or will they be a tool that will create new opportunities and even free humans to use our creativity and curiosity to their full potential? Students will grapple with this and many other questions as they explore this vital, future-focused subject. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "EARLY-CHILDHOOD-EDUCATION",
-      "course_name": "Early Childhood Education",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. The Early Childhood Education course is designed to provide an overview of the expectations and roles of the early childhood edu cator. This course provides details about childhood development, health, nutrition, and guidance strategies to help students under stand the exciting and unique opportunities that a career in early childhood education can offer. The course is intended to prepare students for challenges they may face, while emphasizing the rewards of being able to influence the life of a young child. The ability to offer support to children as they learn and grow is a point that is highlighted throughout each lesson."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-EDUCATION-AND-TEACHING",
-      "course_name": "Introduction to Education and Teaching",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course is designed to prepare future educators for the classroom they may inherit! The course starts with a history of educa tion and the blended, adaptive, and personalized learning opportunities that are coming to the forefront in teaching and learning. It then explores new and emerging technologies, along with their current and future impact on education. Throughout the course, students will explore a wide range of career possibilities in the education field and evaluate both the promises and pitfalls of tech nology in education. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "BIOTECHNOLOGY",
-      "course_name": "Biotechnology",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Biology",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course provides the students with a solid foundation in biotechnology. Students will engage in interactive videos designed to teach students about career paths, research, data analysis, laboratory safety, and the use of laboratory equip ment in the field of biotechnology. Additionally, students will examine topics that include Polymerase Chain Reaction (PCR), analysis of DNA structure, DNA replication, and the DNA purification process. Students will demonstrate their knowledge of laboratory equipment by exploring the use of micropipettes, serological pipettes, and spectrophotometers. Students will also discover how to make a molar solution. Upon completion of this course, the students will be equipped with work-related knowledge and the skills necessary for careers in biotechnology."
-    },
-    {
-      "course_id": "MEDICAL-ASSISTANT",
-      "course_name": "Medical Assistant",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course is designed to prepare students with the knowledge and skills to assess, plan, provide, and evaluate care for patients in a variety of healthcare settings. Students will engage with interactive videos to learn first aid principles, diagnostic testing, and lab oratory procedures. Emphasis will be placed on safety, medical law, and medical interventions. This course is designed to provide students with a competitive edge for entry into the healthcare marketplace."
-    },
-    {
-      "course_id": "NURSING-ASSISTANT",
-      "course_name": "Nursing Assistant",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course is designed to prepare students with knowledge of basic nursing assistant skills, which are necessary to assess, plan, provide, and evaluate the care of patients in various healthcare settings. Students will engage with interactive videos while learning about infection control, personal care skills, mental health needs, and legal responsibilities. Additional information on standard vital signs, identifying body parts, wheelchair assistance and ambulation, and the care of patients is also provided. This course is de signed to provide students with a competitive edge for entry into the healthcare global marketplace. This course is best suited for students in grades 11 and 12."
-    },
-    {
-      "course_id": "EMERGENCY-MEDICAL-RESPONSE",
-      "course_name": "Emergency Medical Response",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. Emergency Medical Response is a comprehensive course that provides essential skills in CPR, basic wound care, patient stabiliza tion, and the use of Automated External Defibrillators (AEDs). Students will learn to operate safely and effectively within their scope of practice, focusing on emergency medical procedures and musculoskeletal system knowledge. Students will master patient assessment and emergency response strategies."
-    },
-    {
-      "course_id": "AGRICULTURAL-SCIENCE",
-      "course_name": "Agricultural Science",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course is designed as the foundational course for agricultural studies. The course introduces the major areas of scientific agricultural production, research, and introductory skills and knowledge in agricultural science and agricultural technologies. Students will practice crop leaf identification, determine genotypes and phenotypes, determine medication dosages, practice vehicle maintenance, and use financial applications in agriculture. Upon completion of the course, they will be equipped with the knowledge and skills necessary for careers in agriculture."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-ANIMAL-SCIENCE",
-      "course_name": "Introduction to Animal Science",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course introduces students to the scientific principles in animal behavior, the growth and development of animals, and basic animal body systems. The scientific principles are applied in animal management, proper nutrition, and disease prevention. Using interactive videos, students will practice basic livestock surgical procedures and injection techniques and under stand the digestive system and basic animal terminology. Upon completion of this course, students will be equipped with knowl edge and skills that will help prepare them for a career in Animal Science."
-    },
-    {
-      "course_id": "VETERINARY-SCIENCE",
-      "course_name": "Veterinary Science",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. The agricultural education course in veterinary science covers the basics of animal care. This competency-based course covers animal behavior, anatomical structures, animal body systems, safety, disease, parasites, feeding, animal control and restraint, and general animal care. Students will practice equipment identification, standard veterinary procedures, filling prescriptions, and more. Upon completion of this course, students will be equipped with knowledge and skills that are valuable in pursuing a career in Veter inary Science."
-    },
-    {
-      "course_id": "CRIMINAL-JUSTICE",
-      "course_name": "Criminal Justice",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course provides students with an overview of the criminal justice system. In the Criminal Justice course, students engage in interactive videos designed to test their visual memory and the ability to apply their skills to effectively manage a crime scene. Students will become immersed in topics that include criminal and constitutional law, security, and communications. Students will review basic law enforcement skills, which include tactics, methods, and other skills utilized by law enforcement."
-    },
-    {
-      "course_id": "CULINARY-ARTS",
-      "course_name": "Culinary Arts",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course provides students with an overview of basic fundamentals and standard practices of the culinary arts. In this course, students will learn culinary techniques and the recognition, selection, and proper use of tools and equipment. Students will learn how to identify and prepare a variety of foods and recipes, as well as master conversions through the use of proper scaling and measurement techniques. Using video-based simulations, students will prepare standard recipes while effectively managing time, accurately measuring ingredients, and appropriately using kitchen equipment. Food safety and sanitation techniques will also be an important part of this course."
-    },
-    {
-      "course_id": "CULINARY-ARTS-II",
-      "course_name": "Culinary Arts II",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Culinary Arts I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course builds on the basic culinary fundamentals and standard practices that lead to a career in culinary arts. Students will expand their culinary knowledge by learning how to make desserts, appetizers, salads, seafood, soups, and sauces. They will also learn how to recognize, select, and properly use tools and equipment. An em phasis will be placed on identifying and preparing a variety of foods and recipes from different regional cuisines. Using virtual reality, students will prepare a variety of recipes while effectively managing time, accurately measuring ingredients, and appropriately using kitchen equipment. Food safety and sanitation techniques will align with industry-recognized certifications."
-    },
-    {
-      "course_id": "BAKING-AND-PASTRY",
-      "course_name": "Baking and Pastry",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. Baking and Pastry is an immersive exploration into the art and science of baking, designed to introduce students to the rich world of baking and pastry arts. The themes of the lessons include an overview of baking fundamentals, kitchen safety and sanitation, food handling, baking mathematics, ingredient roles, various mixing methods, leavening agents, and dough types. Students will also ex plore advanced skills such as p\u00e2te \u00e0 choux preparation, cake decorating, custard-making, sourdough fermentation, and tempering chocolate. Additionally, lessons cover dietary alternatives, international pastries, business skills, and the creative aspects of plating and presenting desserts. The course aims to cultivate technical proficiency, creativity, and a solid understanding of food safety, allowing students to develop practical skills and theoretical knowledge necessary for success in the baking and pastry industry."
-    },
-    {
-      "course_id": "HOSPITALITY-MANAGEMENT",
-      "course_name": "Hospitality Management",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. Hospitality Management is an introduction to the areas of the service industry that are dedicated to people\u2019s basic and leisure needs, such as travel, lodging, tourism, food and drink service, event planning, and theme parks. The themes of the lessons include an industry overview, transportation, accommodations, guest relations, marketing and sales, safety and security, legal and ethical responsibilities, housekeeping, finance, back office functions, and front office procedures. The goal is to develop technical skills at the occupational level and include materials that build factual and theoretical knowledge."
-    },
-    {
-      "course_id": "COSMETOLOGY",
-      "course_name": "Cosmetology",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course equips students with the foundational knowledge and practical skills essential for success in the beauty industry, covering hair cutting and styling, chemical services, nail technology, makeup application, and salon management. Through engaging video lessons and practical activities, students gain proficiency in key techniques, such as shampooing, disinfec tion, advanced styling, manicuring, and makeup. Emphasizing salon safety, client communication, professional ethics, and personal branding, the course prepares students for various career opportunities while covering business concepts like financial manage ment, marketing, and salon ownership."
-    },
-    {
-      "course_id": "CARPENTRY",
-      "course_name": "Carpentry",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This course provides students with an understanding of carpentry. Students will engage in interactive videos designed to teach how to use basic measuring tools, hand tools, and machines commonly used in the field of carpentry. Additionally, students will exam ine various wood construction materials and their properties. Throughout the course, students will learn components of site and personal safety, and how to interpret detailed drawings used for construction."
-    },
-    {
-      "course_id": "ELECTRICAL",
-      "course_name": "Electrical",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course is designed to teach students the concepts of basic electricity and safety and provides knowledge, fundamental skills, and systems used by an electrician. Students will apply the knowledge and skills necessary to install switches, receptacles, dimmers, switch boxes, and more! Through interactive videos, the students will learn about electrical circuits, trans formers, conductors, resistors, and the tools used in the industry. Upon completion of this course, students will be equipped with the knowledge and skills to help determine if an electrical career is right for them."
-    },
-    {
-      "course_id": "HVAC-I",
-      "course_name": "HVAC I",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course provides students with a solid foundation in HVAC. Students will engage in interactive videos de signed to teach the primary duties of an HVAC technician, including part identification, sequence of operations, troubleshooting, finances, and air conditioning. Additionally, students will examine basic electricity, heating, cooling, and fundamental copper and plastic piping practices. Students will learn worksite and personal safety components and basic mathematical operations through out the course."
-    },
-    {
-      "course_id": "HVAC-II",
-      "course_name": "HVAC II",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "HVAC I",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course is preceded by HVAC I. This course builds on the students\u2019 knowledge of electricity, heating, cool ing, air distribution, equipment, and air quality. Using interactive videos, students will practice testing heating, ventilation, and air conditioning systems, enabling the students to perform routine maintenance on these systems. Upon completion of this course, the students will be equipped with work-related knowledge and the skills necessary for careers in HVAC."
-    },
-    {
-      "course_id": "PLUMBING",
-      "course_name": "Plumbing",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. This competency-based course introduces students to the foundational skills of the plumbing trade. Topics covered include general plumbing practices, drainage, traps, water systems, estimating, and storing materials used in plumbing. Using interactive videos, stu dents will practice interpreting construction drawings related to plumbing installation, joining pipes and fittings, installing fixtures, and plumbing service and repair. Upon completion of this course, students will be equipped with the knowledge and skills to help determine if a career in plumbing is right for them."
-    },
-    {
-      "course_id": "DRONES",
-      "course_name": "Drones",
-      "category": "Electives",
-      "sub_category": "Career Readiness Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Career Readiness Elective. In this course, students will engage with interactive videos designed to teach students the skills and qualities of a drone pilot. Stu dents will learn how weather affects the drone and will develop an understanding of the physics involved with flying. Students will be immersed in topics that include emergency procedures, preflight inspection, radio communication, VLOS operations, sectional charts, aerial photography, and search and rescue operations."
-    },
-    {
-      "course_id": "ADOBE-ILLUSTRATOR",
-      "course_name": "Adobe Illustrator",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course provides an introduction to Adobe Illustrator. Students will learn everything from basics like navigating Illustrator to performing complex tasks such as managing colors, drawing, creating illustrations, and much more. Students will gain insight into what it is like working in the graphic design industry in this course. The course contains guided video tutorials, hands-on projects, and step-by-step resources that help students learn how to work in Illustrator."
-    },
-    {
-      "course_id": "ADOBE-INDESIGN",
-      "course_name": "Adobe InDesign",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course introduces students to the world of Adobe InDesign. Through the course, students will learn everything from basics like navigating InDesign to performing complex tasks such as creating page layouts, applying interesting effects, and making docu ments interactive. Students will gain insight into what it is like working in the digital media and print design industry in this course. This course contains guided tutorials, do-it-yourself projects, and other resources that will help students practice and learn how to work in InDesign."
-    },
-    {
-      "course_id": "ADOBE-PHOTOSHOP",
-      "course_name": "Adobe Photoshop",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course introduces students to the world of Adobe Photoshop. Through the course, students will learn everything from basics like navigating Photoshop to performing complex tasks such as editing and retouching photos, applying filters and effects, and creating original artwork. Students will gain insight into what it is like working in the visual and graphic design industry. The course contains guided tutorials, do-it-yourself projects, and other resources to help students practice and learn how to work in Photoshop."
-    },
-    {
-      "course_id": "ADOBE-PREMIERE-PRO",
-      "course_name": "Adobe Premiere Pro",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course introduces students to the world of Adobe Premiere Pro. Students will get an insight into the video design and produc tion industry. Throughout the course, students will progress from learning the basics of navigation to performing complex tasks like editing videos, applying filters and effects, and even creating original artwork. This course contains guided tutorials, engaging projects, and great resources that will help students practice and learn how to work in Premiere Pro."
-    },
-    {
-      "course_id": "BASIC-WEB-DESIGN",
-      "course_name": "Basic Web Design",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Ability to navigate the internet, use email, and use word processing software (i.e., Microsoft Word)",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. In this course, students will learn how to design a beautiful and functional website. Students will learn how to take their design and translate it into a live website using Hypertext Markup Language (HTML) and Cascading Style Sheets (CSS) programming languag es. HTML5 and CSS3 will be the standard versions used in the class. Students will understand the design components of websites, including the use of color, layout and when to use different techniques, typography rules, and the importance of imagery. Upon completion of this course, each student will have hands-on experience creating a fully functioning website. Students do not need to have a previous technical background with HTML or CSS prior to taking this course."
-    },
-    {
-      "course_id": "BUILDING-MAINTENANCE-TECHNOLOGIES",
-      "course_name": "Building Maintenance Technologies",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Algebra I, English 9",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. The Building Maintenance Technology course will focus on all aspects of the construction industry, from health and safety to the tools that every construction professional needs in their collection. They will learn about the various roles in the industry as well as job out looks, educational and experiential requirements, and salary information. Some activities will focus on career exploration to discover career options that best align with interests and talents. Students will learn basic construction math and how it is applied during design and building phases of projects. They will learn specifics about carpentry, construction drawings, framing floor systems, framing walls, and framing roofs. Throughout, they will establish a foundation for what opportunities exist for them in the industry."
-    },
-    {
-      "course_id": "CLOUD-TECHNOLOGIES-AND-THE-INTERNET-OF-T",
-      "course_name": "Cloud Technologies and the Internet of Things",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. First, we had the internet of computers. Then, with the advent of email and social media, along with mobile technology, it be came the internet of people. Today\u2019s world is increasingly becoming the internet of things. This course will examine the trends and opportunities surrounding the Internet of Things. Students will learn about the technologies, hardware, and software that underpin these advancements. A variety of end-market applications in our homes, businesses, and cities will be explored. Finally, students will learn about the many career opportunities that the Internet of Things will enable. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "COMPUTER-BASICS",
-      "course_name": "Computer Basics",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. In this course, students will learn how to use productivity and collaboration tools, such as G Suite by Google Cloud to create word processing documents, spreadsheets, surveys, and forms such as personal budgets and invitations."
-    },
-    {
-      "course_id": "CYBERSECURITY",
-      "course_name": "Cybersecurity",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. In the Cybersecurity course, students will learn about the practice of protecting networks, systems, and programs from digital attacks. They will better understand the aim of these attacks, such as destroying information, extorting money and resources, or disrupting business operations. They will learn about the challenges and opportunities that implementing cybersecurity measures can present. Students will learn about countermeasures and role recovery and their integral function in the cybersecurity realm. Additionally, students will learn what makes certain networks and systems more vulnerable to attacks. They will become adept at identifying potential viruses, worms, threats, and malware. The Cybersecurity course acts as a foundation on which to build exten sive knowledge about threats to digital security."
-    },
-    {
-      "course_id": "HISTORY-OF-GAMING-AND-ESPORTS",
-      "course_name": "History of Gaming and Esports",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. In this course, students will learn about the technologies and design principles that have been the foundation of the development of video game technology over the last 50 years. Students will examine and discuss the impact of video games on culture and the economy. Students will learn about the current gaming and esports landscape, including strategies and techniques of top teams and individuals. This course will also discuss the risks and dangers of video games and help students understand how to set appro priate time and content parameters. Finally, the course will identify career paths and opportunities for those who are passionate about gaming."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-ARTIFICIAL-INTELLIGENCE",
-      "course_name": "Introduction to Artificial Intelligence",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course teaches what every student should know about Artificial Intelligence. AI is a fast-moving technology with impacts and implications for both our individual lives and society as a whole. In this course, students will gain a basic introduction to the building blocks and components of artificial intelligence, learning about concepts like algorithms, machine learning, and neural networks. Students will also explore how AI is already being used, and evaluate problem areas of AI, such as bias. The course also contains a balanced look at the impact of Artificial Intelligence on existing jobs, as well as its potential to create new and exciting career fields in the future. Students will leave the course with a solid understanding of what AI is, how it works, areas of caution, and what they can do with technology. This course involves interactive online lessons, projects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "INTRODUCTION-TO-COMPUTER-SCIENCE",
-      "course_name": "Introduction to Computer Science",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. Introduction to Computer Science is a starting point for any student interested in computer-related skills and careers. This course will introduce students to an overview of computers, operating systems, networks, cybersecurity, and the Internet. Students will also have the opportunity to explore careers in computer-related fields and how computers affect everyday life."
-    },
-    {
-      "course_id": "INTRO-TO-JAVA-PROGRAMMING",
-      "course_name": "Intro to Java Programming",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Previous coding experience in any computer language including: JavaScript, Python, C#, C++, Ruby, or any other object-oriented computer language is strongly recommended",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. Java is one of the most widely used computer languages in the world. This course will teach students Java by having them com plete multiple projects, both in the console and user interface, including mad libs, player vs. computer games, battleship, tic tac toe, picture shuffler, and many more. This course is meant to give students ample experience in Java by creating multiple stand-alone programs."
-    },
-    {
-      "course_id": "JAVASCRIPT-GAME-DESIGN",
-      "course_name": "JavaScript Game Design",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "Ability to navigate the internet, use email, and use word processing software (i.e., Microsoft Word)",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. JavaScript is one of the best computing languages to learn because it makes web browsers come alive! This course will teach students JavaScript through coding multiple computer games, including pong, fish, a platformer, and tower defense! They will then code or customize their own game. Students will write all the code themselves by working through individual lessons and by watching video reviews. They will learn about variables, functions, listening events, loops, arrays, and objects. This course assumes no coding experience and includes self-graded quizzes and tests. Students will also upload their work at the conclusion of each project to create an online portfolio."
-    },
-    {
-      "course_id": "MICROSOFT-EXCEL",
-      "course_name": "Microsoft Excel",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course introduces students to Microsoft Excel. Knowledge of this fundamental spreadsheet software has proven to boost career and employment prospects. Excel skills can boost productivity as a student and are useful in daily life, such as managing personal finances. Through an engaging and scaffolded approach, students advance from learning the basics of formatting and navigation to performing complex tasks like data manipulation, macros, and PivotTables."
-    },
-    {
-      "course_id": "MICROSOFT-POWERPOINT",
-      "course_name": "Microsoft PowerPoint",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course introduces students to Microsoft PowerPoint. Students will gain critical skills in this essential presentation software, which will benefit them in their education and professional futures! Students start by learning fundamentals like slide creation and navigation, and progress to more complex tasks like 3D models, animations, and transitions."
-    },
-    {
-      "course_id": "MICROSOFT-WORD",
-      "course_name": "Microsoft Word",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. This course introduces students to Microsoft Word. Students will gain insights into the features and capabilities of this essential software within personal, educational, and business settings. Throughout the course, students progress from learning the basics of navigation to performing complex tasks like graphic elements and collaboration."
-    },
-    {
-      "course_id": "PYTHON-MULTIPLAYER-ADVENTURE",
-      "course_name": "Python Multiplayer Adventure",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. Python is a powerful language designed to do just about anything! This course allows students to learn Python by first completing a text-based console game and then turning it into a multiplayer adventure! Students will not only learn Python from going through the individual lessons and video reviews but also understand a client-server relationship. They will get to code in their own Python web server that allows connections through a browser. Students will gain experience using variables, classes, functions, lists, dic tionaries, generators, and proper Python formatting. This is a great course for anyone interested in preparing themselves for future coding classes. This course assumes no coding experience."
-    },
-    {
-      "course_id": "PYTHON-PROGRAMMING",
-      "course_name": "Python Programming",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. Learn the Python programming language and develop your problem-solving skills! This course covers the fundamentals of pro gramming and algorithmic thinking, including topics such as variables, loops, conditionals, methods, and functions. Students build numerous projects throughout the year, including text-based games and drawings made with code. Coding can be a fun and rewarding experience that helps students discover if computer programming is the career path for them."
-    },
-    {
-      "course_id": "WEARABLE-TECHNOLOGY-INNOVATIONS",
-      "course_name": "Wearable Technology Innovations",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. From hearing aids to pedometers to smart watches, humans have made and worn devices to count their steps and communicate. With the continued miniaturization of chips and sensors, combined with increasing sophistication of artificial intelligence, wear able technology has proliferated into countless end-markets. This course will introduce students to wearable technologies and the components and software that make these technologies possible. The course will also evaluate several applications of wearable technologies in various industries. Finally, the course will examine and discuss the implications of wearable technology, including its pros and cons, and potential implications to our health, privacy, and society. This course involves interactive online lessons, proj ects, short-answer assignments, and personal reflection activities."
-    },
-    {
-      "course_id": "WEB-DESIGN",
-      "course_name": "Web Design",
-      "category": "Electives",
-      "sub_category": "Multimedia & Technology Elective",
-      "type": [
-        "VC"
-      ],
-      "credits_raw": {
-        "VC": "1.0 credit"
-      },
-      "credits": {
-        "VC": 1.0
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: Multimedia & Technology Elective. Web design allows students to learn how websites are designed and created, from planning to publishing. Course content will in clude basic web programming languages, such as HTML and CSS. Students will also learn web file management."
-    },
-    {
-      "course_id": "CHARACTER-EDUCATION",
-      "course_name": "Character Education",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. This course teaches students practical skills for understanding and managing their emotions, setting goals and getting organized, understanding and getting along with others in our diverse world, and making good decisions. Research shows that people who practice these skills have greater academic achievement as students and experience more success and satisfaction as adults."
-    },
-    {
-      "course_id": "CHILD-DEVELOPMENT",
-      "course_name": "Child Development",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. This course is designed to help prepare students for their responsibilities as parents and caregivers of children. Topics include pre natal care, growth and development through age six, teen pregnancy, maternal health, parenting skills, and child guidance."
-    },
-    {
-      "course_id": "COMMUNICATIONS",
-      "course_name": "Communications",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. In Communications, students explore various aspects of communication. They will investigate the foundations of communication by analyzing, applying, and designing creative works essential to the professional communications industry. This course establishes a comprehensive foundation for students interested in a post-secondary career in communications."
-    },
-    {
-      "course_id": "HIGH-SCHOOL-ESSENTIALS",
-      "course_name": "High School Essentials",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. The journey through high school starts here! In this course, students will become familiar with the moving parts of PA Cyber and will learn how to be successful from their first few years of high school to graduation. As students begin to build the foundation for their high school career, this course will help to identify the who, what, when, and where of PA Cyber and the important resources available to them. Students will become familiar with PA Cyber\u2019s digital programs, school and faculty structure, academic supports, the basics of learning, and how to stay safe online. In finishing this course, students will have a clear idea of how to stay on track, get involved, and plan for a successful future. Students will be scheduled for this course in Grade 9. The course will also be available to any high school students who did not complete the course in Grade 9."
-    },
-    {
-      "course_id": "HUMAN-DEVELOPMENT-AND-FAMILY-STUDIES",
-      "course_name": "Human Development and Family Studies",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. Students in the Human Development and Family Studies course explore the basic information about human development, parent ing roles and strategies, and functioning effectively within the family in today\u2019s changing and complex society. This course helps students to develop competencies related to genetics, family types, and effective communication. Students investigate the ways in which humans develop over their lifespan, human relationships, childcare, and child abuse. Students also learn the importance of creating a nurturing and caring home environment."
-    },
-    {
-      "course_id": "LIFE-SKILLS",
-      "course_name": "Life Skills",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. As students grow and become adult citizens, they are expected to understand basic life skills to live independent and successful lives. Life Skills is designed to provide students with the information that they need as they begin the adulthood phase of their lives. From personal finance to nutrition to personal development, students have the opportunity to learn useful skills, helping them to become responsible and proactive young adults."
-    },
-    {
-      "course_id": "MEDIA-WRITING",
-      "course_name": "Media Writing",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. For students who are interested in majoring in broadcast journalism, communications, or any other form of media in college, Media Writing is the ideal course. This course explores the basics of media writing and reporting. Students are exposed to numerous styles of writing, including social media reviewing, analysis, public service announcements, and writing for publication. In addition, stu dents become familiar with researching and locating sources that are reliable and valid. In addition, students will explore persuasive media and media rhetoric. They will also participate in the review of movies, social media, news stories, and magazine articles."
-    },
-    {
-      "course_id": "PERSONAL-LEADERSHIP",
-      "course_name": "Personal Leadership",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. The Personal Leadership course will help students to develop the important tools needed to hone both relationship and communi cation skills. Students will engage in topics such as responsible decision-making, different perspectives, social skills for healthy and supportive relationships, and empathizing with others. The course will also explore how emotions, thoughts, and values influence our behavior."
-    },
-    {
-      "course_id": "STUDY-SKILLS-AND-STRATEGIES",
-      "course_name": "Study Skills and Strategies",
-      "category": "Electives",
-      "sub_category": "General Elective",
-      "type": [
-        "VC",
-        "AC"
-      ],
-      "credits_raw": {
-        "VC": "0.5 credit (Fall Only)",
-        "AC": "0.5 credit"
-      },
-      "credits": {
-        "VC": 0.5,
-        "AC": 0.5
-      },
-      "prerequisites": "None",
-      "grade_levels": [
-        "9",
-        "10",
-        "11",
-        "12"
-      ],
-      "keystone_associated": false,
-      "ap_ib_course": false,
-      "details": "Sub-category: General Elective. The Study Skills and Strategies course equips students with the skills and understanding critical to effective learning. Using a unique approach to the traditional topic of study skills, this course weaves understanding regarding the role of the brain in learning into the instruction of discrete learning skills and strategies. Moving beyond a list of good tips and ideas, the Study Skills and Strategies course will challenge students to develop intentional approaches to learning. They will be required to make connections between the strategies and skills they learn in this course and the implementation of those strategies and skills in their other coursework."
-    },
-    {
-      "course_id": "KEYSTONE-ALGEBRA-I",
-      "course_name": "Keystone Algebra I",
-      "category": "Other",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "Algebra I",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "This asynchronous course is designed to provide focused content remediation for students who have not yet met proficiency on the Algebra I Keystone Exam. Prior to the start of the course, students will take a pre-test. After completing the pre-test, students may test out of content that they have mastered. Course content will adapt to the individual student and will focus specifically on the topics in which they need further practice. In Keystone Algebra I, students will develop computational, procedural, and prob lem-solving skills through the course, building a solid foundation for further study in mathematics."
-    },
-    {
-      "course_id": "KEYSTONE-BIOLOGY",
-      "course_name": "Keystone Biology",
-      "category": "Other",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "Biology",
-      "grade_levels": [
-        "9"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "This asynchronous course is designed to provide focused content remediation for students who have not yet met proficiency on the Biology Keystone Exam. Prior to the start of the course, students will take a pre-test. After completing the pre-test, students may test out of content that they have mastered. Course content will adapt to the individual student and will focus specifically on the topics in which they need further practice. In Keystone Biology, students will focus on scientific inquiry to investigate real-world phenomena. This course outlines the chemical basis of life, the concept of cell structure and function, and the basics of Mendelian genetics. Students also analyze the structure of DNA and the role of biotechnology today. Students examine the theory of evolu tion, ecology, interactions that occur within ecosystems, and the ways in which humans have impacted ecosystems."
-    },
-    {
-      "course_id": "KEYSTONE-ENGLISH-LITERATURE",
-      "course_name": "Keystone English Literature",
-      "category": "Other",
-      "sub_category": null,
-      "type": [
-        "AC"
-      ],
-      "credits_raw": {
-        "AC": "1.0 credit"
-      },
-      "credits": {
-        "AC": 1.0
-      },
-      "prerequisites": "English 9, English 10",
-      "grade_levels": [
-        "10"
-      ],
-      "keystone_associated": true,
-      "ap_ib_course": false,
-      "details": "This asynchronous course is designed to provide focused content remediation for students who have not yet met proficiency on the English Literature Keystone Exam. Prior to the start of the course, students will take a pre-test. After completing the pre-test, students may test out of content that they have mastered. Course content will adapt to the individual student and will focus spe cifically on the topics in which they need further practice. In Keystone English Literature, students will focus on a variety of skills needed to achieve mastery of grade-level literature, grammar, and composition. Students will study various parts of speech and a variety of literature, including poetry and nonfiction."
-    }
-  ]
+/* ============================================================
+   GradTracker v1.7.4
+   - Exploring status (4th status, excluded from all calculations)
+   - Updated PA Keystone benchmark defaults
+   ============================================================ */
+'use strict';
+
+const STORAGE_KEY = 'gradtracker_data_v1';
+
+const DEFAULT_BENCHMARKS = {
+  keystone: {
+    algebra:    { prof:1500, adv:1546, bb:1438 },
+    literature: { prof:1500, adv:1584, bb:1443 },
+    biology:    { prof:1500, adv:1549, bb:1459 }
+  },
+  p4: { act:21, asvab:31, psat:970, sat:1010 }
+};
+
+// ── State ─────────────────────────────────────────────────────
+// courses[].status: 'earned' | 'working' | 'planned' | 'exploring'
+// 'exploring' is excluded from ALL credit calculations — scratchpad only
+// courses[].catalogRef: null | { catalogId, courseId }
+let state = {
+  student:      { name:'', gradYear:'', school:'' },
+  years:        [],
+  requirements: [],
+  courses:      [],   // [{id,name,yearId,credits,grade,type,reqId,subReqId,status,catalogRef}]
+  benchmarks:   JSON.parse(JSON.stringify(DEFAULT_BENCHMARKS)),
+  keystoneScores:  [],
+  p3Records:       [],
+  p4Records:       [],
+  p5Evidence:      [],
+  plannedEvents:   []
+};
+
+// ── Catalog cache (session only — not persisted) ───────────────
+let _catalogManifest  = [];          // [{file,school,school_id,year,catalog_id}]
+let _catalogCache     = new Map();   // catalogId -> full catalog object
+let _catalogsLoaded   = false;
+
+function loadData() {
+  try { const r=localStorage.getItem(STORAGE_KEY); return r?JSON.parse(r):null; }
+  catch { return null; }
 }
+function saveData() { localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); }
+
+// ── Constants ─────────────────────────────────────────────────
+const GRADES            = ['A','B','C','D','F','P','NP','W','I','AU'];
+const COURSE_TYPES      = ['Standard','VC','BC','AC'];
+const COURSE_STATUSES   = ['earned','working','planned','exploring'];
+const KEYSTONE_SUBJECTS = ['Algebra I','Literature','Biology'];
+const KEYSTONE_KEYS     = ['algebra','literature','biology'];
+
+const P4_TYPES = [
+  {key:'act',       label:'ACT',                       threshold:21,   scoreLabel:'Composite Score'},
+  {key:'workkeys',  label:'ACT WorkKeys NCRC (Gold)',   threshold:null, scoreLabel:'Level achieved'},
+  {key:'asvab',     label:'ASVAB AFQT',                threshold:31,   scoreLabel:'Composite Score'},
+  {key:'psat',      label:'PSAT/NMSQT',                threshold:970,  scoreLabel:'Total Score'},
+  {key:'sat',       label:'SAT',                       threshold:1010, scoreLabel:'Total Score'},
+  {key:'ap',        label:'AP Exam (≥3 per area)',      threshold:3,    scoreLabel:'Score'},
+  {key:'ib',        label:'IB Exam (≥4 per area)',      threshold:4,    scoreLabel:'Score'},
+  {key:'concurrent',label:'Concurrent Enrollment',      threshold:null, scoreLabel:'Grade'},
+  {key:'college4yr',label:'4-Year College Acceptance',  threshold:null, scoreLabel:'Institution'},
+  {key:'apprentice',label:'Pre-Apprenticeship Program', threshold:null, scoreLabel:'Program Name'}
+];
+const P5_S1_TYPES = [
+  {key:'sat-subj',    label:'SAT Subject Test',           threshold:630,  scoreLabel:'Score'},
+  {key:'workkeys-s',  label:'ACT WorkKeys (Silver)',       threshold:null, scoreLabel:'Level'},
+  {key:'ap-s1',       label:'AP Exam',                    threshold:3,    scoreLabel:'Score'},
+  {key:'ib-s1',       label:'IB Exam',                    threshold:3,    scoreLabel:'Score'},
+  {key:'concurrent-s1',label:'Concurrent Enrollment',     threshold:null, scoreLabel:'Grade'},
+  {key:'college2yr',  label:'2-Year College Acceptance',  threshold:null, scoreLabel:'Institution'},
+  {key:'credential',  label:'Industry-Recognized Credential',threshold:null,scoreLabel:'Credential Name'}
+];
+const P5_S2_TYPES = [
+  {key:'keystone-s2', label:'Keystone Proficient+',               threshold:null, scoreLabel:'Score'},
+  {key:'service',     label:'Service-Learning Project',            threshold:null, scoreLabel:'Description'},
+  {key:'internship',  label:'Internship / Externship / Co-op',     threshold:null, scoreLabel:'Hours/Details'},
+  {key:'ncaa',        label:'NCAA Division II Requirements',        threshold:null, scoreLabel:'Confirmation'},
+  {key:'military',    label:'Military Enlistment / Employment Letter',threshold:null,scoreLabel:'Details'}
+];
+
+// ── Globals (before init — TDZ safety) ───────────────────────
+let courseReqFilter       = '';
+let _sidebarOpen          = { pathways:false, settings:false };
+let _groupClickInProgress = false;
+let _statsView            = 'progress'; // 'progress' | 'gap'
+let _yearFilter           = '';
+
+// ══════════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════════
+(async function init() {
+  checkMobileGate();
+  window.addEventListener('resize', checkMobileGate);
+
+  const saved = loadData();
+  if (saved) {
+    if (!saved.benchmarks) saved.benchmarks = JSON.parse(JSON.stringify(DEFAULT_BENCHMARKS));
+    else saved.benchmarks = Object.assign(JSON.parse(JSON.stringify(DEFAULT_BENCHMARKS)), saved.benchmarks);
+    ['keystoneScores','p3Records','p4Records','p5Evidence','plannedEvents'].forEach(k=>{if(!saved[k])saved[k]=[];});
+    if (saved.student && !saved.student.school) saved.student.school='';
+    if (saved.years) saved.years=saved.years.map(y=>({school:'',...y}));
+    if (saved.requirements) saved.requirements=saved.requirements.map(r=>({...r,subReqs:(r.subReqs||[]).map(sr=>({credits:0,...sr}))}));
+    // ── BATCH 1: Migrate planned bool → status string ──────────
+    if (saved.courses) {
+      saved.courses = saved.courses.map(c => {
+        if (c.status) return c; // already migrated
+        return {
+          ...c,
+          status: c.planned ? 'planned' : 'earned',
+          catalogRef: c.catalogRef || null,
+          planned: undefined // remove old field
+        };
+      });
+    }
+    Object.assign(state, saved);
+  }
+
+  setupNavigation();
+  setupSettingsListeners();
+  setupCoursesListeners();
+  renderAll();
+  renderBenchmarkInputs();
+  registerSW();
+  navigateTo('dashboard');
+  if (!state.student.name && state.courses.length===0) showOnboarding();
+
+  // Load catalog manifest async — non-blocking
+  loadCatalogManifest().catch(()=>{});
+})();
+
+function checkMobileGate() {
+  const narrow = window.innerWidth < 900;
+  document.getElementById('mobile-gate').style.display  = narrow?'flex':'none';
+  document.getElementById('sidebar').style.display      = narrow?'none':'';
+  document.getElementById('main-content').style.display = narrow?'none':'';
+}
+
+// ══════════════════════════════════════════════════════════════
+// CATALOG INFRASTRUCTURE  (Batch 3)
+// ══════════════════════════════════════════════════════════════
+async function loadCatalogManifest() {
+  try {
+    const r = await fetch('./catalogs/manifest.json');
+    if (!r.ok) throw new Error('No manifest');
+    _catalogManifest = await r.json();
+    _catalogsLoaded  = true;
+  } catch {
+    _catalogManifest = [];
+    _catalogsLoaded  = true;
+  }
+}
+
+async function loadCatalog(catalogId) {
+  if (_catalogCache.has(catalogId)) return _catalogCache.get(catalogId);
+  const entry = _catalogManifest.find(m=>m.catalog_id===catalogId);
+  if (!entry) return null;
+  try {
+    const r = await fetch(`./catalogs/${entry.file}`);
+    if (!r.ok) throw new Error('Not found');
+    const data = await r.json();
+    _catalogCache.set(catalogId, data);
+    return data;
+  } catch { return null; }
+}
+
+// Parse "1.0 credit" → 1.0
+function parseCreditStr(s) {
+  const m = String(s||'').match(/(\d+\.?\d*)/);
+  return m ? parseFloat(m[1]) : 0;
+}
+
+// Get catalog entry referenced by a course
+function getCatalogEntry(course) {
+  if (!course.catalogRef) return null;
+  const cat = _catalogCache.get(course.catalogRef.catalogId);
+  if (!cat) return null;
+  return cat.courses?.find(c=>c.course_id===course.catalogRef.courseId) || null;
+}
+
+// Auto-suggest catalog based on student school
+function suggestedCatalogId() {
+  if (!state.student.school) return null;
+  const school = state.student.school.toLowerCase();
+  const match = _catalogManifest.find(m =>
+    m.school.toLowerCase().includes(school) ||
+    school.includes(m.school_id.toLowerCase())
+  );
+  return match?.catalog_id || null;
+}
+
+// ══════════════════════════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════════════════════════
+function setupNavigation() {
+  document.querySelectorAll('.nav-link').forEach(link=>{
+    link.addEventListener('click',e=>{
+      e.preventDefault();
+      const page=link.dataset.page, group=link.dataset.group;
+      if (group) {
+        _groupClickInProgress=true;
+        toggleGroup(group);
+        _groupClickInProgress=false;
+        if (page) navigateTo(page,null,true);
+      } else if (page) navigateTo(page);
+    });
+  });
+  document.querySelectorAll('.inline-link').forEach(link=>{
+    link.addEventListener('click',e=>{e.preventDefault();const p=link.dataset.page;if(p)navigateTo(p);});
+  });
+}
+
+function toggleGroup(g) { _sidebarOpen[g]=!_sidebarOpen[g]; applyGroupState(g); }
+function openGroup(g)   { if(_sidebarOpen[g])return; _sidebarOpen[g]=true; applyGroupState(g); }
+function applyGroupState(g) {
+  document.getElementById(`sub-${g}`)?.classList.toggle('open',_sidebarOpen[g]);
+  document.getElementById(`chevron-${g}`)?.classList.toggle('rotated',_sidebarOpen[g]);
+}
+
+function navigateTo(page, extraData, fromGroupHeader=false) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
+  document.getElementById('page-'+page)?.classList.add('active');
+  const exactLink=document.querySelector(`.nav-link[data-page="${page}"]:not([data-group])`);
+  if(exactLink)exactLink.classList.add('active');
+  if(page.startsWith('pathways-')){document.querySelector('.nav-link[data-group="pathways"]')?.classList.add('active');if(!fromGroupHeader)openGroup('pathways');}
+  else if(page.startsWith('settings-')){document.querySelector('.nav-link[data-group="settings"]')?.classList.add('active');if(!fromGroupHeader)openGroup('settings');}
+  if(page==='courses'&&extraData?.reqId!==undefined)courseReqFilter=extraData.reqId;
+  const renders={
+    'dashboard':renderDashboard,'courses':renderCourses,'stats':renderStats,
+    'pathways-overview':renderPathwayOverview,'pathways-p1':renderP1,'pathways-p2':renderP2,
+    'pathways-p3':renderP3,'pathways-p4':renderP4,'pathways-p5':renderP5,
+    'pathways-projection':renderProjection,
+    'settings-student':renderSettingsStudent,'settings-requirements':renderSettingsRequirements,
+    'settings-benchmarks':()=>{},'data-management':()=>{}
+  };
+  renders[page]?.();
+}
+
+function renderAll() {
+  renderDashboard();renderCourses();renderStats();
+  renderPathwayOverview();renderP1();renderP2();renderP3();renderP4();renderP5();
+  renderProjection();renderSettingsStudent();renderSettingsRequirements();
+  updatePathwayNavDots();
+}
+
+// ══════════════════════════════════════════════════════════════
+// UTILITIES
+// ══════════════════════════════════════════════════════════════
+function uid()    { return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+function fmtDate(d){ if(!d)return'—';const p=d.split('-');return`${p[1]}/${p[2]}/${p[0]}`; }
+function today()  { return new Date().toISOString().slice(0,10); }
+function esc(s)   { return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function fmt(n)   { const v=Number(n); return isNaN(v)?'0':parseFloat(v.toFixed(2)).toString(); }
+
+function getYear(id)    { return state.years.find(y=>y.id===id); }
+function getYearName(id){ return getYear(id)?.name||'—'; }
+function getReq(id)     { return state.requirements.find(r=>r.id===id); }
+function getReqName(id) { return getReq(id)?.name||'Uncategorized'; }
+
+// ── BATCH 2: Status-aware credit helpers ──────────────────────
+// earned   = status === 'earned'
+// working  = status === 'working'  (counts toward projected/in-progress)
+// planned  = status === 'planned'  (future intent)
+function isEarned(c)    { return c.status==='earned'; }
+function isWorking(c)   { return c.status==='working'; }
+function isPlanned(c)   { return c.status==='planned'; }
+function isExploring(c) { return c.status==='exploring'; }
+function isNotEarned(c) { return c.status!=='earned'; }
+// Courses that count toward any credit calculation (exploring is excluded)
+function countsToward(c){ return c.status!=='exploring'; }
+
+function creditsEarnedForReq(reqId)  { return state.courses.filter(c=>c.reqId===reqId&&isEarned(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
+function creditsWorkingForReq(reqId) { return state.courses.filter(c=>c.reqId===reqId&&isWorking(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
+function creditsPlannedForReq(reqId) { return state.courses.filter(c=>c.reqId===reqId&&isPlanned(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
+
+function totalEarned()  { return state.courses.filter(isEarned).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalWorking() { return state.courses.filter(isWorking).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalPlanned() { return state.courses.filter(isPlanned).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalRequired(){ return state.requirements.reduce((s,r)=>s+Number(r.credits||0),0); }
+
+function creditsByYear() {
+  const map={};
+  state.years.forEach(y=>{map[y.id]={earned:0,working:0,planned:0};});
+  state.courses.forEach(c=>{
+    if(!c.yearId)return;
+    if(!map[c.yearId])map[c.yearId]={earned:0,working:0,planned:0};
+    const cr=Number(c.credits||0);
+    if(isEarned(c))  map[c.yearId].earned+=cr;
+    else if(isWorking(c)) map[c.yearId].working+=cr;
+    else if(isPlanned(c)) map[c.yearId].planned+=cr;
+  });
+  return map;
+}
+
+// Sub-req status with working support
+// Sub-req status — exploring courses never satisfy a sub-req
+function subReqStatus(req,sr) {
+  const n=sr.name.trim().toLowerCase();
+  const m=state.courses.filter(c=>c.reqId===req.id&&c.name.trim().toLowerCase()===n&&!isExploring(c));
+  if(m.some(isEarned))  return 'earned';
+  if(m.some(isWorking)) return 'working';
+  if(m.some(isPlanned)) return 'planned';
+  return null;
+}
+
+// ── Keystone helpers ──────────────────────────────────────────
+function calcKeystoneLevel(subject, score) {
+  const key=KEYSTONE_KEYS[KEYSTONE_SUBJECTS.indexOf(subject)];
+  const bm=state.benchmarks.keystone[key];
+  if(!bm)return 'Basic';
+  if(score>=bm.adv) return 'Advanced';
+  if(score>=bm.prof)return 'Proficient';
+  if(bm.bb&&score<=bm.bb)return 'Below Basic';
+  return 'Basic';
+}
+
+function getKeystoneSubjectData() {
+  const bm=state.benchmarks.keystone;
+  const subj={algebra:{met:false,belowBasic:false,best:null},literature:{met:false,belowBasic:false,best:null},biology:{met:false,belowBasic:false,best:null}};
+  state.keystoneScores.forEach(s=>{
+    const key=KEYSTONE_KEYS[KEYSTONE_SUBJECTS.indexOf(s.subject)];if(!key)return;
+    const b=bm[key];
+    if(!subj[key].best||s.score>subj[key].best)subj[key].best=s.score;
+    if(s.score>=b.prof)subj[key].met=true;
+    if(b.bb&&s.score<=b.bb)subj[key].belowBasic=true;
+  });
+  return subj;
+}
+
+// ══════════════════════════════════════════════════════════════
+// PATHWAY STATUS COMPUTATIONS
+// ══════════════════════════════════════════════════════════════
+function p1Status() {
+  const subj=getKeystoneSubjectData();
+  const allMet=Object.values(subj).every(s=>s.met);
+  const anyMet=Object.values(subj).some(s=>s.met);
+  return {subjects:subj,met:allMet,status:allMet?'met':anyMet?'partial':'none'};
+}
+function p2Status() {
+  const subj=getKeystoneSubjectData();
+  const scores=KEYSTONE_KEYS.map(k=>subj[k].best).filter(x=>x!==null);
+  if(!scores.length)return{met:false,status:'none',mode:null,composite:0};
+  const anyBB=KEYSTONE_KEYS.some(k=>subj[k].belowBasic);
+  const anyProf=KEYSTONE_KEYS.some(k=>subj[k].met);
+  if(anyBB||!anyProf)return{met:false,status:scores.length?'partial':'none',mode:null,composite:0};
+  const c3=scores.length>=3?scores.slice().sort((a,b)=>b-a).slice(0,3).reduce((s,x)=>s+x,0):null;
+  const c2=scores.length>=2?scores.slice().sort((a,b)=>b-a).slice(0,2).reduce((s,x)=>s+x,0):null;
+  if(c3!==null&&c3>=4452)return{met:true,status:'met',mode:'3-score',composite:c3};
+  if(c2!==null&&c2>=2939)return{met:true,status:'met',mode:'2-score',composite:c2};
+  const best=Math.max(...[c3,c2].filter(x=>x!==null));
+  return{met:false,status:'partial',mode:null,composite:best};
+}
+function p3Status() {
+  const v=state.p3Records.filter(r=>r.verified);
+  return{met:v.length>0,status:v.length>0?'met':state.p3Records.length?'partial':'none',count:v.length};
+}
+function p4Status() {
+  const q=state.p4Records.filter(r=>{
+    const t=P4_TYPES.find(x=>x.key===r.type);if(!t)return false;
+    if(t.threshold===null)return r.verified||r.score;
+    return Number(r.score)>=t.threshold;
+  });
+  return{met:q.length>0,status:q.length>0?'met':state.p4Records.length?'partial':'none',qualifying:q};
+}
+function p5Status() {
+  const s1=state.p5Evidence.filter(e=>e.section==='S1');
+  const s2=state.p5Evidence.filter(e=>e.section==='S2');
+  const total=s1.length+s2.length;
+  const met=s1.length>=1&&total>=3;
+  return{met,s1Count:s1.length,s2Count:s2.length,total,status:met?'met':total>0?'partial':'none'};
+}
+function allPathwayStatuses() { return{p1:p1Status(),p2:p2Status(),p3:p3Status(),p4:p4Status(),p5:p5Status()}; }
+function isPathwayEligible(s) { return Object.values(s).some(x=>x.met); }
+
+function updatePathwayNavDots() {
+  const s=allPathwayStatuses();
+  const map={'pdot-p1':s.p1,'pdot-p2':s.p2,'pdot-p3':s.p3,'pdot-p4':s.p4,'pdot-p5':s.p5};
+  Object.entries(map).forEach(([id,st])=>{const el=document.getElementById(id);if(el)el.className='pathway-status-dot '+(st.status==='met'?'dot-met':st.status==='partial'?'dot-partial':'dot-none');});
+  const el=document.getElementById('pdot-overall');
+  const elig=isPathwayEligible(s),any=Object.values(s).some(x=>x.status==='partial');
+  if(el)el.className='pathway-status-dot '+(elig?'dot-met':any?'dot-partial':'dot-none');
+}
+
+// ══════════════════════════════════════════════════════════════
+// ONBOARDING
+// ══════════════════════════════════════════════════════════════
+function showOnboarding(){document.getElementById('onboard-overlay').classList.remove('hidden');document.getElementById('ob-name').focus();}
+function hideOnboarding(){document.getElementById('onboard-overlay').classList.add('hidden');}
+document.getElementById('ob-next').addEventListener('click',()=>{
+  const name=document.getElementById('ob-name').value.trim();
+  const school=document.getElementById('ob-school').value.trim();
+  const gradYear=document.getElementById('ob-grad-year').value.trim();
+  state.student={name,school,gradYear};saveData();
+  document.getElementById('student-name').value=name;
+  document.getElementById('student-school').value=school;
+  document.getElementById('grad-year').value=gradYear;
+  document.getElementById('new-year-school').value=school;
+  hideOnboarding();navigateTo('settings-requirements');renderDashboard();
+  toast(`Welcome, ${name||'there'}! Now add your graduation requirements.`,'success');
+});
+document.getElementById('ob-skip').addEventListener('click',hideOnboarding);
+
+// ══════════════════════════════════════════════════════════════
+// DASHBOARD  (Batch 2 — tri-state bars)
+// ══════════════════════════════════════════════════════════════
+function renderDashboard() {
+  const earned=totalEarned(),working=totalWorking(),planned=totalPlanned(),required=totalRequired();
+  const pctE=required>0?Math.min(100,(earned/required)*100):0;
+  const pctW=required>0?Math.min(100-pctE,(working/required)*100):0;
+  const pctP=required>0?Math.min(100-pctE-pctW,(planned/required)*100):0;
+  const pctAll=required>0?Math.min(100,((earned+working+planned)/required)*100):0;
+
+  document.getElementById('dash-heading').textContent=state.student.name?`Welcome, ${state.student.name}`:'Dashboard';
+  const sub=[];
+  if(state.student.school)   sub.push(state.student.school);
+  if(state.student.gradYear) sub.push(`Class of ${state.student.gradYear}`);
+  document.getElementById('dash-subtitle').textContent=sub.length?sub.join(' · '):'Your graduation progress at a glance';
+
+  document.getElementById('dash-earned').textContent=fmt(earned);
+  document.getElementById('dash-required').textContent=fmt(required);
+  document.getElementById('dash-pct').textContent=fmt(pctE)+'%';
+  document.getElementById('dash-progress-bar').style.width=pctE+'%';
+  document.getElementById('dash-working-bar').style.width=pctW+'%';
+  document.getElementById('dash-planned-bar').style.width=pctP+'%';
+
+  // Working row
+  const workWrap=document.getElementById('dash-working-wrap');
+  if(workWrap){workWrap.style.visibility=working>0?'visible':'hidden';const ws=document.getElementById('dash-working');if(ws)ws.textContent=fmt(working);}
+  // Planned row
+  const planWrap=document.getElementById('dash-planned-wrap');
+  if(planWrap){planWrap.style.visibility=planned>0?'visible':'hidden';const ps=document.getElementById('dash-planned');if(ps)ps.textContent=fmt(planned);}
+  // Legend visibility
+  document.getElementById('legend-working-item').style.display=working>0?'':'none';
+  document.getElementById('legend-planned-item').style.display=planned>0?'':'none';
+
+  // Combined % below main
+  const pctEl=document.getElementById('dash-pct-with-planned');
+  if((working>0||planned>0)&&required>0){pctEl.textContent=fmt(pctAll)+'% projected';pctEl.style.display='block';}
+  else pctEl.style.display='none';
+
+  document.getElementById('no-requirements-notice').classList.toggle('hidden',state.requirements.length>0);
+
+  // Pathway summary
+  const s=allPathwayStatuses();
+  const eligible=isPathwayEligible(s);
+  const badge=document.getElementById('dash-pathway-elig-badge');
+  if(eligible){badge.textContent='✓ Eligible';badge.className='dash-pathway-elig-badge elig-yes';}
+  else if(Object.values(s).some(x=>x.status==='partial')){badge.textContent='In Progress';badge.className='dash-pathway-elig-badge elig-partial';}
+  else{badge.textContent='Not Yet Determined';badge.className='dash-pathway-elig-badge elig-no';}
+
+  const pways=[
+    {id:'p1',label:'Pathway 1\nKeystone'},
+    {id:'p2',label:'Pathway 2\nComposite'},
+    {id:'p3',label:'Pathway 3\nCTE'},
+    {id:'p4',label:'Pathway 4\nAlt.'},
+    {id:'p5',label:'Pathway 5\nEvidence'}
+  ];
+  document.getElementById('dash-pathway-grid').innerHTML=pways.map(p=>{
+    const st=s[p.id].status;
+    const icon=st==='met'?'fa-circle-check':st==='partial'?'fa-hourglass-half':'fa-circle';
+    const cls=st==='met'?'dp-met':st==='partial'?'dp-partial':'dp-none';
+    const [l1,l2]=p.label.split('\n');
+    return `<div class="dp-item ${cls}" onclick="event.stopPropagation();navigateTo('pathways-${p.id}')">
+      <i class="fa-solid ${icon} dp-icon"></i>
+      <div class="dp-label">${l1}<br><span>${l2}</span></div>
+    </div>`;
+  }).join('');
+
+  // Requirement cards
+  const grid=document.getElementById('dash-req-grid');
+  grid.innerHTML='';
+  state.requirements.forEach(req=>{
+    const e=creditsEarnedForReq(req.id),w=creditsWorkingForReq(req.id),p=creditsPlannedForReq(req.id);
+    const pct=req.credits>0?Math.min(100,(e/req.credits)*100):0;
+    const pctW=req.credits>0?Math.min(100-pct,(w/req.credits)*100):0;
+    const pctP=req.credits>0?Math.min(100-pct-pctW,(p/req.credits)*100):0;
+    const complete=e>=req.credits&&req.credits>0;
+    // (#1) still needed after earned+working+planned
+    const stillNeeded=Math.max(0,req.credits-e-w-p);
+    const subHtml=(req.subReqs||[]).length?`
+      <div class="req-card-subreqs">${req.subReqs.map(sr=>{
+        const st=subReqStatus(req,sr);
+        const cr=Number(sr.credits)>0?` (${fmt(sr.credits)})`:'';
+        const cls=st==='earned'?'subreq-chip sr-met':st==='working'?'subreq-chip sr-working':st==='planned'?'subreq-chip sr-planned':'subreq-chip';
+        const icon=st==='earned'?'<i class="fa-solid fa-check"></i> ':st==='working'?'<i class="fa-solid fa-bolt"></i> ':st==='planned'?'<i class="fa-solid fa-clock"></i> ':'';
+        return `<span class="${cls}">${icon}${esc(sr.name)}${cr}</span>`;
+      }).join('')}</div>`:''  ;
+    const notesHtml=w>0||p>0?`<div class="req-card-projected">${w>0?`<span class="proj-working"><i class="fa-solid fa-bolt"></i> ${fmt(w)} working</span>`:''} ${p>0?`<span class="proj-planned"><i class="fa-solid fa-clock"></i> ${fmt(p)} planned</span>`:''}</div>`:'';
+    const neededHtml=!complete&&stillNeeded>0?`<div class="req-card-needed"><i class="fa-solid fa-hourglass-half"></i> ${fmt(stillNeeded)} still needed</div>`:'';
+    grid.innerHTML+=`
+      <div class="req-card ${complete?'complete':''}" role="button" tabindex="0"
+           onclick="openReqCourses('${req.id}')" onkeydown="if(event.key==='Enter')openReqCourses('${req.id}')">
+        <span class="req-badge">${complete?'✓ Met':fmt(pct)+'%'}</span>
+        <div class="req-card-name">${esc(req.name)}</div>
+        <div class="req-card-credits">${fmt(e)} <span>/ ${fmt(req.credits)} credits</span></div>
+        ${notesHtml}${neededHtml}${subHtml}
+        <div class="req-card-bar-wrap">
+          <div class="req-card-bar" style="width:${pct}%"></div>
+          <div class="req-card-bar working-seg" style="width:${pctW}%"></div>
+          <div class="req-card-bar planned-seg" style="width:${pctP}%"></div>
+        </div>
+        <div class="req-card-click-hint">
+          <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View courses
+        </div>
+      </div>`;
+  });
+
+  // (#9) "Other" virtual card — uncategorized courses (no reqId)
+  const otherCourses=state.courses.filter(c=>!c.reqId&&!isExploring(c));
+  if(otherCourses.length){
+    const oE=otherCourses.filter(isEarned).reduce((s,c)=>s+Number(c.credits||0),0);
+    const oW=otherCourses.filter(isWorking).reduce((s,c)=>s+Number(c.credits||0),0);
+    const oP=otherCourses.filter(isPlanned).reduce((s,c)=>s+Number(c.credits||0),0);
+    const notesHtml=oW>0||oP>0?`<div class="req-card-projected">${oW>0?`<span class="proj-working"><i class="fa-solid fa-bolt"></i> ${fmt(oW)} working</span>`:''} ${oP>0?`<span class="proj-planned"><i class="fa-solid fa-clock"></i> ${fmt(oP)} planned</span>`:''}</div>`:'';
+    grid.innerHTML+=`
+      <div class="req-card req-card-other" role="button" tabindex="0"
+           onclick="openReqCourses('')" onkeydown="if(event.key==='Enter')openReqCourses('')">
+        <span class="req-badge" style="background:var(--gray-100);color:var(--gray-500)">Other</span>
+        <div class="req-card-name" style="color:var(--gray-600)">Other / Electives</div>
+        <div class="req-card-credits">${fmt(oE)} <span>credits not applied to requirements</span></div>
+        ${notesHtml}
+        <div class="req-card-bar-wrap">
+          <div class="req-card-bar" style="width:100%;background:var(--gray-300)"></div>
+        </div>
+        <div class="req-card-click-hint">
+          <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View courses
+        </div>
+      </div>`;
+  }
+
+  // Year cards — (#4) clickable to filter courses, (#6) match req-grid column sizing
+  const yearCards=document.getElementById('dash-year-cards');
+  yearCards.innerHTML='';
+  const byYear=creditsByYear();
+  state.years.forEach(y=>{
+    const {earned:e,working:w,planned:p}=byYear[y.id]||{earned:0,working:0,planned:0};
+    const cnt=state.courses.filter(co=>co.yearId===y.id).length;
+    yearCards.innerHTML+=`<div class="year-card" role="button" tabindex="0"
+         onclick="openYearCourses('${y.id}')" onkeydown="if(event.key==='Enter')openYearCourses('${y.id}')">
+      <div class="year-card-name">${esc(y.name)}</div>
+      ${y.school?`<div class="year-card-school">${esc(y.school)}</div>`:''}
+      <div class="year-card-credits">${fmt(e)}</div>
+      ${w>0?`<div class="year-card-working"><i class="fa-solid fa-bolt"></i> ${fmt(w)} working</div>`:''}
+      ${p>0?`<div class="year-card-planned"><i class="fa-solid fa-clock"></i> ${fmt(p)} planned</div>`:''}
+      <div class="year-card-sub">${cnt} course${cnt!==1?'s':''}</div>
+      <div class="req-card-click-hint" style="margin-top:6px">
+        <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        View courses
+      </div>
+    </div>`;
+  });
+  if(!state.years.length&&state.requirements.length>0)
+    yearCards.innerHTML='<p class="text-muted" style="font-size:.85rem">No school years defined yet.</p>';
+
+  // (#3) Total remaining in overall-card
+  const totalRemaining=Math.max(0,required-earned-working-planned);
+  const remEl=document.getElementById('dash-total-remaining');
+  if(remEl){
+    if(totalRemaining>0&&required>0){
+      remEl.textContent=`${fmt(totalRemaining)} credits still needed`;
+      remEl.style.display='block';
+    } else {
+      remEl.style.display='none';
+    }
+  }
+}
+
+function openReqCourses(reqId){courseReqFilter=reqId;navigateTo('courses',{reqId});}
+
+// (#4) Filter courses by year
+function openYearCourses(yearId){
+  navigateTo('courses');
+  const fyEl=document.getElementById('filter-year');
+  if(fyEl){fyEl.value=yearId;renderCourses();}
+}
+
+// (#2) Stats view toggle
+function toggleStatsView(){
+  _statsView=_statsView==='progress'?'gap':'progress';
+  const btn=document.getElementById('stats-view-toggle');
+  if(btn){btn.textContent=_statsView==='gap'?'Show Progress View':'Show Gap View';}
+  renderStats();
+}
+
+// ══════════════════════════════════════════════════════════════
+// COURSES  (Batch 2+5 — status dropdown + catalog display)
+// ══════════════════════════════════════════════════════════════
+function setupCoursesListeners() {
+  document.getElementById('btn-add-course').addEventListener('click',()=>openAddCourseChoice());
+  document.getElementById('filter-year').addEventListener('change',renderCourses);
+  document.getElementById('filter-req').addEventListener('change',renderCourses);
+  document.getElementById('filter-status').addEventListener('change',renderCourses);
+}
+
+function renderCourses() {
+  const fyEl=document.getElementById('filter-year');
+  const frEl=document.getElementById('filter-req');
+  const fsEl=document.getElementById('filter-status');
+  const savedY=fyEl.value,savedS=fsEl.value;
+
+  fyEl.innerHTML='<option value="">All Years</option>';
+  state.years.forEach(y=>{fyEl.innerHTML+=`<option value="${y.id}" ${savedY===y.id?'selected':''}>${esc(y.name)}</option>`;});
+
+  const pendingR=courseReqFilter||frEl.value;
+  frEl.innerHTML='<option value="">All Categories</option>';
+  state.requirements.forEach(r=>{frEl.innerHTML+=`<option value="${r.id}" ${pendingR===r.id?'selected':''}>${esc(r.name)}</option>`;});
+  if(courseReqFilter){frEl.value=courseReqFilter;courseReqFilter='';}
+
+  let courses=state.courses.slice();
+  if(fyEl.value)   courses=courses.filter(c=>c.yearId===fyEl.value);
+  if(frEl.value)   courses=courses.filter(c=>c.reqId===frEl.value);
+  if(savedS==='earned')     courses=courses.filter(c=>isEarned(c));
+  if(savedS==='working')    courses=courses.filter(c=>isWorking(c));
+  if(savedS==='planned')    courses=courses.filter(c=>isPlanned(c));
+  if(savedS==='exploring')  courses=courses.filter(c=>isExploring(c));
+
+  const tbody=document.getElementById('courses-tbody');
+  if(!courses.length){tbody.innerHTML='<tr class="empty-row"><td colspan="9">No courses match the current filters.</td></tr>';return;}
+
+  const yo=state.years.reduce((m,y,i)=>{m[y.id]=i;return m;},{});
+  courses.sort((a,b)=>{
+    const order={'earned':0,'working':1,'planned':2,'exploring':3};
+    const od=(order[a.status]??0)-(order[b.status]??0);
+    if(od!==0)return od;
+    return(yo[a.yearId]??99)-(yo[b.yearId]??99);
+  });
+
+  tbody.innerHTML=courses.map(c=>{
+    const gClass=['A','B','C','D','F','P'].includes(c.grade)?c.grade:'';
+    const status=c.status||'earned';
+    const statusSel=`<select class="status-select sel-${status}" onchange="handleStatusChange('${c.id}',this.value)">
+      <option value="earned"    ${status==='earned'    ?'selected':''}>✓ Earned</option>
+      <option value="working"   ${status==='working'   ?'selected':''}>Working On</option>
+      <option value="planned"   ${status==='planned'   ?'selected':''}>Planned</option>
+      <option value="exploring" ${status==='exploring' ?'selected':''}>Exploring</option>
+    </select>`;
+    const typeBadge=c.type&&c.type!=='Standard'?`<span class="type-badge type-${c.type}">${esc(c.type)}</span>`:c.type==='Standard'?'<span class="type-badge type-std">Std</span>':'—';
+
+    const req=getReq(c.reqId);
+    let catDisplay=esc(getReqName(c.reqId));
+    if(c.subReqId&&req){const sub=req.subReqs?.find(sr=>sr.id===c.subReqId);if(sub)catDisplay+=`<br><span class="subreq-label">${esc(sub.name)}</span>`;}
+
+    let srMatch='';
+    if(req&&!isExploring(c)){const mSr=req.subReqs?.find(sr=>sr.name.trim().toLowerCase()===c.name.trim().toLowerCase());if(mSr){const st=subReqStatus(req,mSr);if(st)srMatch=`<span class="sr-match-tag sr-match-${st}">${st==='earned'?'<i class="fa-solid fa-check"></i>':st==='working'?'<i class="fa-solid fa-bolt"></i>':'<i class="fa-solid fa-clock"></i>'} Sub-req</span>`;}}
+
+    // Catalog action icon (no badge in name cell)
+    const hasCatalogLink=!!c.catalogRef;
+
+    const rowCls=status==='earned'?'':status==='working'?'row-working':status==='exploring'?'row-exploring':'row-planned';
+    return `<tr class="${rowCls}">
+      <td class="td-course-name">${esc(c.name)}${srMatch}</td>
+      <td class="td-year">${esc(getYearName(c.yearId))}</td>
+      <td class="col-center"><strong>${fmt(c.credits)}</strong></td>
+      <td class="col-center">${c.grade?`<span class="grade-badge ${gClass}">${esc(c.grade)}</span>`:'—'}</td>
+      <td class="col-center">${typeBadge}</td>
+      <td class="td-cat">${catDisplay}</td>
+      <td class="col-center">${statusSel}</td>
+      <td><div class="action-btns">
+        <button class="btn-icon" onclick="openCourseModal('${c.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+        ${hasCatalogLink?`<button class="btn-icon" onclick="openCatalogLinkModal('${c.id}')" title="Catalog info"><i class="fa-solid fa-book-open" style="font-size:.75rem"></i></button>`:''}
+        <button class="btn-icon delete" onclick="deleteCourse('${c.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg></button>
+      </div></td>
+    </tr>`;
+  }).join('');
+}
+
+// ── (#2) Status change handler — tri-state ────────────────────
+function handleStatusChange(courseId, newStatus) {
+  const course=state.courses.find(c=>c.id===courseId);
+  if(!course)return;
+  const old=course.status||'earned';
+  if(newStatus===old)return;
+  if(newStatus==='earned'&&old!=='earned'){
+    openEarnedModal(courseId,old);
+  } else {
+    course.status=newStatus;
+    saveData();renderAll();
+    const labels={working:'Working On',planned:'Planned',exploring:'Exploring'};
+    toast(`Course marked as ${labels[newStatus]||newStatus}.`,'success');
+  }
+}
+
+function openEarnedModal(courseId, fromStatus) {
+  const c=state.courses.find(x=>x.id===courseId);if(!c)return;
+  const gradeOpts=GRADES.map(g=>`<option value="${g}" ${c.grade===g?'selected':''}>${g}</option>`).join('');
+  const fromLabels={working:'Working On',planned:'Planned',exploring:'Exploring'};
+  const fromLabel=fromLabels[fromStatus]||fromStatus;
+  document.getElementById('modal-title').textContent='Mark as Earned';
+  document.getElementById('modal-body').innerHTML=`
+    <div class="earned-modal-info"><div class="earned-course-name">${esc(c.name)}</div>
+      <div class="earned-course-meta">${fmt(c.credits)} credits · ${esc(getYearName(c.yearId))} · ${esc(getReqName(c.reqId))}</div></div>
+    <div class="status-change-banner">
+      <span class="status-badge sel-${fromStatus}">${fromLabel}</span>
+      <span class="status-arrow">→</span>
+      <span class="status-badge sel-earned">✓ Earned</span>
+    </div>
+    <div class="form-group" style="margin-top:16px"><label>Grade Received</label>
+      <select id="em-grade"><option value="">— Select grade —</option>${gradeOpts}</select></div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" id="modal-cancel">Cancel</button>
+      <button class="btn btn-primary" id="em-save">Save as Earned</button>
+    </div>`;
+  document.getElementById('modal-cancel').addEventListener('click',()=>{closeModal();renderCourses();});
+  document.getElementById('em-save').addEventListener('click',()=>{
+    c.status='earned';c.grade=document.getElementById('em-grade').value||c.grade;
+    saveData();closeModal();renderAll();toast('Course marked as Earned!','success');
+  });
+  openModal();
+}
+
+// ══════════════════════════════════════════════════════════════
+// ADD COURSE — TWO-PATH MODAL  (Batch 4)
+// ══════════════════════════════════════════════════════════════
+
+// Entry point — shows choice screen
+function openAddCourseChoice() {
+  // Fix #2: always reset mode flags when starting fresh add-course flow
+  window._catBrowserMode = null;
+  window._relinkCourseId = null;
+  document.getElementById('modal-title').textContent='Add Course';
+  document.getElementById('modal-body').innerHTML=`
+    <p style="font-size:.85rem;color:var(--gray-600);margin-bottom:18px">How would you like to add this course?</p>
+    <div class="add-choice-grid">
+      <button class="add-choice-btn" onclick="openCourseModal(null)">
+        <i class="fa-solid fa-pen-to-square add-choice-icon"></i>
+        <div class="add-choice-label">Add Manually</div>
+        <div class="add-choice-sub">Enter course details yourself</div>
+      </button>
+      <button class="add-choice-btn" onclick="openCatalogPicker()">
+        <i class="fa-solid fa-book-open add-choice-icon"></i>
+        <div class="add-choice-label">Add from School Catalog</div>
+        <div class="add-choice-sub">Browse official course listings</div>
+      </button>
+    </div>`;
+  openModal();
+}
+
+// Step 1 — catalog + school year picker
+async function openCatalogPicker() {
+  document.getElementById('modal-title').textContent='Select School Catalog';
+  document.getElementById('modal-body').innerHTML=`<div style="text-align:center;padding:24px"><i class="fa-solid fa-spinner fa-spin" style="font-size:1.5rem;color:var(--blue-lite)"></i><p style="margin-top:8px;color:var(--gray-600);font-size:.85rem">Loading catalogs…</p></div>`;
+
+  // Fix #1: always open the modal — needed when called from linkExistingCourseToCatalog
+  // which closes the edit modal first before calling this
+  openModal();
+
+  if(!_catalogsLoaded) await loadCatalogManifest();
+
+  if(!_catalogManifest.length){
+    document.getElementById('modal-body').innerHTML=`
+      <div class="info-callout"><i class="fa-solid fa-circle-info"></i>
+        <div>No course catalogs found. Make sure catalog JSON files are in the <code>catalogs/</code> folder.</div>
+      </div>
+      <div class="modal-footer"><button class="btn btn-outline" onclick="forceCloseModal()">Close</button></div>`;
+    return;
+  }
+
+  const suggested=suggestedCatalogId();
+  const catalogOpts=_catalogManifest.map(m=>`<option value="${m.catalog_id}" ${m.catalog_id===suggested?'selected':''}>${esc(m.school)} — ${m.year}</option>`).join('');
+  const yearOpts=state.years.map(y=>`<option value="${y.id}">${esc(y.name)}</option>`).join('');
+  const isLinking=window._catBrowserMode==='link'||window._catBrowserMode==='relink';
+
+  document.getElementById('modal-body').innerHTML=`
+    <div class="form-group"><label>School Catalog</label>
+      <select id="cat-picker">${catalogOpts}</select>
+      ${suggested?`<div style="font-size:.76rem;color:var(--green);margin-top:4px"><i class="fa-solid fa-circle-check"></i> Auto-suggested based on your school</div>`:''}
+    </div>
+    <div class="form-group" style="margin-top:12px"><label>School Year to add courses to</label>
+      <select id="cat-year-picker">
+        <option value="">— Select Year —</option>${yearOpts}
+      </select>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="${isLinking?'forceCloseModal()':'openAddCourseChoice()'}">← Back</button>
+      <button class="btn btn-primary" onclick="openCatalogBrowser()">Browse Courses →</button>
+    </div>`;
+}
+
+// Step 2 — browse catalog courses
+async function openCatalogBrowser() {
+  const catalogId=document.getElementById('cat-picker')?.value||window._catBrowserCatalogId;
+  const yearId=document.getElementById('cat-year-picker')?.value||window._catBrowserYearId;
+  if(!catalogId){toast('Please select a catalog.','error');return;}
+
+  // Store for step 3 — must persist before DOM is replaced
+  window._catBrowserCatalogId=catalogId;
+  window._catBrowserYearId=yearId;
+
+  document.getElementById('modal-title').textContent='Browse Catalog Courses';
+  document.getElementById('modal-body').innerHTML=`<div style="text-align:center;padding:24px"><i class="fa-solid fa-spinner fa-spin" style="font-size:1.5rem;color:var(--blue-lite)"></i></div>`;
+
+  // Fix #4: protect modal — clicking outside or Escape won't lose catalog progress
+  openModal(true);
+
+  const catalog=await loadCatalog(catalogId);
+  if(!catalog){
+    document.getElementById('modal-body').innerHTML=`<div class="info-callout"><i class="fa-solid fa-circle-info"></i><div>Could not load catalog.</div></div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="openCatalogPicker()">← Back</button>
+        <button class="btn btn-outline" onclick="forceCloseModal()">Cancel</button>
+      </div>`;
+    return;
+  }
+
+  // Get categories
+  const cats=[...new Set(catalog.courses.map(c=>c.category))].sort();
+  const catOpts=cats.map(c=>`<option value="${c}">${esc(c)}</option>`).join('');
+
+  document.getElementById('modal-body').innerHTML=`
+    <div class="cat-browser-filters">
+      <input type="text" id="cat-search" placeholder="Search courses…" oninput="filterCatalogBrowser()" style="flex:1" />
+      <select id="cat-category" onchange="filterCatalogBrowser()">
+        <option value="">All Categories</option>${catOpts}
+      </select>
+      <select id="cat-type" onchange="filterCatalogBrowser()">
+        <option value="">All Types</option>
+        <option value="VC">VC</option><option value="BC">BC</option><option value="AC">AC</option>
+      </select>
+    </div>
+    <div id="cat-course-list" class="cat-course-list"></div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="openCatalogPicker()">← Back</button>
+      <button class="btn btn-outline" onclick="forceCloseModal()">Cancel</button>
+    </div>`;
+
+  // Store courses for filter
+  window._catBrowserCourses=catalog.courses;
+  filterCatalogBrowser();
+}
+
+function filterCatalogBrowser() {
+  const courses=window._catBrowserCourses||[];
+  const search=(document.getElementById('cat-search')?.value||'').toLowerCase();
+  const cat=document.getElementById('cat-category')?.value||'';
+  const type=document.getElementById('cat-type')?.value||'';
+
+  const filtered=courses.filter(c=>{
+    if(cat&&c.category!==cat)return false;
+    if(type&&!c.type?.includes(type))return false;
+    if(search&&!c.course_name.toLowerCase().includes(search)&&!c.category.toLowerCase().includes(search))return false;
+    return true;
+  });
+
+  const listEl=document.getElementById('cat-course-list');
+  if(!listEl)return;
+  if(!filtered.length){listEl.innerHTML='<p class="text-muted" style="padding:16px;text-align:center">No courses match the filters.</p>';return;}
+
+  // Fix #1: use data-course-id attribute — avoids broken inline onclick when
+  // course_id contains hyphens/special chars that corrupt the HTML string
+  listEl.innerHTML=filtered.map(c=>{
+    const types=(c.type||[]).map(t=>`<span class="type-badge type-${t}">${t}</span>`).join(' ');
+    const credits=Object.entries(c.credits||{}).map(([t,v])=>`${t}: ${v}`).join(' / ');
+    const alreadyAdded=state.courses.some(sc=>sc.catalogRef?.catalogId===window._catBrowserCatalogId&&sc.catalogRef?.courseId===c.course_id);
+    return `<div class="cat-course-row ${alreadyAdded?'cat-added':''}">
+      <div class="cat-course-info">
+        <div class="cat-course-name">${esc(c.course_name)} ${alreadyAdded?'<span class="catalog-badge">Added</span>':''}</div>
+        <div class="cat-course-meta">${esc(c.category)}${c.sub_category?` › ${esc(c.sub_category)}`:''} · ${credits} · ${types}</div>
+        ${c.prerequisites&&c.prerequisites!=='None'?`<div class="cat-prereq"><i class="fa-solid fa-arrow-right-long" style="font-size:.65rem;color:var(--gray-400)"></i> Prereq: ${esc(c.prerequisites)}</div>`:''}
+      </div>
+      <button class="btn btn-secondary btn-sm cat-select-btn" data-course-id="${esc(c.course_id)}">Select →</button>
+    </div>`;
+  }).join('');
+
+  // Bind listeners after render — course_id passed safely through DOM, not HTML string
+  listEl.querySelectorAll('.cat-select-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>openCatalogCourseForm(btn.dataset.courseId));
+  });
+}
+
+// Step 3 — confirm and fill course form from catalog entry
+async function openCatalogCourseForm(courseId) {
+  const catalog=_catalogCache.get(window._catBrowserCatalogId);
+  if(!catalog)return;
+  const entry=catalog.courses.find(c=>c.course_id===courseId);
+  if(!entry)return;
+
+  const mode=window._catBrowserMode; // 'link' | 'relink' | undefined(new)
+  const isLinking=mode==='link'||mode==='relink';
+  const existingCourse=isLinking?state.courses.find(c=>c.id===window._relinkCourseId):null;
+
+  document.getElementById('modal-title').textContent=isLinking?'Link to Catalog Entry':'Add Catalog Course';
+
+  // Determine available types and credits
+  const types=entry.type||[];
+  const typeOpts=types.map(t=>`<option value="${t}">${t} — ${entry.credits_raw?.[t]||entry.credits?.[t]+' cr'||''}</option>`).join('');
+  const yearOpts=state.years.map(y=>`<option value="${y.id}" ${y.id===(window._catBrowserYearId||existingCourse?.yearId||'')?'selected':''}>${esc(y.name)}</option>`).join('');
+  // Fix #3: auto-match requirement category from catalog entry category name
+  const autoReqId=state.requirements.find(r=>
+    r.name.toLowerCase()===entry.category.toLowerCase() ||
+    entry.category.toLowerCase().includes(r.name.toLowerCase()) ||
+    r.name.toLowerCase().includes(entry.category.toLowerCase())
+  )?.id||'';
+
+  const reqOpts=state.requirements.map(r=>{
+    const subs=(r.subReqs||[]).map(sr=>`<option value="${r.id}|${sr.id}" ${existingCourse?.reqId===r.id&&existingCourse?.subReqId===sr.id?'selected':''}>  ↳ ${esc(sr.name)}</option>`).join('');
+    const sel=existingCourse?existingCourse.reqId===r.id&&!existingCourse.subReqId:r.id===autoReqId;
+    return `<option value="${r.id}" ${sel?'selected':''}>${esc(r.name)}</option>${subs}`;
+  }).join('');
+  // Fix #6: FA icons for status options
+  const statusOpts=`<option value="planned" ${existingCourse?.status==='planned'?'selected':''}>Planned</option><option value="working" ${existingCourse?.status==='working'?'selected':''}>Working On</option><option value="exploring" ${existingCourse?.status==='exploring'?'selected':''}>Exploring</option><option value="earned" ${existingCourse?.status==='earned'||!existingCourse?'selected':''}>Earned</option>`;
+  const gradeOpts=GRADES.map(g=>`<option value="${g}" ${existingCourse?.grade===g?'selected':''}>${g}</option>`).join('');
+
+  // Merge options only shown when linking existing course
+  const mergeSection=isLinking?`
+    <div style="margin-top:8px;padding:10px 13px;background:var(--off-white);border-radius:var(--radius-sm);border:1px solid var(--gray-200);font-size:.8rem;color:var(--gray-600)">
+      <strong>Merge options:</strong> what should be updated from the catalog?
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <label style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="radio" name="merge" value="none" checked /> Keep my data as-is</label>
+        <label style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="radio" name="merge" value="name" /> Update name only</label>
+        <label style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="radio" name="merge" value="credits" /> Update credits only</label>
+        <label style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="radio" name="merge" value="all" /> Update name + credits</label>
+      </div>
+    </div>`:'';
+
+  document.getElementById('modal-body').innerHTML=`
+    <div class="cat-course-preview">
+      <div class="cat-preview-name">${esc(entry.course_name)}</div>
+      <div class="cat-preview-meta">${esc(entry.category)}${entry.sub_category?` › ${esc(entry.sub_category)}`:''}</div>
+      ${entry.prerequisites&&entry.prerequisites!=='None'?`<div class="cat-prereq" style="margin-top:4px"><i class="fa-solid fa-circle-info" style="color:var(--blue-lite)"></i> Prerequisite: ${esc(entry.prerequisites)}</div>`:''}
+      ${entry.details?`<details style="margin-top:8px"><summary style="cursor:pointer;font-size:.76rem;color:var(--blue-lite);font-weight:600">Course Description</summary><p style="font-size:.78rem;color:var(--gray-600);line-height:1.5;margin-top:6px;max-height:80px;overflow-y:auto">${esc(entry.details)}</p></details>`:''}
+    </div>
+    ${isLinking&&existingCourse?`<div style="margin-top:8px;padding:8px 12px;background:var(--gray-100);border-radius:var(--radius-sm);font-size:.8rem;color:var(--gray-600)"><i class="fa-solid fa-arrow-right-arrow-left"></i> Linking to: <strong>${esc(existingCourse.name)}</strong></div>`:''}
+    ${mergeSection}
+    <div class="form-row" style="margin-top:14px">
+      <div class="form-group"><label>Course Type *</label>
+        <select id="cc-type" onchange="updateCatalogCredits()">
+          ${typeOpts}
+          ${!types.length?`<option value="Standard">Standard</option>`:''}
+        </select>
+      </div>
+      <div class="form-group"><label>Credits</label>
+        <input type="number" id="cc-credits" placeholder="0" min="0" step="0.5" value="${existingCourse?.credits||''}" />
+      </div>
+    </div>
+    ${!isLinking?`
+    <div class="form-row">
+      <div class="form-group"><label>School Year</label>
+        <select id="cc-year"><option value="">— Select —</option>${yearOpts}</select>
+      </div>
+      <div class="form-group"><label>Status *</label>
+        <select id="cc-status">${statusOpts}</select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Grade (if earned)</label>
+        <select id="cc-grade"><option value="">— Select —</option>${gradeOpts}</select>
+      </div>
+      <div class="form-group"><label>Requirement Category</label>
+        <select id="cc-req"><option value="">— Uncategorized —</option>${reqOpts}</select>
+      </div>
+    </div>`:''}
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="openCatalogBrowser()">← Back</button>
+      <button class="btn btn-outline" onclick="forceCloseModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="${isLinking?`confirmCatalogLink('${courseId}')`:`saveCatalogCourse('${courseId}')`}">${isLinking?'Link Course':'Add Course'}</button>
+    </div>`;
+
+  // Store entry for credit auto-fill
+  window._catCurrentEntry=entry;
+  updateCatalogCredits();
+}
+
+function updateCatalogCredits() {
+  const entry=window._catCurrentEntry;if(!entry)return;
+  const type=document.getElementById('cc-type')?.value;
+  const cr=entry.credits?.[type];
+  const credEl=document.getElementById('cc-credits');
+  if(credEl&&cr!==undefined)credEl.value=cr;
+}
+
+async function saveCatalogCourse(courseId) {
+  const type=document.getElementById('cc-type')?.value||'Standard';
+  const credits=parseFloat(document.getElementById('cc-credits')?.value);
+  const yearId=document.getElementById('cc-year')?.value;
+  const status=document.getElementById('cc-status')?.value||'planned';
+  const grade=document.getElementById('cc-grade')?.value;
+  const reqVal=document.getElementById('cc-req')?.value;
+  let reqId='',subReqId='';
+  if(reqVal?.includes('|'))[reqId,subReqId]=reqVal.split('|');else reqId=reqVal||'';
+
+  if(isNaN(credits)||credits<0){toast('Please select a course type to auto-fill credits.','error');return;}
+
+  const entry=window._catCurrentEntry;
+  state.courses.push({
+    id:uid(),
+    name:entry.course_name,
+    yearId,credits,grade,type,reqId,subReqId,status,
+    catalogRef:{catalogId:window._catBrowserCatalogId,courseId}
+  });
+  saveData();forceCloseModal();renderAll();
+  toast(`${entry.course_name} added as ${status}.`,'success');
+}
+
+// Confirm linking an existing manually-entered course to a catalog entry
+function confirmCatalogLink(catalogCourseId) {
+  const c=state.courses.find(x=>x.id===window._relinkCourseId);
+  if(!c){toast('Course not found.','error');return;}
+  const entry=window._catCurrentEntry;
+  if(!entry){toast('Catalog entry not found.','error');return;}
+
+  // Apply selected merge option
+  const mergeVal=document.querySelector('input[name="merge"]:checked')?.value||'none';
+  if(mergeVal==='name'||mergeVal==='all') c.name=entry.course_name;
+  if(mergeVal==='credits'||mergeVal==='all'){
+    const type=document.getElementById('cc-type')?.value||c.type;
+    const cr=entry.credits?.[type];
+    if(cr!==undefined)c.credits=cr;
+  }
+  // Apply type from selector regardless
+  const selectedType=document.getElementById('cc-type')?.value;
+  if(selectedType)c.type=selectedType;
+
+  // Set the catalog reference
+  c.catalogRef={catalogId:window._catBrowserCatalogId,courseId:catalogCourseId};
+
+  // Clear mode flags
+  window._catBrowserMode=null;
+  window._relinkCourseId=null;
+
+  saveData();forceCloseModal();renderAll();
+  toast(`${c.name} linked to catalog.`,'success');
+}
+
+// ── Catalog link / info modal (Batch 5) ───────────────────────
+async function openCatalogLinkModal(courseId) {
+  const c=state.courses.find(x=>x.id===courseId);if(!c)return;
+  document.getElementById('modal-title').textContent='Catalog Entry';
+  document.getElementById('modal-body').innerHTML=`<div style="text-align:center;padding:24px"><i class="fa-solid fa-spinner fa-spin" style="font-size:1.5rem;color:var(--blue-lite)"></i></div>`;
+  openModal();
+
+  // Bug fix: manifest may not be loaded yet if user hasn't browsed catalog this session
+  if(!_catalogsLoaded) await loadCatalogManifest();
+
+  const catalog=c.catalogRef?await loadCatalog(c.catalogRef.catalogId):null;
+  const entry=catalog?.courses?.find(x=>x.course_id===c.catalogRef?.courseId);
+  const mf=_catalogManifest.find(m=>m.catalog_id===c.catalogRef?.catalogId);
+
+  if(!entry){
+    document.getElementById('modal-body').innerHTML=`
+      <p class="text-muted">Could not load catalog entry.</p>
+      <div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Close</button>
+      <button class="btn btn-secondary" onclick="relinkCatalogCourse('${courseId}')">Re-link to Catalog</button></div>`;
+    openModal();return;
+  }
+
+  const credits=Object.entries(entry.credits_raw||entry.credits||{}).map(([t,v])=>`<strong>${t}</strong>: ${v}`).join(' / ');
+  document.getElementById('modal-body').innerHTML=`
+    <div class="cat-course-preview">
+      <div class="cat-preview-name">${esc(entry.course_name)}</div>
+      <div class="cat-preview-meta">${esc(mf?.school||'')} · ${esc(mf?.year||'')}</div>
+    </div>
+    <table style="width:100%;font-size:.83rem;margin-top:14px;border-collapse:collapse">
+      <tr><td style="padding:5px 0;color:var(--gray-600);width:110px">Category</td><td>${esc(entry.category)}</td></tr>
+      ${entry.sub_category?`<tr><td style="padding:5px 0;color:var(--gray-600)">Sub-category</td><td>${esc(entry.sub_category)}</td></tr>`:''}
+      <tr><td style="padding:5px 0;color:var(--gray-600)">Credits</td><td>${credits}</td></tr>
+      <tr><td style="padding:5px 0;color:var(--gray-600)">Prereqs</td><td>${esc(entry.prerequisites||'None')}</td></tr>
+      <tr><td style="padding:5px 0;color:var(--gray-600)">Grade Levels</td><td>${(entry.grade_levels||[]).join(', ')||'—'}</td></tr>
+      ${entry.ap_ib_course?'<tr><td colspan="2"><span class="type-badge type-VC">AP/IB Course</span></td></tr>':''}
+    </table>
+    <details style="margin-top:12px">
+      <summary style="cursor:pointer;font-size:.82rem;color:var(--blue-lite);font-weight:600">Course Description</summary>
+      <p style="font-size:.81rem;color:var(--gray-600);line-height:1.6;margin-top:8px">${esc(entry.details||'')}</p>
+    </details>
+    <div style="margin-top:14px;padding:10px 13px;background:var(--off-white);border-radius:var(--radius-sm);font-size:.78rem;color:var(--gray-600)">
+      <strong>Merge options:</strong>
+      <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-outline btn-sm" onclick="mergeCatalogData('${courseId}','name')">Update Name</button>
+        <button class="btn btn-outline btn-sm" onclick="mergeCatalogData('${courseId}','credits')">Update Credits</button>
+        <button class="btn btn-outline btn-sm" onclick="mergeCatalogData('${courseId}','all')">Update Name + Credits</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal()">Close</button>
+      <button class="btn btn-secondary" onclick="relinkCatalogCourse('${courseId}')">Re-link to Different Catalog</button>
+    </div>`;
+  openModal();
+}
+
+// Merge catalog data into existing course (Batch 5 — option 6)
+async function mergeCatalogData(courseId, mergeType) {
+  const c=state.courses.find(x=>x.id===courseId);if(!c||!c.catalogRef)return;
+  if(!_catalogsLoaded) await loadCatalogManifest();
+  const catalog=await loadCatalog(c.catalogRef.catalogId);
+  const entry=catalog?.courses?.find(x=>x.course_id===c.catalogRef.courseId);
+  if(!entry){toast('Catalog entry not found.','error');return;}
+  if(mergeType==='name'||mergeType==='all') c.name=entry.course_name;
+  if(mergeType==='credits'||mergeType==='all'){
+    const cr=entry.credits?.[c.type];
+    if(cr!==undefined)c.credits=cr;
+  }
+  saveData();closeModal();renderAll();toast('Course updated from catalog.','success');
+}
+
+// Re-link existing catalog-linked course to a different catalog entry
+async function relinkCatalogCourse(courseId) {
+  window._relinkCourseId=courseId;
+  window._catBrowserMode='relink';
+  closeModal();
+  await openCatalogPicker();
+}
+
+// Link a manually entered course (no catalogRef) to a catalog entry
+// Opens the full catalog browser — on Select the course is linked (not duplicated)
+async function linkExistingCourseToCatalog(courseId) {
+  window._relinkCourseId=courseId;
+  window._catBrowserMode='link';
+  closeModal();
+  await openCatalogPicker();
+}
+
+// ── Manual course modal (enhanced with status) ────────────────
+function openCourseModal(courseId) {
+  const c=courseId?state.courses.find(x=>x.id===courseId):null;
+  document.getElementById('modal-title').textContent=c?'Edit Course':'Add Course Manually';
+  const yearOpts=state.years.map(y=>`<option value="${y.id}" ${c?.yearId===y.id?'selected':''}>${esc(y.name)}</option>`).join('');
+  const reqOpts=state.requirements.map(r=>{
+    const subs=(r.subReqs||[]).map(sr=>{const cr=Number(sr.credits)>0?` (${fmt(sr.credits)} cr)`:'';return `<option value="${r.id}|${sr.id}" ${c?.reqId===r.id&&c?.subReqId===sr.id?'selected':''}>  ↳ ${esc(sr.name)}${cr}</option>`;}).join('');
+    return `<option value="${r.id}" ${c?.reqId===r.id&&!c?.subReqId?'selected':''}>${esc(r.name)}</option>${subs}`;
+  }).join('');
+  const gradeOpts=GRADES.map(g=>`<option value="${g}" ${c?.grade===g?'selected':''}>${g}</option>`).join('');
+  const typeOpts=COURSE_TYPES.map(t=>`<option value="${t}" ${(c?.type||'Standard')===t?'selected':''}>${t}</option>`).join('');
+  const curStatus=c?.status||'earned';
+  const statusOpts=[
+    {v:'earned',    l:'✓ Earned'},
+    {v:'working',   l:'Working On'},
+    {v:'planned',   l:'Planned'},
+    {v:'exploring', l:'Exploring'}
+  ].map(s=>`<option value="${s.v}" ${curStatus===s.v?'selected':''}>${s.l}</option>`).join('');
+
+  document.getElementById('modal-body').innerHTML=`
+    <div class="form-group"><label>Course Name *</label><input type="text" id="c-name" placeholder="e.g. Algebra II" value="${esc(c?.name||'')}" /></div>
+    <div class="form-row">
+      <div class="form-group"><label>School Year</label><select id="c-year"><option value="">— Select —</option>${yearOpts}</select></div>
+      <div class="form-group"><label>Credits *</label><input type="number" id="c-credits" placeholder="1.0" min="0" step="0.5" value="${c?.credits??''}" /></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label>Grade</label><select id="c-grade"><option value="">— Select —</option>${gradeOpts}</select></div>
+      <div class="form-group"><label>Course Type</label><select id="c-type">${typeOpts}</select></div>
+    </div>
+    <div class="form-group"><label>Requirement Category</label><select id="c-req"><option value="">— Uncategorized —</option>${reqOpts}</select></div>
+    <div class="form-group" style="margin-top:8px"><label>Status</label><select id="c-status" class="status-select sel-${curStatus}"
+      onchange="this.className='status-select sel-'+this.value">${statusOpts}</select></div>
+    ${c?.catalogRef
+      ? `<div style="font-size:.78rem;color:var(--gray-600);margin-top:8px;padding:8px 12px;background:var(--gray-100);border-radius:var(--radius-sm)">
+          <i class="fa-solid fa-book-open" style="color:var(--blue-lite)"></i> Linked to catalog —
+          <button class="btn btn-outline btn-sm" style="padding:2px 8px;font-size:.74rem" onclick="openCatalogLinkModal('${c.id}');closeModal()">View / Merge</button>
+        </div>`
+      : c  // editing an existing unlinked course — show Link option
+        ? `<div style="font-size:.78rem;color:var(--gray-600);margin-top:8px;padding:8px 12px;background:var(--off-white);border-radius:var(--radius-sm);border:1px solid var(--gray-200)">
+            <i class="fa-solid fa-link" style="color:var(--gray-400)"></i> Not linked to a catalog —
+            <button class="btn btn-outline btn-sm" style="padding:2px 8px;font-size:.74rem;margin-left:4px" onclick="linkExistingCourseToCatalog('${c.id}')">Link to Catalog</button>
+          </div>`
+        : ''
+    }
+    <div class="modal-footer"><button class="btn btn-outline" id="modal-cancel">Cancel</button><button class="btn btn-primary" id="modal-save">Save Course</button></div>`;
+  document.getElementById('modal-cancel').addEventListener('click',closeModal);
+  document.getElementById('modal-save').addEventListener('click',()=>saveCourse(courseId));
+  openModal();document.getElementById('c-name').focus();
+}
+
+function saveCourse(courseId) {
+  const name=document.getElementById('c-name').value.trim();
+  const credits=parseFloat(document.getElementById('c-credits').value);
+  const yearId=document.getElementById('c-year').value;
+  const grade=document.getElementById('c-grade').value;
+  const type=document.getElementById('c-type').value;
+  const status=document.getElementById('c-status').value||'earned';
+  const reqVal=document.getElementById('c-req').value;
+  let reqId='',subReqId='';
+  if(reqVal.includes('|'))[reqId,subReqId]=reqVal.split('|');else reqId=reqVal;
+  if(!name){toast('Please enter a course name.','error');return;}
+  if(isNaN(credits)||credits<0){toast('Please enter a valid credit value.','error');return;}
+  const data={name,credits,yearId,grade,type,reqId,subReqId,status};
+  if(courseId)Object.assign(state.courses.find(c=>c.id===courseId),data);
+  else state.courses.push({id:uid(),...data,catalogRef:null});
+  saveData();closeModal();renderAll();
+  toast(courseId?'Course updated.':'Course added.','success');
+}
+
+function deleteCourse(id){if(!confirm('Delete this course?'))return;state.courses=state.courses.filter(c=>c.id!==id);saveData();renderAll();toast('Course deleted.');}
+
+// ══════════════════════════════════════════════════════════════
+// STATISTICS  (Batch 2 — tri-state)
+// ══════════════════════════════════════════════════════════════
+function renderStats() {
+  const earned=totalEarned(),working=totalWorking(),planned=totalPlanned(),required=totalRequired();
+  const remaining=Math.max(0,required-earned);
+  const metCount=state.requirements.filter(r=>creditsEarnedForReq(r.id)>=r.credits&&r.credits>0).length;
+  const pct=required>0?(earned/required)*100:0;
+  const yearsW=state.years.filter(y=>state.courses.some(c=>c.yearId===y.id&&isEarned(c)));
+  const avg=yearsW.length>0?earned/yearsW.length:0;
+
+  document.getElementById('stat-total-courses').textContent=state.courses.length;
+  document.getElementById('stat-credits-earned').textContent=fmt(earned);
+  document.getElementById('stat-credits-remaining').textContent=fmt(remaining);
+  document.getElementById('stat-credits-working').textContent=fmt(working);
+  document.getElementById('stat-credits-planned').textContent=fmt(planned);
+  document.getElementById('stat-reqs-met').textContent=`${metCount} / ${state.requirements.length}`;
+  document.getElementById('stat-completion').textContent=fmt(pct)+'%';
+  document.getElementById('stat-avg-credits').textContent=fmt(avg);
+  document.getElementById('stat-grad-year').textContent=state.student.gradYear||'—';
+
+  const byYear=creditsByYear();
+  const maxC=Math.max(...state.years.map(y=>(byYear[y.id]?.earned||0)+(byYear[y.id]?.working||0)+(byYear[y.id]?.planned||0)),1);
+  document.getElementById('bar-chart-years').innerHTML=!state.years.length
+    ?'<p class="text-muted" style="font-size:.85rem;padding:20px 0">No years defined.</p>'
+    :state.years.map(y=>{
+        const e=byYear[y.id]?.earned||0,w=byYear[y.id]?.working||0,p=byYear[y.id]?.planned||0;
+        const hE=Math.round((e/maxC)*140),hW=Math.round((w/maxC)*140),hP=Math.round((p/maxC)*140);
+        return `<div class="bar-col">
+          <div class="bar-col-val">${fmt(e)}${w>0?`<span class="bar-work-label"><i class="fa-solid fa-bolt"></i> ${fmt(w)}</span>`:''}${p>0?`<span class="bar-plan-label"><i class="fa-solid fa-clock"></i> ${fmt(p)}</span>`:''}</div>
+          <div class="bar-col-inner-wrap" style="height:${hE+hW+hP}px">
+            ${p>0?`<div class="bar-seg planned" style="height:${hP}px"></div>`:''}
+            ${w>0?`<div class="bar-seg working" style="height:${hW}px"></div>`:''}
+            <div class="bar-seg earned" style="height:${hE}px"></div>
+          </div>
+          <div class="bar-col-label">${esc(y.name)}</div>
+        </div>`;
+      }).join('');
+
+  // (#7) Proportional bars: find max credits across all requirements
+  const maxReqCredits=Math.max(...state.requirements.map(r=>Number(r.credits||0)),1);
+
+  // (#2) Update toggle button label
+  const toggleBtn=document.getElementById('stats-view-toggle');
+  if(toggleBtn)toggleBtn.textContent=_statsView==='gap'?'Show Progress View':'Show Gap View';
+
+  document.getElementById('req-breakdown').innerHTML=!state.requirements.length
+    ?'<p class="text-muted" style="font-size:.85rem">No requirements defined.</p>'
+    :state.requirements.map(req=>{
+        const e=creditsEarnedForReq(req.id),w=creditsWorkingForReq(req.id),p=creditsPlannedForReq(req.id);
+        const remaining=Math.max(0,req.credits-e-w-p);
+        const done=e>=req.credits&&req.credits>0;
+
+        // (#7) Container width proportional to this req's credits vs the largest req
+        const containerPct=(req.credits/maxReqCredits)*100;
+
+        // (#2) Gap view: bar shows remaining; Progress view: bar shows earned/working/planned
+        let barHtml;
+        if(_statsView==='gap'){
+          const remPct=req.credits>0?(remaining/req.credits)*100:0;
+          const coveredPct=100-remPct;
+          barHtml=`
+            <div class="req-row-bar ${done?'done':''}" style="width:${coveredPct}%"></div>
+            ${remaining>0?`<div class="req-row-bar-remaining" style="width:${remPct}%"></div>`:''}`;
+        } else {
+          const pct=req.credits>0?Math.min(100,(e/req.credits)*100):0;
+          const pctW=req.credits>0?Math.min(100-pct,(w/req.credits)*100):0;
+          const pctP=req.credits>0?Math.min(100-pct-pctW,(p/req.credits)*100):0;
+          barHtml=`
+            <div class="req-row-bar ${done?'done':''}" style="width:${pct}%"></div>
+            <div class="req-row-bar-working" style="width:${pctW}%"></div>
+            <div class="req-row-bar-gold" style="width:${pctP}%"></div>`;
+        }
+
+        const creditLabel=_statsView==='gap'
+          ?`${remaining>0?`<span class="req-row-remaining">${fmt(remaining)} needed</span>`:''} / ${fmt(req.credits)}`
+          :`${fmt(e)}${w>0?`<span class="work-inline"><i class="fa-solid fa-bolt"></i> ${fmt(w)}</span>`:''}${p>0?`<span class="plan-inline"><i class="fa-solid fa-clock"></i> ${fmt(p)}</span>`:''} / ${fmt(req.credits)}`;
+
+        const subH=(req.subReqs||[]).length?`<div class="breakdown-subreqs">${req.subReqs.map(sr=>{
+          const st=subReqStatus(req,sr);const cr=Number(sr.credits)>0?` (${fmt(sr.credits)})`:'';
+          const cls=st==='earned'?'subreq-chip sm sr-met':st==='working'?'subreq-chip sm sr-working':st==='planned'?'subreq-chip sm sr-planned':'subreq-chip sm';
+          return `<span class="${cls}">${st==='earned'?'<i class="fa-solid fa-check"></i> ':st==='working'?'<i class="fa-solid fa-bolt"></i> ':st==='planned'?'<i class="fa-solid fa-clock"></i> ':''}${esc(sr.name)}${cr}</span>`;
+        }).join('')}</div>`:'';
+
+        return `<div class="req-row">
+          <div class="req-row-name">${esc(req.name)}${subH}</div>
+          <div class="req-row-bar-outer" style="width:${containerPct}%">
+            <div class="req-row-bar-wrap">${barHtml}</div>
+          </div>
+          <div class="req-row-credits">${creditLabel}</div>
+        </div>`;
+      }).join('');
+
+  const gradesE={},gradesW={},gradesP={};
+  state.courses.forEach(c=>{
+    if(!c.grade||isExploring(c))return;  // exploring excluded from grade dist
+    if(isEarned(c))  gradesE[c.grade]=(gradesE[c.grade]||0)+1;
+    else if(isWorking(c)) gradesW[c.grade]=(gradesW[c.grade]||0)+1;
+    else if(isPlanned(c)) gradesP[c.grade]=(gradesP[c.grade]||0)+1;
+  });
+  const og=GRADES.filter(g=>gradesE[g]||gradesW[g]||gradesP[g]);
+  document.getElementById('grade-dist').innerHTML=og.length
+    ?og.map(g=>`<div class="grade-dist-item">
+        <div class="grade-dist-count">${gradesE[g]||0}</div>
+        ${gradesW[g]?`<div class="grade-working-note"><i class="fa-solid fa-bolt"></i> ${gradesW[g]}</div>`:''}
+        ${gradesP[g]?`<div class="grade-planned-note"><i class="fa-solid fa-clock"></i> ${gradesP[g]}</div>`:''}
+        <div class="grade-dist-label">${g}</div>
+      </div>`).join('')
+    :'<p class="text-muted" style="font-size:.85rem">No grade data available.</p>';
+}
+
+// ══════════════════════════════════════════════════════════════
+// PATHWAY PAGES  (unchanged from v1.6.0)
+// ══════════════════════════════════════════════════════════════
+function renderPathwayOverview() {
+  const s=allPathwayStatuses(),eligible=isPathwayEligible(s),anyPartial=Object.values(s).some(x=>x.status!=='none');
+  updatePathwayNavDots();
+  const banner=document.getElementById('eligibility-banner');
+  const icon=banner?.querySelector('.elig-icon');
+  const metNames=Object.entries(s).filter(([,v])=>v.met).map(([k])=>({p1:'Pathway 1',p2:'Pathway 2',p3:'Pathway 3',p4:'Pathway 4',p5:'Pathway 5'}[k]||k));
+  if(eligible){banner.className='eligibility-banner eligible';if(icon)icon.className='fa-solid fa-circle-check elig-icon';document.getElementById('eligibility-title').textContent='✓ Graduation Eligible — Pathway Requirement Met';document.getElementById('eligibility-detail').textContent='Completed: '+metNames.join(', ');}
+  else if(anyPartial){banner.className='eligibility-banner partial';if(icon)icon.className='fa-solid fa-hourglass-half elig-icon';document.getElementById('eligibility-title').textContent='In Progress — Not Yet Eligible';document.getElementById('eligibility-detail').textContent='At least one pathway must be fully completed.';}
+  else{banner.className='eligibility-banner not-eligible';if(icon)icon.className='fa-solid fa-circle-info elig-icon';document.getElementById('eligibility-title').textContent='Pathway Eligibility: Not Yet Determined';document.getElementById('eligibility-detail').textContent='Complete at least one full pathway to meet graduation requirements.';}
+  const pathways=[
+    {key:'p1',page:'pathways-p1',icon:'fa-pencil',      label:'Pathway 1',name:'Keystone Proficiency',   desc:descP1(s.p1)},
+    {key:'p2',page:'pathways-p2',icon:'fa-calculator',  label:'Pathway 2',name:'Keystone Composite',     desc:descP2(s.p2)},
+    {key:'p3',page:'pathways-p3',icon:'fa-wrench',      label:'Pathway 3',name:'Career & Technical Ed',  desc:descP3(s.p3)},
+    {key:'p4',page:'pathways-p4',icon:'fa-chart-bar',   label:'Pathway 4',name:'Alternative Assessment', desc:descP4(s.p4)},
+    {key:'p5',page:'pathways-p5',icon:'fa-folder-open', label:'Pathway 5',name:'Evidence-Based',         desc:descP5(s.p5)}
+  ];
+  document.getElementById('pathway-overview-grid').innerHTML=pathways.map(p=>{
+    const status=s[p.key].status,complete=status==='met';
+    const badgeTxt=complete?'✓ Met':status==='partial'?'◷ In Progress':'○ Not Started';
+    const pct=complete?100:status==='partial'?50:0;
+    return `<div class="req-card ${complete?'complete':''}" role="button" tabindex="0"
+         onclick="navigateTo('${p.page}')" onkeydown="if(event.key==='Enter')navigateTo('${p.page}')">
+      <span class="req-badge">${badgeTxt}</span>
+      <div class="req-card-name"><i class="fa-solid ${p.icon}" style="margin-right:6px;color:var(--blue-lite)"></i>${p.label}</div>
+      <div class="req-card-credits" style="font-size:.85rem;font-weight:600;color:var(--gray-800);margin-top:2px">${p.name}</div>
+      <div class="req-card-planned" style="color:var(--gray-600);font-size:.75rem;font-weight:400;margin-top:4px">${p.desc}</div>
+      <div class="req-card-bar-wrap" style="margin-top:10px"><div class="req-card-bar" style="width:${pct}%"></div></div>
+      <div class="req-card-click-hint"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View details</div>
+    </div>`;
+  }).join('');
+  const metCount=Object.values(s).filter(x=>x.met).length;
+  document.getElementById('pathway-progress-card').innerHTML=`
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <span style="font-size:.87rem;color:var(--gray-600)">Pathways completed: <strong style="color:var(--blue-dark)">${metCount} / 5</strong></span>
+      <span style="font-size:.87rem;color:var(--gray-600)">You only need <strong style="color:var(--green)">1</strong> to be eligible</span>
+    </div>
+    <div class="prog-wrap" style="height:12px"><div class="prog-bar ${metCount>0?'green':''}" style="width:${(metCount/5)*100}%"></div></div>`;
+}
+function descP1(s){ return `${Object.values(s.subjects).filter(x=>x.met).length}/3 subjects Proficient or higher`; }
+function descP2(s){ return s.met?`${s.mode} composite: ${s.composite}`:s.composite?`Best composite: ${s.composite}`:'No qualifying scores yet'; }
+function descP3(s){ return s.met?`${s.count} verified CTE record(s)`:'No CTE records logged'; }
+function descP4(s){ return s.met?`${s.qualifying.length} qualifying assessment(s)`:state.p4Records.length?`${state.p4Records.length} record(s) logged`:'No assessments logged'; }
+function descP5(s){ return `${s.total}/3 pieces (need ≥1 from Section 1)`; }
+
+function renderP1(){
+  const s=p1Status(),bm=state.benchmarks.keystone;
+  const badge=document.getElementById('p1-badge');
+  badge.textContent=s.met?'✓ Pathway Met':s.status==='partial'?'◷ Partial':'○ Not Met';
+  badge.className='subject-badge '+(s.met?'badge-met':s.status==='partial'?'badge-partial':'badge-none');
+  document.getElementById('p1-subjects').innerHTML=KEYSTONE_SUBJECTS.map((subj,i)=>{
+    const key=KEYSTONE_KEYS[i],info=s.subjects[key],prof=bm[key]?.prof??0;
+    const pct=info.best?Math.min(100,(info.best/(prof*1.15))*100):0;
+    const bc=info.met?'badge-met':info.best?'badge-partial':'badge-none';
+    return `<div class="subject-row"><div class="subject-name">${subj}</div><div><div class="prog-wrap"><div class="prog-bar ${info.met?'green':''}" style="width:${pct}%"></div></div></div><div class="subject-score-info">Proficient: ≥ ${prof}</div><div><span class="subject-badge ${bc}">${info.met?'✓ Proficient':info.best?`Best: ${info.best}`:'Not Taken'}</span></div></div>`;
+  }).join('');
+  const tbody=document.getElementById('keystone-log-tbody');
+  if(!state.keystoneScores.length){tbody.innerHTML='<tr class="empty-row"><td colspan="6">No scores logged yet.</td></tr>';return;}
+  tbody.innerHTML=[...state.keystoneScores].sort((a,b)=>new Date(b.date)-new Date(a.date)).map(sc=>{
+    const key=KEYSTONE_KEYS[KEYSTONE_SUBJECTS.indexOf(sc.subject)],prof=bm[key]?.prof??0,met=sc.score>=prof;
+    return `<tr><td>${sc.subject}</td><td>${fmtDate(sc.date)}</td><td>${sc.score}</td>
+      <td class="col-center"><span class="subject-badge ${sc.level==='Below Basic'||sc.level==='Basic'?'badge-none':'badge-met'}">${sc.level||'—'}</span></td>
+      <td class="col-center"><span class="subject-badge ${met?'badge-met':'badge-none'}">${met?'✓ Proficient':'Below'}</span></td>
+      <td><button class="btn-icon delete" onclick="deletePathwayEntry('keystoneScores','${sc.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`;
+  }).join('');
+}
+
+function renderP2(){
+  const s=p2Status(),subj=getKeystoneSubjectData(),bm=state.benchmarks.keystone;
+  const badge=document.getElementById('p2-badge');
+  badge.textContent=s.met?'✓ Pathway Met':s.status==='partial'?'◷ Partial':'○ Not Met';
+  badge.className='subject-badge '+(s.met?'badge-met':s.status==='partial'?'badge-partial':'badge-none');
+  const scores=KEYSTONE_KEYS.map(k=>subj[k].best).filter(x=>x!==null);
+  const anyBB=KEYSTONE_KEYS.some(k=>subj[k].belowBasic),anyProf=KEYSTONE_KEYS.some(k=>subj[k].met);
+  let html=`<div style="margin-bottom:16px">`;
+  html+=KEYSTONE_SUBJECTS.map((n,i)=>{const key=KEYSTONE_KEYS[i],info=subj[key];const lc=info.belowBasic?'badge-none':info.met?'badge-met':info.best?'badge-partial':'badge-none';const lt=info.belowBasic?'Below Basic':info.met?'Proficient+':info.best?`Basic (${info.best})`:'Not Taken';return `<div class="subject-row"><div class="subject-name">${n}</div><div></div><div class="subject-score-info">${info.best!==null?`Score: ${info.best}`:'—'}</div><div><span class="subject-badge ${lc}">${lt}</span></div></div>`;}).join('');
+  html+=`</div>`;
+  if(anyBB)html+=`<div class="info-callout" style="background:#fdecea;border-color:#f5a9a0"><i class="fa-solid fa-circle-exclamation" style="color:var(--danger)"></i><div><strong>Below Basic score present.</strong> Composite pathway requires no Below Basic scores.</div></div>`;
+  else if(!anyProf&&scores.length>0)html+=`<div class="info-callout"><i class="fa-solid fa-circle-info"></i><div>At least one score must be Proficient or higher.</div></div>`;
+  else if(scores.length>=2){
+    const s3=scores.length>=3?scores.slice().sort((a,b)=>b-a).slice(0,3).reduce((s,x)=>s+x,0):null;
+    const s2=scores.slice().sort((a,b)=>b-a).slice(0,2).reduce((s,x)=>s+x,0);
+    html+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px">`;
+    if(s3!==null)html+=`<div class="card" style="padding:14px;text-align:center;border-top:3px solid ${s3>=4452?'var(--green)':'var(--gray-200)'}"><div style="font-size:.78rem;color:var(--gray-600);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">3-Score Composite</div><div style="font-size:2rem;font-weight:700;color:var(--blue-dark)">${s3}</div><div style="font-size:.78rem;margin-top:4px"><span class="subject-badge ${s3>=4452?'badge-met':'badge-none'}">${s3>=4452?'✓ Meets 4452':'Need '+4452}</span></div></div>`;
+    html+=`<div class="card" style="padding:14px;text-align:center;border-top:3px solid ${s2>=2939?'var(--green)':'var(--gray-200)'}"><div style="font-size:.78rem;color:var(--gray-600);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">2-Score Composite</div><div style="font-size:2rem;font-weight:700;color:var(--blue-dark)">${s2}</div><div style="font-size:.78rem;margin-top:4px"><span class="subject-badge ${s2>=2939?'badge-met':'badge-none'}">${s2>=2939?'✓ Meets 2939':'Need '+2939}</span></div></div>`;
+    html+=`</div>`;
+  } else html+=`<p class="text-muted" style="padding:12px 0">Log Keystone scores in Pathway 1 to calculate your composite.</p>`;
+  document.getElementById('p2-composite-status').innerHTML=html;
+}
+
+function renderP3(){
+  const s=p3Status();const badge=document.getElementById('p3-badge');
+  badge.textContent=s.met?'✓ Pathway Met':s.status==='partial'?'◷ Partial':'○ Not Met';
+  badge.className='subject-badge '+(s.met?'badge-met':s.status==='partial'?'badge-partial':'badge-none');
+  const tbody=document.getElementById('p3-log-tbody');
+  if(!state.p3Records.length){tbody.innerHTML='<tr class="empty-row"><td colspan="5">No CTE records logged yet.</td></tr>';return;}
+  tbody.innerHTML=state.p3Records.map(r=>`<tr><td>${esc(r.description)}</td><td>${esc(r.type||'—')}</td><td>${fmtDate(r.date)}</td>
+    <td class="col-center"><span class="subject-badge ${r.verified?'badge-met':'badge-none'}">${r.verified?'✓ Verified':'Pending'}</span></td>
+    <td><button class="btn-icon delete" onclick="deletePathwayEntry('p3Records','${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`).join('');
+}
+
+function renderP4(){
+  const s=p4Status();const badge=document.getElementById('p4-badge');
+  badge.textContent=s.met?'✓ Pathway Met':s.status==='partial'?'◷ Partial':'○ Not Met';
+  badge.className='subject-badge '+(s.met?'badge-met':s.status==='partial'?'badge-partial':'badge-none');
+  const tbody=document.getElementById('p4-log-tbody');
+  if(!state.p4Records.length){tbody.innerHTML='<tr class="empty-row"><td colspan="7">No assessments logged yet.</td></tr>';return;}
+  tbody.innerHTML=state.p4Records.map(r=>{
+    const type=P4_TYPES.find(t=>t.key===r.type);const q=s.qualifying.some(x=>x.id===r.id);
+    return `<tr><td>${esc(r.name)}</td><td>${esc(type?.label||r.type)}</td><td>${fmtDate(r.date)}</td>
+      <td class="col-center">${esc(r.score||'—')}</td>
+      <td class="col-center">${type?.threshold!==null?`≥ ${type?.threshold}`:'Completion'}</td>
+      <td class="col-center"><span class="subject-badge ${q?'badge-met':'badge-none'}">${q?'✓ Qualifies':'Not Yet'}</span></td>
+      <td><button class="btn-icon delete" onclick="deletePathwayEntry('p4Records','${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`;
+  }).join('');
+}
+
+function renderP5(){
+  const s=p5Status();const badge=document.getElementById('p5-badge');
+  badge.textContent=s.met?'✓ Pathway Met':s.status==='partial'?'◷ Partial':'○ Not Met';
+  badge.className='subject-badge '+(s.met?'badge-met':s.status==='partial'?'badge-partial':'badge-none');
+  const pct=Math.min(100,(s.total/3)*100);
+  document.getElementById('p5-summary').innerHTML=`<div style="display:flex;align-items:center;gap:14px"><span style="font-size:.84rem;color:var(--gray-600)">${s.total}/3 pieces of evidence (${s.s1Count} from Section 1)</span><div class="prog-wrap" style="flex:1;height:9px"><div class="prog-bar ${s.met?'green':''}" style="width:${pct}%"></div></div></div>`;
+  const renderTable=(id,section)=>{
+    const rows=state.p5Evidence.filter(e=>e.section===section);
+    const tbody=document.getElementById(id);
+    if(!rows.length){tbody.innerHTML=`<tr class="empty-row"><td colspan="6">No ${section} evidence logged.</td></tr>`;return;}
+    tbody.innerHTML=rows.map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.type)}</td><td>${fmtDate(e.date)}</td><td class="col-center">${esc(e.score||'—')}</td><td class="col-center"><span class="subject-badge badge-partial">${e.section}</span></td><td><button class="btn-icon delete" onclick="deletePathwayEntry('p5Evidence','${e.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`).join('');
+  };
+  renderTable('p5-s1-tbody','S1');renderTable('p5-s2-tbody','S2');
+}
+
+function renderProjection(){
+  const s=allPathwayStatuses(),eligible=isPathwayEligible(s);
+  const pways=[{key:'p1',label:'Pathway 1 — Keystone Proficiency',page:'pathways-p1'},{key:'p2',label:'Pathway 2 — Keystone Composite',page:'pathways-p2'},{key:'p3',label:'Pathway 3 — CTE',page:'pathways-p3'},{key:'p4',label:'Pathway 4 — Alternative Assessment',page:'pathways-p4'},{key:'p5',label:'Pathway 5 — Evidence-Based',page:'pathways-p5'}];
+  document.getElementById('proj-checklist').innerHTML=pways.map(p=>{const st=s[p.key].status;const cls=st==='met'?'done':st==='partial'?'active':'todo';const icon=st==='met'?'fa-circle-check':st==='partial'?'fa-hourglass-half':'fa-circle';return `<div class="proj-step ${cls}" onclick="navigateTo('${p.page}')" style="cursor:pointer"><i class="fa-solid ${icon}"></i><span>${p.label}</span></div>`;}).join('');
+  const steps=buildNextSteps(s,eligible);
+  document.getElementById('proj-next-steps').innerHTML=steps.length?steps.map(st=>`<div class="next-step-item ${st.priority?'priority':''}"><i class="fa-solid ${st.icon}"></i><div><strong>${st.label}</strong><br><span class="text-muted">${st.detail}</span></div></div>`).join(''):`<div class="next-step-item"><i class="fa-solid fa-star"></i><div><strong>All set!</strong><br><span class="text-muted">At least one pathway is complete.</span></div></div>`;
+  const tl=document.getElementById('proj-timeline');
+  if(!state.plannedEvents.length){tl.innerHTML='<p class="text-muted" style="padding:8px 0">No planned events yet.</p>';return;}
+  const now=new Date();
+  tl.innerHTML=[...state.plannedEvents].sort((a,b)=>new Date(a.date)-new Date(b.date)).map(ev=>{
+    const evDate=new Date(ev.date),past=evDate<now,soon=!past&&(evDate-now)<30*24*60*60*1000;
+    const dotCls=past?'tl-past':soon?'tl-soon':'tl-future';
+    return `<div class="timeline-item">
+      <div class="timeline-date">${fmtDate(ev.date)}</div>
+      <div class="timeline-dot ${dotCls}"></div>
+      <div style="flex:1">
+        <strong>${esc(ev.label)}</strong>
+        ${ev.projectedScore?`<span class="text-muted"> — ${esc(ev.projectedScore)}</span>`:''}
+      </div>
+      <div class="action-btns">
+        <button class="btn-icon" onclick="editPlannedEvent('${ev.id}')" title="Edit">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deletePathwayEntry('plannedEvents','${ev.id}')" title="Delete">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+        </button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function buildNextSteps(s,eligible){
+  if(eligible)return[];const steps=[];
+  const kSubj=getKeystoneSubjectData();
+  const missing=KEYSTONE_SUBJECTS.filter((_,i)=>!kSubj[KEYSTONE_KEYS[i]].met);
+  if(missing.length)steps.push({icon:'fa-pencil',label:'Pathway 1 — Keystone Exams',detail:`${missing.join(', ')} not yet Proficient`,priority:missing.length<3});
+  if(!s.p2.met&&s.p2.composite>0)steps.push({icon:'fa-calculator',label:'Pathway 2 — Composite',detail:`Current best composite: ${s.p2.composite}. Need 4452 (3-score) or 2939 (2-score)`,priority:true});
+  if(!s.p4.met&&state.p4Records.length>0)steps.push({icon:'fa-chart-bar',label:'Pathway 4 — Alternative',detail:`${state.p4Records.length} record(s) — none qualifying yet`,priority:true});
+  if(!s.p5.met){const need=3-s.p5.total;steps.push({icon:'fa-folder-open',label:'Pathway 5 — Evidence-Based',detail:`${s.p5.total}/3 pieces. Need ${need} more${s.p5.s1Count===0?' (at least 1 from Section 1)':''}`,priority:s.p5.total>0});}
+  if(!s.p3.met&&!state.p3Records.length)steps.push({icon:'fa-wrench',label:'Pathway 3 — CTE',detail:'Log CTE concentration records if applicable',priority:false});
+  return steps.slice(0,6);
+}
+
+// Pathway modals
+function openPathwayModal(type){
+  const body=document.getElementById('modal-body');
+  const title=document.getElementById('modal-title');
+  if(type==='keystone'){
+    title.textContent='Log Keystone Score';
+    const subjOpts=KEYSTONE_SUBJECTS.map(s=>`<option>${s}</option>`).join('');
+    body.innerHTML=`<div class="form-row"><div class="form-group"><label>Subject</label><select id="m-subj">${subjOpts}</select></div><div class="form-group"><label>Date Taken</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-group"><label>Score</label><input type="number" id="m-score" placeholder="e.g. 1542" /></div><div class="form-group" style="margin-top:8px;padding:10px 13px;background:var(--gray-100);border-radius:var(--radius-sm);font-size:.83rem;color:var(--gray-600)"><i class="fa-solid fa-circle-info" style="color:var(--blue-lite)"></i> Performance level auto-calculated from score and benchmarks.</div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveKeystoneScore()">Save Score</button></div>`;
+  } else if(type==='p3'){
+    title.textContent='Log CTE Record';
+    const typeOpts=['Industry-Based Competency Certification','High Likelihood of Success on Assessment','CTE Concentrator Readiness Demonstration','Transfer Record from Previous District'].map(t=>`<option>${t}</option>`).join('');
+    body.innerHTML=`<div class="form-group"><label>Description</label><input type="text" id="m-name" placeholder="e.g. CompTIA IT Fundamentals certification" /></div><div class="form-row"><div class="form-group"><label>Type</label><select id="m-type">${typeOpts}</select></div><div class="form-group"><label>Date</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem"><input type="checkbox" id="m-verified" /> Mark as verified by advisor / district</label></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveP3Record()">Save Record</button></div>`;
+  } else if(type==='p4'){
+    title.textContent='Log Alternative Assessment';
+    const typeOpts=P4_TYPES.map(t=>`<option value="${t.key}">${t.label}</option>`).join('');
+    body.innerHTML=`<div class="form-group"><label>Assessment / Activity Name</label><input type="text" id="m-name" placeholder="e.g. SAT — Spring 2024" /></div><div class="form-row"><div class="form-group"><label>Type</label><select id="m-type">${typeOpts}</select></div><div class="form-group"><label>Date</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-row"><div class="form-group"><label>Score / Result</label><input type="text" id="m-score" placeholder="e.g. 1025 or Gold" /></div><div class="form-group"><label>Notes (optional)</label><input type="text" id="m-notes" /></div></div><div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem"><input type="checkbox" id="m-verified" /> Verified / completed</label></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveP4Record()">Save Assessment</button></div>`;
+  } else if(type==='p5'){
+    title.textContent='Add Evidence (Pathway 5)';
+    const s1Opts=P5_S1_TYPES.map(t=>`<option value="${t.key}">${t.label}</option>`).join('');
+    const s2Opts=P5_S2_TYPES.map(t=>`<option value="${t.key}">${t.label}</option>`).join('');
+    body.innerHTML=`<div class="form-group"><label>Evidence Description</label><input type="text" id="m-name" placeholder="e.g. AP Calculus Exam — Score 3" /></div><div class="form-row"><div class="form-group"><label>Section</label><select id="m-section" onchange="updateP5TypeOpts()"><option value="S1">Section 1</option><option value="S2">Section 2</option></select></div><div class="form-group"><label>Date</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-row"><div class="form-group"><label>Type</label><select id="m-type">${s1Opts}</select></div><div class="form-group"><label>Score / Result</label><input type="text" id="m-score" placeholder="e.g. 3 or Gold" /></div></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveP5Evidence()">Add Evidence</button></div>`;
+    window._p5s1Opts=s1Opts;window._p5s2Opts=s2Opts;
+  } else if(type==='plan-event'){
+    title.textContent='Add Planned Event';
+    body.innerHTML=`<div class="form-group"><label>Event Label</label><input type="text" id="m-label" placeholder='e.g. "Keystone Retake — Algebra I"' /></div><div class="form-row"><div class="form-group"><label>Date</label><input type="date" id="m-date" /></div><div class="form-group"><label>Projected Score / Result (optional)</label><input type="text" id="m-proj" placeholder='e.g. "1550"' /></div></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="savePlannedEvent()">Add Event</button></div>`;
+  }
+  openModal();
+}
+function updateP5TypeOpts(){const sec=document.getElementById('m-section')?.value;const el=document.getElementById('m-type');if(el)el.innerHTML=sec==='S1'?(window._p5s1Opts||''):(window._p5s2Opts||'');}
+function saveKeystoneScore(){const subj=document.getElementById('m-subj')?.value;const date=document.getElementById('m-date')?.value;const score=Number(document.getElementById('m-score')?.value);if(!subj||!date||isNaN(score)||score<=0){toast('Please fill all fields.','error');return;}const level=calcKeystoneLevel(subj,score);state.keystoneScores.push({id:uid(),subject:subj,date,score,level});saveData();closeModal();renderP1();renderP2();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast(`Keystone score logged — ${level}.`,'success');}
+function saveP3Record(){const name=document.getElementById('m-name')?.value.trim();if(!name){toast('Please enter a description.','error');return;}state.p3Records.push({id:uid(),description:name,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,verified:document.getElementById('m-verified')?.checked});saveData();closeModal();renderP3();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast('CTE record saved.','success');}
+function saveP4Record(){const name=document.getElementById('m-name')?.value.trim();if(!name){toast('Please enter a name.','error');return;}state.p4Records.push({id:uid(),name,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,score:document.getElementById('m-score')?.value.trim(),notes:document.getElementById('m-notes')?.value.trim(),verified:document.getElementById('m-verified')?.checked});saveData();closeModal();renderP4();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast('Assessment logged.','success');}
+function saveP5Evidence(){const name=document.getElementById('m-name')?.value.trim();if(!name){toast('Please enter a description.','error');return;}state.p5Evidence.push({id:uid(),name,section:document.getElementById('m-section')?.value,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,score:document.getElementById('m-score')?.value.trim()});saveData();closeModal();renderP5();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast('Evidence added.','success');}
+function savePlannedEvent(){
+  const label=document.getElementById('m-label')?.value.trim();
+  const date=document.getElementById('m-date')?.value;
+  if(!label||!date){toast('Please enter a label and date.','error');return;}
+  const editId=document.getElementById('m-event-id')?.value;
+  if(editId){
+    const ev=state.plannedEvents.find(x=>x.id===editId);
+    if(ev){ev.label=label;ev.date=date;ev.projectedScore=document.getElementById('m-proj')?.value.trim();}
+  } else {
+    state.plannedEvents.push({id:uid(),label,date,projectedScore:document.getElementById('m-proj')?.value.trim()});
+  }
+  saveData();closeModal();renderProjection();
+  toast(editId?'Event updated.':'Planned event added.','success');
+}
+
+function editPlannedEvent(evId){
+  const ev=state.plannedEvents.find(x=>x.id===evId);if(!ev)return;
+  document.getElementById('modal-title').textContent='Edit Planned Event';
+  document.getElementById('modal-body').innerHTML=`
+    <input type="hidden" id="m-event-id" value="${ev.id}" />
+    <div class="form-group"><label>Event Label</label><input type="text" id="m-label" value="${esc(ev.label)}" /></div>
+    <div class="form-row">
+      <div class="form-group"><label>Date</label><input type="date" id="m-date" value="${ev.date}" /></div>
+      <div class="form-group"><label>Projected Score / Result</label><input type="text" id="m-proj" value="${esc(ev.projectedScore||'')}" /></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="savePlannedEvent()">Save Changes</button>
+    </div>`;
+  openModal();
+}
+function deletePathwayEntry(k,id){if(!confirm('Remove this entry?'))return;state[k]=state[k].filter(x=>x.id!==id);saveData();renderAll();toast('Entry removed.');}
+
+// ══════════════════════════════════════════════════════════════
+// SETTINGS
+// ══════════════════════════════════════════════════════════════
+function setupSettingsListeners(){
+  document.getElementById('btn-save-student').addEventListener('click',()=>{
+    state.student.name=document.getElementById('student-name').value.trim();
+    state.student.gradYear=document.getElementById('grad-year').value.trim();
+    state.student.school=document.getElementById('student-school').value.trim();
+    saveData();renderDashboard();
+    document.getElementById('new-year-school').value=state.student.school;
+    toast('Student info saved.','success');
+  });
+  document.getElementById('btn-add-year').addEventListener('click',addYear);
+  document.getElementById('new-year-name').addEventListener('keydown',e=>{if(e.key==='Enter')addYear();});
+  document.getElementById('btn-add-req').addEventListener('click',addRequirement);
+  document.getElementById('new-req-name').addEventListener('keydown',e=>{if(e.key==='Enter')addRequirement();});
+  document.getElementById('btn-export').addEventListener('click',exportData);
+  document.getElementById('import-file').addEventListener('change',importData);
+  document.getElementById('btn-clear').addEventListener('click',clearData);
+}
+
+function renderSettingsStudent(){
+  document.getElementById('student-name').value=state.student.name||'';
+  document.getElementById('grad-year').value=state.student.gradYear||'';
+  document.getElementById('student-school').value=state.student.school||'';
+  const nys=document.getElementById('new-year-school');
+  if(!nys.value&&state.student.school)nys.value=state.student.school;
+  document.getElementById('years-list').innerHTML=state.years.length
+    ?state.years.map(y=>`<div class="list-item"><div class="list-item-name-group"><span class="list-item-name">${esc(y.name)}</span>${y.school?`<span class="list-item-school">${esc(y.school)}</span>`:''}</div><div class="list-item-actions"><button class="btn-icon" onclick="openEditYearModal('${y.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button class="btn-icon delete" onclick="deleteYear('${y.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></div></div>`).join('')
+    :'<p class="text-muted" style="font-size:.85rem;padding:6px 0">No years added yet.</p>';
+}
+
+function renderSettingsRequirements(){
+  document.getElementById('reqs-list').innerHTML=state.requirements.length
+    ?state.requirements.map(r=>{
+        const subList=(r.subReqs||[]).map(sr=>{const status=subReqStatus(r,sr),cr=Number(sr.credits)>0?`${fmt(sr.credits)} cr`:'0 cr';const dot=status==='earned'?'<span class="sr-dot sr-dot-earned">✓</span>':status==='working'?'<span class="sr-dot sr-dot-working"><i class="fa-solid fa-bolt"></i></span>':status==='planned'?'<span class="sr-dot sr-dot-planned"><i class="fa-solid fa-clock"></i></span>':'<span class="sr-dot sr-dot-none">○</span>';return `<div class="subreq-item">${dot}<span class="subreq-item-name">${esc(sr.name)}</span><span class="subreq-item-credits">${cr}</span><div class="subreq-item-actions"><button class="btn-icon" onclick="openEditSubReqModal('${r.id}','${sr.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button class="btn-icon delete" onclick="deleteSubReq('${r.id}','${sr.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></div></div>`;}).join('');
+        return `<div class="req-list-block" id="req-block-${r.id}"><div class="list-item req-list-item"><span class="list-item-name">${esc(r.name)}</span><div class="list-item-right"><span class="list-item-credits">${fmt(r.credits)} cr</span><div class="list-item-actions"><button class="btn-icon" onclick="openEditReqModal('${r.id}')"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button><button class="btn-icon" onclick="toggleSubReqForm('${r.id}')"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><button class="btn-icon delete" onclick="deleteReq('${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></div></div></div>${subList?`<div class="subreq-list">${subList}</div>`:''}<div class="subreq-add-form hidden" id="subreq-form-${r.id}"><input type="text" id="subreq-name-${r.id}" placeholder='Name (e.g. "Algebra I Required")' /><input type="number" id="subreq-credits-${r.id}" placeholder="Credits" min="0" step="0.5" class="input-credits-sm" /><button class="btn btn-secondary btn-sm" onclick="addSubReq('${r.id}')">Add</button><button class="btn btn-outline btn-sm" onclick="toggleSubReqForm('${r.id}')">Cancel</button></div></div>`;
+      }).join('')
+    :'<p class="text-muted" style="font-size:.85rem;padding:6px 0">No requirements added yet.</p>';
+  document.getElementById('total-req-credits').textContent=fmt(totalRequired());
+}
+
+function renderBenchmarkInputs(){
+  const bm=state.benchmarks;
+  const set=(id,val)=>{const el=document.getElementById(id);if(el)el.value=val;};
+  set('bm-alg-prof',bm.keystone.algebra.prof);set('bm-alg-adv',bm.keystone.algebra.adv);set('bm-alg-bb',bm.keystone.algebra.bb);
+  set('bm-lit-prof',bm.keystone.literature.prof);set('bm-lit-adv',bm.keystone.literature.adv);set('bm-lit-bb',bm.keystone.literature.bb);
+  set('bm-bio-prof',bm.keystone.biology.prof);set('bm-bio-adv',bm.keystone.biology.adv);set('bm-bio-bb',bm.keystone.biology.bb);
+  set('bm-act-composite',bm.p4?.act||21);set('bm-asvab',bm.p4?.asvab||31);set('bm-psat-composite',bm.p4?.psat||970);set('bm-sat-p4',bm.p4?.sat||1010);
+}
+function saveBenchmarks(){
+  const g=id=>Number(document.getElementById(id)?.value)||0;
+  state.benchmarks={keystone:{algebra:{prof:g('bm-alg-prof'),adv:g('bm-alg-adv'),bb:g('bm-alg-bb')},literature:{prof:g('bm-lit-prof'),adv:g('bm-lit-adv'),bb:g('bm-lit-bb')},biology:{prof:g('bm-bio-prof'),adv:g('bm-bio-adv'),bb:g('bm-bio-bb')}},p4:{act:g('bm-act-composite'),asvab:g('bm-asvab'),psat:g('bm-psat-composite'),sat:g('bm-sat-p4')}};
+  saveData();renderAll();toast('Benchmarks saved.','success');
+}
+function resetBenchmarks(){if(!confirm('Reset all benchmarks to PA defaults?'))return;state.benchmarks=JSON.parse(JSON.stringify(DEFAULT_BENCHMARKS));saveData();renderBenchmarkInputs();renderAll();toast('Benchmarks reset.','success');}
+
+// Year / Req CRUD
+function openEditYearModal(yearId){
+  const y=state.years.find(x=>x.id===yearId);if(!y)return;
+  document.getElementById('modal-title').textContent='Edit School Year';
+  document.getElementById('modal-body').innerHTML=`<div class="form-group"><label>Year / Grade Label *</label><input type="text" id="edit-year-name" value="${esc(y.name)}" /></div><div class="form-group" style="margin-top:12px"><label>School Name</label><input type="text" id="edit-year-school" value="${esc(y.school||'')}" /></div><div class="modal-footer"><button class="btn btn-outline" id="modal-cancel">Cancel</button><button class="btn btn-primary" id="modal-save-year">Save</button></div>`;
+  document.getElementById('modal-cancel').addEventListener('click',closeModal);
+  document.getElementById('modal-save-year').addEventListener('click',()=>{const name=document.getElementById('edit-year-name').value.trim();if(!name){toast('Please enter a year label.','error');return;}y.name=name;y.school=document.getElementById('edit-year-school').value.trim();saveData();closeModal();renderAll();toast('Year updated.','success');});
+  openModal();document.getElementById('edit-year-name').focus();
+}
+function openEditReqModal(reqId){
+  const req=state.requirements.find(r=>r.id===reqId);if(!req)return;
+  document.getElementById('modal-title').textContent='Edit Requirement';
+  document.getElementById('modal-body').innerHTML=`<div class="form-group"><label>Name *</label><input type="text" id="edit-req-name" value="${esc(req.name)}" /></div><div class="form-group" style="margin-top:12px"><label>Credits *</label><input type="number" id="edit-req-credits" value="${req.credits}" min="0" step="0.5" /></div><div class="modal-footer"><button class="btn btn-outline" id="modal-cancel">Cancel</button><button class="btn btn-primary" id="modal-save-req">Save</button></div>`;
+  document.getElementById('modal-cancel').addEventListener('click',closeModal);
+  document.getElementById('modal-save-req').addEventListener('click',()=>{const name=document.getElementById('edit-req-name').value.trim();const credits=parseFloat(document.getElementById('edit-req-credits').value);if(!name||isNaN(credits)||credits<0){toast('Please fill all fields correctly.','error');return;}req.name=name;req.credits=credits;saveData();closeModal();renderAll();toast('Requirement updated.','success');});
+  openModal();document.getElementById('edit-req-name').focus();
+}
+function openEditSubReqModal(reqId,subId){
+  const req=state.requirements.find(r=>r.id===reqId);const sr=req?.subReqs?.find(s=>s.id===subId);if(!req||!sr)return;
+  document.getElementById('modal-title').textContent='Edit Sub-Requirement';
+  document.getElementById('modal-body').innerHTML=`<div class="form-group"><label>Name *</label><input type="text" id="edit-sub-name" value="${esc(sr.name)}" /></div><p style="font-size:.78rem;color:var(--gray-600);margin:6px 0 10px"><i class="fa-solid fa-circle-info" style="color:var(--blue-lite)"></i> Name is matched against course names to detect auto-completion.</p><div class="form-group"><label>Credits (0 if informational)</label><input type="number" id="edit-sub-credits" value="${sr.credits||0}" min="0" step="0.5" /></div><div class="modal-footer"><button class="btn btn-outline" id="modal-cancel">Cancel</button><button class="btn btn-primary" id="modal-save-sub">Save</button></div>`;
+  document.getElementById('modal-cancel').addEventListener('click',closeModal);
+  document.getElementById('modal-save-sub').addEventListener('click',()=>{const name=document.getElementById('edit-sub-name').value.trim();if(!name){toast('Please enter a name.','error');return;}sr.name=name;sr.credits=parseFloat(document.getElementById('edit-sub-credits').value)||0;saveData();closeModal();renderAll();toast('Sub-requirement updated.','success');});
+  openModal();document.getElementById('edit-sub-name').focus();
+}
+function toggleSubReqForm(reqId){const form=document.getElementById(`subreq-form-${reqId}`);if(!form)return;form.classList.toggle('hidden');if(!form.classList.contains('hidden'))document.getElementById(`subreq-name-${reqId}`)?.focus();}
+function addSubReq(reqId){const name=document.getElementById(`subreq-name-${reqId}`)?.value.trim();const credits=parseFloat(document.getElementById(`subreq-credits-${reqId}`)?.value)||0;if(!name){toast('Please enter a name.','error');return;}const req=state.requirements.find(r=>r.id===reqId);if(!req)return;req.subReqs=req.subReqs||[];if(req.subReqs.find(sr=>sr.name.toLowerCase()===name.toLowerCase())){toast('Sub-requirement already exists.','error');return;}req.subReqs.push({id:uid(),name,credits});saveData();renderAll();toast('Sub-requirement added.','success');}
+function deleteSubReq(reqId,subId){const req=state.requirements.find(r=>r.id===reqId);if(!req)return;req.subReqs=(req.subReqs||[]).filter(sr=>sr.id!==subId);state.courses.forEach(c=>{if(c.reqId===reqId&&c.subReqId===subId)c.subReqId='';});saveData();renderAll();toast('Sub-requirement removed.');}
+function addYear(){const name=document.getElementById('new-year-name').value.trim();const school=document.getElementById('new-year-school').value.trim()||state.student.school||'';if(!name){toast('Please enter a year name.','error');return;}if(state.years.find(y=>y.name.toLowerCase()===name.toLowerCase())){toast('Year already exists.','error');return;}state.years.push({id:uid(),name,school});document.getElementById('new-year-name').value='';saveData();renderAll();toast('Year added.','success');}
+function deleteYear(yearId){if(state.courses.some(c=>c.yearId===yearId)){if(!confirm('This year has courses. Deleting removes the year assignment. Continue?'))return;state.courses.forEach(c=>{if(c.yearId===yearId)c.yearId='';});}state.years=state.years.filter(y=>y.id!==yearId);saveData();renderAll();toast('Year removed.');}
+function addRequirement(){const name=document.getElementById('new-req-name').value.trim();const credits=parseFloat(document.getElementById('new-req-credits').value);if(!name){toast('Please enter a requirement name.','error');return;}if(isNaN(credits)||credits<=0){toast('Please enter a valid credit amount.','error');return;}if(state.requirements.find(r=>r.name.toLowerCase()===name.toLowerCase())){toast('Requirement already exists.','error');return;}state.requirements.push({id:uid(),name,credits,subReqs:[]});document.getElementById('new-req-name').value='';document.getElementById('new-req-credits').value='';saveData();renderAll();toast('Requirement added.','success');}
+function deleteReq(reqId){if(state.courses.some(c=>c.reqId===reqId)){if(!confirm('Removing this will unassign courses. Continue?'))return;state.courses.forEach(c=>{if(c.reqId===reqId){c.reqId='';c.subReqId='';}});}state.requirements=state.requirements.filter(r=>r.id!==reqId);saveData();renderAll();toast('Requirement removed.');}
+
+// Import / Export
+function exportData(){const a=Object.assign(document.createElement('a'),{href:URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'})),download:`gradtracker-${today()}.json`});a.click();toast('Data exported.','success');}
+function importData(e){
+  const file=e.target.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    try{
+      const parsed=JSON.parse(ev.target.result);
+      if(!confirm('This will replace all current data. Continue?'))return;
+      if(!parsed.benchmarks)parsed.benchmarks=JSON.parse(JSON.stringify(DEFAULT_BENCHMARKS));
+      ['keystoneScores','p3Records','p4Records','p5Evidence','plannedEvents'].forEach(k=>{if(!parsed[k])parsed[k]=[];});
+      if(parsed.student&&!parsed.student.school)parsed.student.school='';
+      if(parsed.years)parsed.years=parsed.years.map(y=>({school:'',...y}));
+      if(parsed.requirements)parsed.requirements=parsed.requirements.map(r=>({...r,subReqs:(r.subReqs||[]).map(sr=>({credits:0,...sr}))}));
+      // Migrate status on import
+      if(parsed.courses)parsed.courses=parsed.courses.map(c=>({...c,status:c.status||(c.planned?'planned':'earned'),catalogRef:c.catalogRef||null}));
+      Object.assign(state,parsed);saveData();renderAll();renderBenchmarkInputs();toast('Data imported.','success');
+    }catch{toast('Invalid file format.','error');}
+  };reader.readAsText(file);e.target.value='';
+}
+function clearData(){if(!confirm('Clear ALL data including courses, pathways, and benchmarks?'))return;state={student:{name:'',gradYear:'',school:''},years:[],requirements:[],courses:[],benchmarks:JSON.parse(JSON.stringify(DEFAULT_BENCHMARKS)),keystoneScores:[],p3Records:[],p4Records:[],p5Evidence:[],plannedEvents:[]};saveData();renderAll();renderBenchmarkInputs();toast('All data cleared.');}
+
+// Modal
+// _modalProtected: when true, clicking outside or pressing Escape won't close
+// the modal — used during multi-step catalog browser to prevent losing progress.
+let _modalProtected = false;
+
+function openModal(protected_=false) {
+  _modalProtected=protected_;
+  document.getElementById('modal-overlay').classList.remove('hidden');
+  document.body.style.overflow='hidden';
+}
+function closeModal() {
+  if(_modalProtected)return;   // blocked during catalog browser flow
+  _modalProtected=false;
+  document.getElementById('modal-overlay').classList.add('hidden');
+  document.body.style.overflow='';
+}
+function forceCloseModal() {
+  // Bypass protection — used by explicit Cancel/Close buttons inside protected modals
+  _modalProtected=false;
+  document.getElementById('modal-overlay').classList.add('hidden');
+  document.body.style.overflow='';
+}
+document.getElementById('modal-close').addEventListener('click',forceCloseModal);
+document.getElementById('modal-overlay').addEventListener('click',e=>{
+  if(e.target===document.getElementById('modal-overlay'))closeModal();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+// Toast
+let _toastTimer;
+function toast(msg,type=''){const el=document.getElementById('toast');el.textContent=msg;el.className='toast'+(type?' '+type:'');clearTimeout(_toastTimer);_toastTimer=setTimeout(()=>{el.classList.add('toast-fade');setTimeout(()=>el.classList.add('hidden'),300);},2500);}
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function registerSW(){if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});}
