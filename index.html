@@ -132,6 +132,7 @@
             <div class="overall-credits"><span id="dash-earned">0</span> / <span id="dash-required">0</span></div>
             <div class="overall-working" id="dash-working-wrap"><i class="fa-solid fa-bolt"></i> <span id="dash-working">0</span> working on</div>
             <div class="overall-planned" id="dash-planned-wrap"><i class="fa-solid fa-clock"></i> <span id="dash-planned">0</span> planned</div>
+            <div class="overall-exploring" id="dash-exploring-wrap"><i class="fa-solid fa-compass"></i> <span id="dash-exploring">0</span> exploring</div>
             <div class="overall-remaining" id="dash-total-remaining" style="display:none"></div>
           </div>
           <div class="overall-pct-wrap">
@@ -143,11 +144,13 @@
           <div class="progress-bar" id="dash-progress-bar" style="width:0%"></div>
           <div class="progress-bar-working" id="dash-working-bar" style="width:0%"></div>
           <div class="progress-bar-planned" id="dash-planned-bar" style="width:0%"></div>
+          <div class="progress-bar-exploring" id="dash-exploring-bar" style="width:0%"></div>
         </div>
         <div class="progress-legend">
           <span class="legend-item"><span class="legend-dot earned"></span> Earned</span>
           <span class="legend-item" id="legend-working-item"><span class="legend-dot working"></span> Working On</span>
           <span class="legend-item" id="legend-planned-item"><span class="legend-dot planned"></span> Planned</span>
+          <span class="legend-item" id="legend-exploring-item"><span class="legend-dot exploring"></span> Exploring</span>
         </div>
       </div>
 
@@ -164,10 +167,12 @@
         <div class="dash-pathway-hint">Click to view pathway details →</div>
       </div>
 
-      <h2 class="section-title">Requirements Progress <small class="section-hint">click to view courses</small></h2>
+      <h2 class="section-title">Requirements Progress</h2>
+      <p class="section-subtitle-hint">Click any card to view its courses</p>
       <div class="req-grid" id="dash-req-grid"></div>
 
       <h2 class="section-title">Credits by Year</h2>
+      <p class="section-subtitle-hint">Click any year to view its courses</p>
       <div class="year-cards" id="dash-year-cards"></div>
     </section>
 
@@ -220,6 +225,7 @@
         <div class="stat-card stat-highlight-red"><div class="stat-label">Credits Remaining</div><div class="stat-value" id="stat-credits-remaining">0</div></div>
         <div class="stat-card stat-highlight-orange"><div class="stat-label">Working On</div><div class="stat-value" id="stat-credits-working">0</div></div>
         <div class="stat-card stat-highlight-gold"><div class="stat-label">Credits Planned</div><div class="stat-value" id="stat-credits-planned">0</div></div>
+        <div class="stat-card stat-highlight-purple"><div class="stat-label">Exploring</div><div class="stat-value" id="stat-credits-exploring">0</div></div>
         <div class="stat-card"><div class="stat-label">Requirements Met</div><div class="stat-value" id="stat-reqs-met">0 / 0</div></div>
         <div class="stat-card"><div class="stat-label">Completion</div><div class="stat-value" id="stat-completion">0%</div></div>
         <div class="stat-card"><div class="stat-label">Avg Credits / Year</div><div class="stat-value" id="stat-avg-credits">0</div></div>
@@ -252,6 +258,7 @@
         <div>Under <strong>Act 158 of 2018</strong>, Pennsylvania students must demonstrate readiness through at least one of five pathways. Satisfying <strong>any single pathway completely</strong> meets the graduation requirement.</div>
       </div>
       <h2 class="section-title">Pathway Status</h2>
+      <p class="section-subtitle-hint">Click any pathway card to view details</p>
       <div class="req-grid" id="pathway-overview-grid"></div>
       <h2 class="section-title">Overall Progress</h2>
       <div class="card" id="pathway-progress-card"></div>

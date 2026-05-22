@@ -275,21 +275,25 @@ function creditsEarnedForReq(reqId)  { return state.courses.filter(c=>c.reqId===
 function creditsWorkingForReq(reqId) { return state.courses.filter(c=>c.reqId===reqId&&isWorking(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
 function creditsPlannedForReq(reqId) { return state.courses.filter(c=>c.reqId===reqId&&isPlanned(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
 
-function totalEarned()  { return state.courses.filter(isEarned).reduce((s,c)=>s+Number(c.credits||0),0); }
-function totalWorking() { return state.courses.filter(isWorking).reduce((s,c)=>s+Number(c.credits||0),0); }
-function totalPlanned() { return state.courses.filter(isPlanned).reduce((s,c)=>s+Number(c.credits||0),0); }
-function totalRequired(){ return state.requirements.reduce((s,r)=>s+Number(r.credits||0),0); }
+function totalEarned()    { return state.courses.filter(isEarned).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalWorking()   { return state.courses.filter(isWorking).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalPlanned()   { return state.courses.filter(isPlanned).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalExploring() { return state.courses.filter(isExploring).reduce((s,c)=>s+Number(c.credits||0),0); }
+function totalRequired()  { return state.requirements.reduce((s,r)=>s+Number(r.credits||0),0); }
+
+function creditsExploringForReq(reqId){ return state.courses.filter(c=>c.reqId===reqId&&isExploring(c)).reduce((s,c)=>s+Number(c.credits||0),0); }
 
 function creditsByYear() {
   const map={};
-  state.years.forEach(y=>{map[y.id]={earned:0,working:0,planned:0};});
+  state.years.forEach(y=>{map[y.id]={earned:0,working:0,planned:0,exploring:0};});
   state.courses.forEach(c=>{
     if(!c.yearId)return;
-    if(!map[c.yearId])map[c.yearId]={earned:0,working:0,planned:0};
+    if(!map[c.yearId])map[c.yearId]={earned:0,working:0,planned:0,exploring:0};
     const cr=Number(c.credits||0);
-    if(isEarned(c))  map[c.yearId].earned+=cr;
+    if(isEarned(c))       map[c.yearId].earned+=cr;
     else if(isWorking(c)) map[c.yearId].working+=cr;
     else if(isPlanned(c)) map[c.yearId].planned+=cr;
+    else if(isExploring(c)) map[c.yearId].exploring+=cr;
   });
   return map;
 }
@@ -406,11 +410,16 @@ document.getElementById('ob-skip').addEventListener('click',hideOnboarding);
 // DASHBOARD  (Batch 2 — tri-state bars)
 // ══════════════════════════════════════════════════════════════
 function renderDashboard() {
-  const earned=totalEarned(),working=totalWorking(),planned=totalPlanned(),required=totalRequired();
+  const earned=totalEarned(),working=totalWorking(),planned=totalPlanned(),exploring=totalExploring(),required=totalRequired();
   const pctE=required>0?Math.min(100,(earned/required)*100):0;
   const pctW=required>0?Math.min(100-pctE,(working/required)*100):0;
   const pctP=required>0?Math.min(100-pctE-pctW,(planned/required)*100):0;
-  const pctAll=required>0?Math.min(100,((earned+working+planned)/required)*100):0;
+  // Exploring shown as 4th segment but capped so bar doesn't exceed 100%
+  const pctX=required>0?Math.min(100-pctE-pctW-pctP,(exploring/required)*100):0;
+
+  // Projections (#4)
+  const plannedProj=Math.min(100,((earned+working+planned)/required)*100);
+  const exploringProj=Math.min(100,((earned+working+planned+exploring)/required)*100);
 
   document.getElementById('dash-heading').textContent=state.student.name?`Welcome, ${state.student.name}`:'Dashboard';
   const sub=[];
@@ -424,21 +433,37 @@ function renderDashboard() {
   document.getElementById('dash-progress-bar').style.width=pctE+'%';
   document.getElementById('dash-working-bar').style.width=pctW+'%';
   document.getElementById('dash-planned-bar').style.width=pctP+'%';
+  // Exploring bar segment (#3)
+  const xBar=document.getElementById('dash-exploring-bar');
+  if(xBar) xBar.style.width=pctX+'%';
 
-  // Working row
   const workWrap=document.getElementById('dash-working-wrap');
   if(workWrap){workWrap.style.visibility=working>0?'visible':'hidden';const ws=document.getElementById('dash-working');if(ws)ws.textContent=fmt(working);}
-  // Planned row
   const planWrap=document.getElementById('dash-planned-wrap');
   if(planWrap){planWrap.style.visibility=planned>0?'visible':'hidden';const ps=document.getElementById('dash-planned');if(ps)ps.textContent=fmt(planned);}
-  // Legend visibility
+  // Exploring row (#3)
+  const explWrap=document.getElementById('dash-exploring-wrap');
+  if(explWrap){explWrap.style.visibility=exploring>0?'visible':'hidden';const xs=document.getElementById('dash-exploring');if(xs)xs.textContent=fmt(exploring);}
+
   document.getElementById('legend-working-item').style.display=working>0?'':'none';
   document.getElementById('legend-planned-item').style.display=planned>0?'':'none';
+  document.getElementById('legend-exploring-item').style.display=exploring>0?'':'none';
 
-  // Combined % below main
-  const pctEl=document.getElementById('dash-pct-with-planned');
-  if((working>0||planned>0)&&required>0){pctEl.textContent=fmt(pctAll)+'% projected';pctEl.style.display='block';}
-  else pctEl.style.display='none';
+  // (#4) Planned Projection and Exploring Projection
+  const projEl=document.getElementById('dash-pct-with-planned');
+  if(required>0){
+    let projHtml='';
+    if(working>0||planned>0){
+      const overage=Math.max(0,earned+working+planned-required);
+      projHtml+=`<div class="dash-proj-line planned-proj"><i class="fa-solid fa-clock"></i> Planned Projection: ${fmt(plannedProj)}%${overage>0?` <span class="proj-overage">+${fmt(overage)} over</span>`:''}</div>`;
+    }
+    if(exploring>0){
+      const overageX=Math.max(0,earned+working+planned+exploring-required);
+      projHtml+=`<div class="dash-proj-line exploring-proj"><i class="fa-solid fa-compass"></i> Exploring Projection: ${fmt(exploringProj)}%${overageX>0?` <span class="proj-overage">+${fmt(overageX)} over</span>`:''}</div>`;
+    }
+    if(projHtml){projEl.innerHTML=projHtml;projEl.style.display='block';}
+    else projEl.style.display='none';
+  } else projEl.style.display='none';
 
   document.getElementById('no-requirements-notice').classList.toggle('hidden',state.requirements.length>0);
 
@@ -468,17 +493,21 @@ function renderDashboard() {
     </div>`;
   }).join('');
 
-  // Requirement cards
+  // Requirement cards — (#5) separate lines, (#6) no SVG click-hint, (#3) exploring included
   const grid=document.getElementById('dash-req-grid');
   grid.innerHTML='';
   state.requirements.forEach(req=>{
-    const e=creditsEarnedForReq(req.id),w=creditsWorkingForReq(req.id),p=creditsPlannedForReq(req.id);
+    const e=creditsEarnedForReq(req.id),w=creditsWorkingForReq(req.id),p=creditsPlannedForReq(req.id),x=creditsExploringForReq(req.id);
     const pct=req.credits>0?Math.min(100,(e/req.credits)*100):0;
     const pctW=req.credits>0?Math.min(100-pct,(w/req.credits)*100):0;
     const pctP=req.credits>0?Math.min(100-pct-pctW,(p/req.credits)*100):0;
+    const pctX=req.credits>0?Math.min(100-pct-pctW-pctP,(x/req.credits)*100):0;
     const complete=e>=req.credits&&req.credits>0;
-    // (#1) still needed after earned+working+planned
-    const stillNeeded=Math.max(0,req.credits-e-w-p);
+    // Still needed: planned proj and exploring proj (#4 / #5)
+    const stillPlanned=Math.max(0,req.credits-e-w-p);
+    const stillExploring=Math.max(0,req.credits-e-w-p-x);
+    const overPlanned=Math.max(0,e+w+p-req.credits);
+    const overExploring=Math.max(0,e+w+p+x-req.credits);
     const subHtml=(req.subReqs||[]).length?`
       <div class="req-card-subreqs">${req.subReqs.map(sr=>{
         const st=subReqStatus(req,sr);
@@ -487,57 +516,61 @@ function renderDashboard() {
         const icon=st==='earned'?'<i class="fa-solid fa-check"></i> ':st==='working'?'<i class="fa-solid fa-bolt"></i> ':st==='planned'?'<i class="fa-solid fa-clock"></i> ':'';
         return `<span class="${cls}">${icon}${esc(sr.name)}${cr}</span>`;
       }).join('')}</div>`:''  ;
-    const notesHtml=w>0||p>0?`<div class="req-card-projected">${w>0?`<span class="proj-working"><i class="fa-solid fa-bolt"></i> ${fmt(w)} working</span>`:''} ${p>0?`<span class="proj-planned"><i class="fa-solid fa-clock"></i> ${fmt(p)} planned</span>`:''}</div>`:'';
-    const neededHtml=!complete&&stillNeeded>0?`<div class="req-card-needed"><i class="fa-solid fa-hourglass-half"></i> ${fmt(stillNeeded)} still needed</div>`:'';
+    // (#5) Each status on its own line
+    const statusLines=[
+      w>0?`<div class="req-status-line working-line"><i class="fa-solid fa-bolt"></i> ${fmt(w)} Working On</div>`:'',
+      p>0?`<div class="req-status-line planned-line"><i class="fa-solid fa-clock"></i> ${fmt(p)} Planned</div>`:'',
+      x>0?`<div class="req-status-line exploring-line"><i class="fa-solid fa-compass"></i> ${fmt(x)} Exploring</div>`:'',
+      !complete&&stillPlanned>0?`<div class="req-status-line needed-line"><i class="fa-solid fa-hourglass-half"></i> ${fmt(stillPlanned)} still needed (w/ planned)</div>`:'',
+      !complete&&stillExploring>0&&x>0?`<div class="req-status-line needed-explore-line"><i class="fa-solid fa-hourglass-half"></i> ${fmt(stillExploring)} still needed (w/ exploring)</div>`:'',
+      overPlanned>0?`<div class="req-status-line overage-line"><i class="fa-solid fa-circle-plus"></i> ${fmt(overPlanned)} over planned</div>`:'',
+    ].filter(Boolean).join('');
+
     grid.innerHTML+=`
       <div class="req-card ${complete?'complete':''}" role="button" tabindex="0"
            onclick="openReqCourses('${req.id}')" onkeydown="if(event.key==='Enter')openReqCourses('${req.id}')">
         <span class="req-badge">${complete?'✓ Met':fmt(pct)+'%'}</span>
         <div class="req-card-name">${esc(req.name)}</div>
-        <div class="req-card-credits">${fmt(e)} <span>/ ${fmt(req.credits)} credits</span></div>
-        ${notesHtml}${neededHtml}${subHtml}
+        <div class="req-card-credits">${fmt(e)} <span>/ ${fmt(req.credits)} credits earned</span></div>
+        ${statusLines}${subHtml}
         <div class="req-card-bar-wrap">
           <div class="req-card-bar" style="width:${pct}%"></div>
           <div class="req-card-bar working-seg" style="width:${pctW}%"></div>
           <div class="req-card-bar planned-seg" style="width:${pctP}%"></div>
-        </div>
-        <div class="req-card-click-hint">
-          <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          View courses
+          <div class="req-card-bar exploring-seg" style="width:${pctX}%"></div>
         </div>
       </div>`;
   });
 
-  // (#9) "Other" virtual card — uncategorized courses (no reqId)
+  // Other / Electives card — exploring excluded
   const otherCourses=state.courses.filter(c=>!c.reqId&&!isExploring(c));
   if(otherCourses.length){
     const oE=otherCourses.filter(isEarned).reduce((s,c)=>s+Number(c.credits||0),0);
     const oW=otherCourses.filter(isWorking).reduce((s,c)=>s+Number(c.credits||0),0);
     const oP=otherCourses.filter(isPlanned).reduce((s,c)=>s+Number(c.credits||0),0);
-    const notesHtml=oW>0||oP>0?`<div class="req-card-projected">${oW>0?`<span class="proj-working"><i class="fa-solid fa-bolt"></i> ${fmt(oW)} working</span>`:''} ${oP>0?`<span class="proj-planned"><i class="fa-solid fa-clock"></i> ${fmt(oP)} planned</span>`:''}</div>`:'';
+    const statusLines=[
+      oW>0?`<div class="req-status-line working-line"><i class="fa-solid fa-bolt"></i> ${fmt(oW)} Working On</div>`:'',
+      oP>0?`<div class="req-status-line planned-line"><i class="fa-solid fa-clock"></i> ${fmt(oP)} Planned</div>`:'',
+    ].filter(Boolean).join('');
     grid.innerHTML+=`
       <div class="req-card req-card-other" role="button" tabindex="0"
            onclick="openReqCourses('')" onkeydown="if(event.key==='Enter')openReqCourses('')">
         <span class="req-badge" style="background:var(--gray-100);color:var(--gray-500)">Other</span>
         <div class="req-card-name" style="color:var(--gray-600)">Other / Electives</div>
         <div class="req-card-credits">${fmt(oE)} <span>credits not applied to requirements</span></div>
-        ${notesHtml}
+        ${statusLines}
         <div class="req-card-bar-wrap">
           <div class="req-card-bar" style="width:100%;background:var(--gray-300)"></div>
-        </div>
-        <div class="req-card-click-hint">
-          <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          View courses
         </div>
       </div>`;
   }
 
-  // Year cards — (#4) clickable to filter courses, (#6) match req-grid column sizing
+  // Year cards (#4 clickable)
   const yearCards=document.getElementById('dash-year-cards');
   yearCards.innerHTML='';
   const byYear=creditsByYear();
   state.years.forEach(y=>{
-    const {earned:e,working:w,planned:p}=byYear[y.id]||{earned:0,working:0,planned:0};
+    const {earned:e,working:w,planned:p,exploring:x}=byYear[y.id]||{earned:0,working:0,planned:0,exploring:0};
     const cnt=state.courses.filter(co=>co.yearId===y.id).length;
     yearCards.innerHTML+=`<div class="year-card" role="button" tabindex="0"
          onclick="openYearCourses('${y.id}')" onkeydown="if(event.key==='Enter')openYearCourses('${y.id}')">
@@ -546,27 +579,34 @@ function renderDashboard() {
       <div class="year-card-credits">${fmt(e)}</div>
       ${w>0?`<div class="year-card-working"><i class="fa-solid fa-bolt"></i> ${fmt(w)} working</div>`:''}
       ${p>0?`<div class="year-card-planned"><i class="fa-solid fa-clock"></i> ${fmt(p)} planned</div>`:''}
+      ${x>0?`<div class="year-card-exploring"><i class="fa-solid fa-compass"></i> ${fmt(x)} exploring</div>`:''}
       <div class="year-card-sub">${cnt} course${cnt!==1?'s':''}</div>
-      <div class="req-card-click-hint" style="margin-top:6px">
-        <svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        View courses
-      </div>
     </div>`;
   });
   if(!state.years.length&&state.requirements.length>0)
     yearCards.innerHTML='<p class="text-muted" style="font-size:.85rem">No school years defined yet.</p>';
 
-  // (#3) Total remaining in overall-card
-  const totalRemaining=Math.max(0,required-earned-working-planned);
+  // (#3) Total remaining including exploring in overall-card
   const remEl=document.getElementById('dash-total-remaining');
-  if(remEl){
-    if(totalRemaining>0&&required>0){
-      remEl.textContent=`${fmt(totalRemaining)} credits still needed`;
-      remEl.style.display='block';
-    } else {
-      remEl.style.display='none';
+  if(remEl&&required>0){
+    const stillNeededPlanned=Math.max(0,required-earned-working-planned);
+    const stillNeededExploring=Math.max(0,required-earned-working-planned-exploring);
+    const overPlanned=Math.max(0,earned+working+planned-required);
+    const overExploring=Math.max(0,earned+working+planned+exploring-required);
+    let remHtml='';
+    if(stillNeededPlanned>0)
+      remHtml+=`<div class="overall-remaining"><i class="fa-solid fa-hourglass-half"></i> ${fmt(stillNeededPlanned)} still needed (planned projection)</div>`;
+    else if(overPlanned>0)
+      remHtml+=`<div class="overall-over"><i class="fa-solid fa-circle-plus"></i> ${fmt(overPlanned)} over required (planned)</div>`;
+    if(exploring>0){
+      if(stillNeededExploring>0)
+        remHtml+=`<div class="overall-remaining exploring-rem"><i class="fa-solid fa-compass"></i> ${fmt(stillNeededExploring)} still needed (with exploring)</div>`;
+      else if(overExploring>0)
+        remHtml+=`<div class="overall-over"><i class="fa-solid fa-circle-plus"></i> ${fmt(overExploring)} over required (with exploring)</div>`;
     }
-  }
+    remEl.innerHTML=remHtml;
+    remEl.style.display=remHtml?'block':'none';
+  } else if(remEl) remEl.style.display='none';
 }
 
 function openReqCourses(reqId){courseReqFilter=reqId;navigateTo('courses',{reqId});}
@@ -1187,33 +1227,36 @@ function deleteCourse(id){if(!confirm('Delete this course?'))return;state.course
 // STATISTICS  (Batch 2 — tri-state)
 // ══════════════════════════════════════════════════════════════
 function renderStats() {
-  const earned=totalEarned(),working=totalWorking(),planned=totalPlanned(),required=totalRequired();
+  const earned=totalEarned(),working=totalWorking(),planned=totalPlanned(),exploring=totalExploring(),required=totalRequired();
   const remaining=Math.max(0,required-earned);
   const metCount=state.requirements.filter(r=>creditsEarnedForReq(r.id)>=r.credits&&r.credits>0).length;
   const pct=required>0?(earned/required)*100:0;
-  const yearsW=state.years.filter(y=>state.courses.some(c=>c.yearId===y.id&&isEarned(c)));
-  const avg=yearsW.length>0?earned/yearsW.length:0;
+  // (#1) Fix: avg earned / ALL defined years (not just active ones)
+  const avg=state.years.length>0?earned/state.years.length:0;
 
   document.getElementById('stat-total-courses').textContent=state.courses.length;
   document.getElementById('stat-credits-earned').textContent=fmt(earned);
   document.getElementById('stat-credits-remaining').textContent=fmt(remaining);
   document.getElementById('stat-credits-working').textContent=fmt(working);
   document.getElementById('stat-credits-planned').textContent=fmt(planned);
+  document.getElementById('stat-credits-exploring').textContent=fmt(exploring); // (#2)
   document.getElementById('stat-reqs-met').textContent=`${metCount} / ${state.requirements.length}`;
   document.getElementById('stat-completion').textContent=fmt(pct)+'%';
   document.getElementById('stat-avg-credits').textContent=fmt(avg);
   document.getElementById('stat-grad-year').textContent=state.student.gradYear||'—';
 
   const byYear=creditsByYear();
-  const maxC=Math.max(...state.years.map(y=>(byYear[y.id]?.earned||0)+(byYear[y.id]?.working||0)+(byYear[y.id]?.planned||0)),1);
+  // (#3) Include exploring in bar chart max height
+  const maxC=Math.max(...state.years.map(y=>(byYear[y.id]?.earned||0)+(byYear[y.id]?.working||0)+(byYear[y.id]?.planned||0)+(byYear[y.id]?.exploring||0)),1);
   document.getElementById('bar-chart-years').innerHTML=!state.years.length
     ?'<p class="text-muted" style="font-size:.85rem;padding:20px 0">No years defined.</p>'
     :state.years.map(y=>{
-        const e=byYear[y.id]?.earned||0,w=byYear[y.id]?.working||0,p=byYear[y.id]?.planned||0;
-        const hE=Math.round((e/maxC)*140),hW=Math.round((w/maxC)*140),hP=Math.round((p/maxC)*140);
+        const e=byYear[y.id]?.earned||0,w=byYear[y.id]?.working||0,p=byYear[y.id]?.planned||0,x=byYear[y.id]?.exploring||0;
+        const hE=Math.round((e/maxC)*140),hW=Math.round((w/maxC)*140),hP=Math.round((p/maxC)*140),hX=Math.round((x/maxC)*140);
         return `<div class="bar-col">
-          <div class="bar-col-val">${fmt(e)}${w>0?`<span class="bar-work-label"><i class="fa-solid fa-bolt"></i> ${fmt(w)}</span>`:''}${p>0?`<span class="bar-plan-label"><i class="fa-solid fa-clock"></i> ${fmt(p)}</span>`:''}</div>
-          <div class="bar-col-inner-wrap" style="height:${hE+hW+hP}px">
+          <div class="bar-col-val">${fmt(e)}${w>0?`<span class="bar-work-label"><i class="fa-solid fa-bolt"></i> ${fmt(w)}</span>`:''}${p>0?`<span class="bar-plan-label"><i class="fa-solid fa-clock"></i> ${fmt(p)}</span>`:''}${x>0?`<span class="bar-expl-label"><i class="fa-solid fa-compass"></i> ${fmt(x)}</span>`:''}</div>
+          <div class="bar-col-inner-wrap" style="height:${hE+hW+hP+hX}px">
+            ${x>0?`<div class="bar-seg exploring" style="height:${hX}px"></div>`:''}
             ${p>0?`<div class="bar-seg planned" style="height:${hP}px"></div>`:''}
             ${w>0?`<div class="bar-seg working" style="height:${hW}px"></div>`:''}
             <div class="bar-seg earned" style="height:${hE}px"></div>
@@ -1324,7 +1367,6 @@ function renderPathwayOverview() {
       <div class="req-card-credits" style="font-size:.85rem;font-weight:600;color:var(--gray-800);margin-top:2px">${p.name}</div>
       <div class="req-card-planned" style="color:var(--gray-600);font-size:.75rem;font-weight:400;margin-top:4px">${p.desc}</div>
       <div class="req-card-bar-wrap" style="margin-top:10px"><div class="req-card-bar" style="width:${pct}%"></div></div>
-      <div class="req-card-click-hint"><svg viewBox="0 0 24 24" width="12" height="12"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>View details</div>
     </div>`;
   }).join('');
   const metCount=Object.values(s).filter(x=>x.met).length;

@@ -183,14 +183,16 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 
 .progress-bar-wrap { height:12px; background:var(--gray-200); border-radius:99px; overflow:hidden; display:flex; }
 .progress-bar         { height:100%; flex-shrink:0; background:linear-gradient(90deg,var(--blue-lite),var(--green)); border-radius:99px 0 0 99px; transition:width .6s cubic-bezier(.4,0,.2,1); }
-.progress-bar-working { height:100%; flex-shrink:0; background:var(--working); opacity:.85; transition:width .6s cubic-bezier(.4,0,.2,1); }
-.progress-bar-planned { height:100%; flex-shrink:0; background:var(--gold); opacity:.8; transition:width .6s cubic-bezier(.4,0,.2,1); }
-.progress-legend { display:flex; gap:14px; margin-top:8px; font-size:.71rem; color:var(--gray-600); }
+.progress-bar-working   { height:100%; flex-shrink:0; background:var(--working); opacity:.85; transition:width .6s cubic-bezier(.4,0,.2,1); }
+.progress-bar-planned   { height:100%; flex-shrink:0; background:var(--gold); opacity:.8; transition:width .6s cubic-bezier(.4,0,.2,1); }
+.progress-bar-exploring { height:100%; flex-shrink:0; background:var(--exploring); opacity:.7; transition:width .6s cubic-bezier(.4,0,.2,1); }
+.progress-legend { display:flex; gap:14px; margin-top:8px; font-size:.71rem; color:var(--gray-600); flex-wrap:wrap; }
 .legend-item { display:flex; align-items:center; gap:5px; }
 .legend-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
-.legend-dot.earned  { background:var(--blue-lite); }
-.legend-dot.working { background:var(--working); }
-.legend-dot.planned { background:var(--gold); }
+.legend-dot.earned    { background:var(--blue-lite); }
+.legend-dot.working   { background:var(--working); }
+.legend-dot.planned   { background:var(--gold); }
+.legend-dot.exploring { background:var(--exploring); }
 
 /* ── (#5) Dashboard pathway summary card ───────────────────── */
 .dash-pathway-card {
@@ -462,17 +464,40 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 .next-step-item i { margin-top:2px; color:var(--blue-lite); flex-shrink:0; }
 .next-step-item.priority { background:var(--gold-light); border-color:#f0c040; }
 .next-step-item.priority i { color:var(--gold); }
-/* (#1) Still needed line in req cards */
-.req-card-needed {
-  font-size:.71rem; color:var(--gray-400); margin-top:2px;
-  display:flex; align-items:center; gap:4px;
-}
-.req-card-needed i { font-size:.65rem; }
+/* (#3) Overall-card exploring row */
+.overall-exploring { font-size:.76rem; color:var(--exploring); font-weight:600; margin-top:2px; visibility:hidden; }
+.overall-over      { font-size:.74rem; color:var(--green); font-weight:600; margin-top:2px; }
 
-/* (#3) Total remaining in overall-card */
-.overall-remaining {
-  font-size:.76rem; color:var(--danger); font-weight:600; margin-top:3px;
-}
+/* (#6) Section subtitle hint replaces inline SVG click-hint */
+.section-subtitle-hint { font-size:.75rem; color:var(--gray-400); margin:-8px 0 10px; font-style:italic; }
+
+/* (#2) Exploring stat card */
+.stat-card.stat-highlight-purple { border-top:3px solid var(--exploring); }
+
+/* (#5) Req card status lines */
+.req-status-line { font-size:.72rem; display:flex; align-items:center; gap:4px; margin-top:2px; }
+.working-line     { color:var(--working); }
+.planned-line     { color:var(--gold); }
+.exploring-line   { color:var(--exploring); }
+.needed-line      { color:var(--gray-400); }
+.needed-explore-line { color:var(--exploring); opacity:.75; }
+.overage-line     { color:var(--green); font-style:italic; }
+
+/* (#4) Projection lines under overall-card */
+.dash-proj-line { font-size:.74rem; display:flex; align-items:center; gap:5px; margin-top:3px; }
+.planned-proj   { color:var(--gold); font-weight:600; }
+.exploring-proj { color:var(--exploring); font-weight:600; }
+.proj-overage   { color:var(--green); font-size:.68rem; margin-left:3px; }
+
+/* (#3) Exploring segment in req-card bar */
+.exploring-seg { height:100%; background:var(--exploring); opacity:.7; flex-shrink:0; }
+
+/* (#3) Exploring bar seg in stats bar chart */
+.bar-seg.exploring { background:var(--exploring); opacity:.75; }
+.bar-expl-label { font-size:.63rem; color:var(--exploring); font-weight:600; display:block; }
+
+/* Year card exploring line */
+.year-card-exploring { font-size:.68rem; color:var(--exploring); font-weight:600; margin-top:2px; }
 
 /* (#6) Year cards match req-grid column widths exactly */
 .year-cards {
@@ -506,6 +531,11 @@ svg { fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stro
 .req-row-credits  { font-size:.78rem; color:var(--gray-600); text-align:right; white-space:nowrap; }
 .work-inline { color:var(--working); font-size:.71rem; margin-left:3px; font-weight:600; }
 .plan-inline { color:var(--gold);    font-size:.71rem; margin-left:3px; }
+/* Overall-card remaining lines */
+.overall-remaining { font-size:.74rem; color:var(--danger); font-weight:600; margin-top:2px; display:flex; align-items:center; gap:4px; }
+.overall-remaining.exploring-rem { color:var(--exploring); }
+.overall-over      { font-size:.74rem; color:var(--green); font-weight:600; margin-top:2px; display:flex; align-items:center; gap:4px; }
+
 .req-card-other { border-left-color: var(--gray-300); }
 .req-card-other:hover { border-left-color: var(--gray-400); }
 
