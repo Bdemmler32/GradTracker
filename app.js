@@ -633,7 +633,7 @@ function renderCourses() {
     const gClass=['A','B','C','D','F','P'].includes(c.grade)?c.grade:'';
     const status=c.status||'earned';
     const statusSel=`<select class="status-select sel-${status}" onchange="handleStatusChange('${c.id}',this.value)">
-      <option value="earned"    ${status==='earned'    ?'selected':''}>✓ Earned</option>
+      <option value="earned"    ${status==='earned'    ?'selected':''}>Earned</option>
       <option value="working"   ${status==='working'   ?'selected':''}>Working On</option>
       <option value="planned"   ${status==='planned'   ?'selected':''}>Planned</option>
       <option value="exploring" ${status==='exploring' ?'selected':''}>Exploring</option>
@@ -696,7 +696,7 @@ function openEarnedModal(courseId, fromStatus) {
     <div class="status-change-banner">
       <span class="status-badge sel-${fromStatus}">${fromLabel}</span>
       <span class="status-arrow">→</span>
-      <span class="status-badge sel-earned">✓ Earned</span>
+      <span class="status-badge sel-earned">Earned</span>
     </div>
     <div class="form-group" style="margin-top:16px"><label>Grade Received</label>
       <select id="em-grade"><option value="">— Select grade —</option>${gradeOpts}</select></div>
@@ -1125,7 +1125,7 @@ function openCourseModal(courseId) {
   const typeOpts=COURSE_TYPES.map(t=>`<option value="${t}" ${(c?.type||'Standard')===t?'selected':''}>${t}</option>`).join('');
   const curStatus=c?.status||'earned';
   const statusOpts=[
-    {v:'earned',    l:'✓ Earned'},
+    {v:'earned',    l:'Earned'},
     {v:'working',   l:'Working On'},
     {v:'planned',   l:'Planned'},
     {v:'exploring', l:'Exploring'}
@@ -1355,11 +1355,25 @@ function renderP1(){
   const tbody=document.getElementById('keystone-log-tbody');
   if(!state.keystoneScores.length){tbody.innerHTML='<tr class="empty-row"><td colspan="6">No scores logged yet.</td></tr>';return;}
   tbody.innerHTML=[...state.keystoneScores].sort((a,b)=>new Date(b.date)-new Date(a.date)).map(sc=>{
-    const key=KEYSTONE_KEYS[KEYSTONE_SUBJECTS.indexOf(sc.subject)],prof=bm[key]?.prof??0,met=sc.score>=prof;
-    return `<tr><td>${sc.subject}</td><td>${fmtDate(sc.date)}</td><td>${sc.score}</td>
-      <td class="col-center"><span class="subject-badge ${sc.level==='Below Basic'||sc.level==='Basic'?'badge-none':'badge-met'}">${sc.level||'—'}</span></td>
-      <td class="col-center"><span class="subject-badge ${met?'badge-met':'badge-none'}">${met?'✓ Proficient':'Below'}</span></td>
-      <td><button class="btn-icon delete" onclick="deletePathwayEntry('keystoneScores','${sc.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`;
+    const key=KEYSTONE_KEYS[KEYSTONE_SUBJECTS.indexOf(sc.subject)],prof=bm[key]?.prof??0;
+    const pending=sc.score===null||sc.score===undefined||sc.score==='';
+    const met=!pending&&Number(sc.score)>=prof;
+    const levelBadge=pending?'<span class="subject-badge badge-partial">Pending</span>'
+      :`<span class="subject-badge ${sc.level==='Below Basic'||sc.level==='Basic'?'badge-none':'badge-met'}">${sc.level||'—'}</span>`;
+    const profBadge=pending?'<span class="subject-badge badge-partial">Pending</span>'
+      :`<span class="subject-badge ${met?'badge-met':'badge-none'}">${met?'Proficient':'Below'}</span>`;
+    return `<tr><td>${sc.subject}</td><td>${fmtDate(sc.date)}</td>
+      <td>${pending?'<em style="color:var(--gray-400)">Pending</em>':sc.score}</td>
+      <td class="col-center">${levelBadge}</td>
+      <td class="col-center">${profBadge}</td>
+      <td><div class="action-btns">
+        <button class="btn-icon" onclick="editPathwayEntry('keystoneScores','${sc.id}')" title="Edit">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deletePathwayEntry('keystoneScores','${sc.id}')" title="Delete">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+        </button>
+      </div></td></tr>`;
   }).join('');
 }
 
@@ -1392,9 +1406,17 @@ function renderP3(){
   badge.className='subject-badge '+(s.met?'badge-met':s.status==='partial'?'badge-partial':'badge-none');
   const tbody=document.getElementById('p3-log-tbody');
   if(!state.p3Records.length){tbody.innerHTML='<tr class="empty-row"><td colspan="5">No CTE records logged yet.</td></tr>';return;}
-  tbody.innerHTML=state.p3Records.map(r=>`<tr><td>${esc(r.description)}</td><td>${esc(r.type||'—')}</td><td>${fmtDate(r.date)}</td>
+  tbody.innerHTML=state.p3Records.map(r=>`<tr>
+    <td>${esc(r.description)}</td><td>${esc(r.type||'—')}</td><td>${fmtDate(r.date)}</td>
     <td class="col-center"><span class="subject-badge ${r.verified?'badge-met':'badge-none'}">${r.verified?'✓ Verified':'Pending'}</span></td>
-    <td><button class="btn-icon delete" onclick="deletePathwayEntry('p3Records','${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`).join('');
+    <td><div class="action-btns">
+      <button class="btn-icon" onclick="editPathwayEntry('p3Records','${r.id}')" title="Edit">
+        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      </button>
+      <button class="btn-icon delete" onclick="deletePathwayEntry('p3Records','${r.id}')" title="Delete">
+        <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+      </button>
+    </div></td></tr>`).join('');
 }
 
 function renderP4(){
@@ -1406,10 +1428,17 @@ function renderP4(){
   tbody.innerHTML=state.p4Records.map(r=>{
     const type=P4_TYPES.find(t=>t.key===r.type);const q=s.qualifying.some(x=>x.id===r.id);
     return `<tr><td>${esc(r.name)}</td><td>${esc(type?.label||r.type)}</td><td>${fmtDate(r.date)}</td>
-      <td class="col-center">${esc(r.score||'—')}</td>
+      <td class="col-center">${r.score?esc(r.score):'<em style="color:var(--gray-400)">Pending</em>'}</td>
       <td class="col-center">${type?.threshold!==null?`≥ ${type?.threshold}`:'Completion'}</td>
-      <td class="col-center"><span class="subject-badge ${q?'badge-met':'badge-none'}">${q?'✓ Qualifies':'Not Yet'}</span></td>
-      <td><button class="btn-icon delete" onclick="deletePathwayEntry('p4Records','${r.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`;
+      <td class="col-center"><span class="subject-badge ${q?'badge-met':r.score?'badge-none':'badge-partial'}">${q?'✓ Qualifies':r.score?'Not Yet':'Pending'}</span></td>
+      <td><div class="action-btns">
+        <button class="btn-icon" onclick="editPathwayEntry('p4Records','${r.id}')" title="Edit">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deletePathwayEntry('p4Records','${r.id}')" title="Delete">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+        </button>
+      </div></td></tr>`;
   }).join('');
 }
 
@@ -1423,7 +1452,18 @@ function renderP5(){
     const rows=state.p5Evidence.filter(e=>e.section===section);
     const tbody=document.getElementById(id);
     if(!rows.length){tbody.innerHTML=`<tr class="empty-row"><td colspan="6">No ${section} evidence logged.</td></tr>`;return;}
-    tbody.innerHTML=rows.map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.type)}</td><td>${fmtDate(e.date)}</td><td class="col-center">${esc(e.score||'—')}</td><td class="col-center"><span class="subject-badge badge-partial">${e.section}</span></td><td><button class="btn-icon delete" onclick="deletePathwayEntry('p5Evidence','${e.id}')"><svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg></button></td></tr>`).join('');
+    tbody.innerHTML=rows.map(e=>`<tr>
+      <td>${esc(e.name)}</td><td>${esc(e.type)}</td><td>${fmtDate(e.date)}</td>
+      <td class="col-center">${e.score?esc(e.score):'<em style="color:var(--gray-400)">—</em>'}</td>
+      <td class="col-center"><span class="subject-badge badge-partial">${e.section}</span></td>
+      <td><div class="action-btns">
+        <button class="btn-icon" onclick="editPathwayEntry('p5Evidence','${e.id}')" title="Edit">
+          <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </button>
+        <button class="btn-icon delete" onclick="deletePathwayEntry('p5Evidence','${e.id}')" title="Delete">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+        </button>
+      </div></td></tr>`).join('');
   };
   renderTable('p5-s1-tbody','S1');renderTable('p5-s2-tbody','S2');
 }
@@ -1471,39 +1511,166 @@ function buildNextSteps(s,eligible){
   return steps.slice(0,6);
 }
 
-// Pathway modals
-function openPathwayModal(type){
+// Pathway modals — editId optional, pre-fills form for editing
+function openPathwayModal(type, editId) {
   const body=document.getElementById('modal-body');
   const title=document.getElementById('modal-title');
+  const isEdit=!!editId;
+
   if(type==='keystone'){
-    title.textContent='Log Keystone Score';
-    const subjOpts=KEYSTONE_SUBJECTS.map(s=>`<option>${s}</option>`).join('');
-    body.innerHTML=`<div class="form-row"><div class="form-group"><label>Subject</label><select id="m-subj">${subjOpts}</select></div><div class="form-group"><label>Date Taken</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-group"><label>Score</label><input type="number" id="m-score" placeholder="e.g. 1542" /></div><div class="form-group" style="margin-top:8px;padding:10px 13px;background:var(--gray-100);border-radius:var(--radius-sm);font-size:.83rem;color:var(--gray-600)"><i class="fa-solid fa-circle-info" style="color:var(--blue-lite)"></i> Performance level auto-calculated from score and benchmarks.</div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveKeystoneScore()">Save Score</button></div>`;
+    const ex=isEdit?state.keystoneScores.find(x=>x.id===editId):null;
+    title.textContent=isEdit?'Edit Keystone Score':'Log Keystone Score';
+    const subjOpts=KEYSTONE_SUBJECTS.map(s=>`<option ${ex?.subject===s?'selected':''}>${s}</option>`).join('');
+    body.innerHTML=`
+      ${isEdit?`<input type="hidden" id="m-edit-id" value="${editId}" />`:''}
+      <div class="form-row">
+        <div class="form-group"><label>Subject</label><select id="m-subj">${subjOpts}</select></div>
+        <div class="form-group"><label>Date Taken</label><input type="date" id="m-date" value="${ex?.date||today()}" /></div>
+      </div>
+      <div class="form-group">
+        <label>Score <span style="font-size:.76rem;color:var(--gray-400)">(leave blank if awaiting results)</span></label>
+        <input type="number" id="m-score" placeholder="e.g. 1542" value="${ex?.score??''}" />
+      </div>
+      <div class="form-group" style="margin-top:8px;padding:10px 13px;background:var(--gray-100);border-radius:var(--radius-sm);font-size:.83rem;color:var(--gray-600)">
+        <i class="fa-solid fa-circle-info" style="color:var(--blue-lite)"></i> Performance level auto-calculated. Leave score blank to log a placeholder.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveKeystoneScore()">${isEdit?'Save Changes':'Save Score'}</button>
+      </div>`;
+
   } else if(type==='p3'){
-    title.textContent='Log CTE Record';
-    const typeOpts=['Industry-Based Competency Certification','High Likelihood of Success on Assessment','CTE Concentrator Readiness Demonstration','Transfer Record from Previous District'].map(t=>`<option>${t}</option>`).join('');
-    body.innerHTML=`<div class="form-group"><label>Description</label><input type="text" id="m-name" placeholder="e.g. CompTIA IT Fundamentals certification" /></div><div class="form-row"><div class="form-group"><label>Type</label><select id="m-type">${typeOpts}</select></div><div class="form-group"><label>Date</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem"><input type="checkbox" id="m-verified" /> Mark as verified by advisor / district</label></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveP3Record()">Save Record</button></div>`;
+    const ex=isEdit?state.p3Records.find(x=>x.id===editId):null;
+    title.textContent=isEdit?'Edit CTE Record':'Log CTE Record';
+    const typeOpts=['Industry-Based Competency Certification','High Likelihood of Success on Assessment','CTE Concentrator Readiness Demonstration','Transfer Record from Previous District'].map(t=>`<option ${ex?.type===t?'selected':''}>${t}</option>`).join('');
+    body.innerHTML=`
+      ${isEdit?`<input type="hidden" id="m-edit-id" value="${editId}" />`:''}
+      <div class="form-group"><label>Description</label><input type="text" id="m-name" value="${esc(ex?.description||'')}" placeholder="e.g. CompTIA IT Fundamentals certification" /></div>
+      <div class="form-row">
+        <div class="form-group"><label>Type</label><select id="m-type">${typeOpts}</select></div>
+        <div class="form-group"><label>Date</label><input type="date" id="m-date" value="${ex?.date||today()}" /></div>
+      </div>
+      <div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem">
+        <input type="checkbox" id="m-verified" ${ex?.verified?'checked':''} /> Mark as verified by advisor / district
+      </label></div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveP3Record()">${isEdit?'Save Changes':'Save Record'}</button>
+      </div>`;
+
   } else if(type==='p4'){
-    title.textContent='Log Alternative Assessment';
-    const typeOpts=P4_TYPES.map(t=>`<option value="${t.key}">${t.label}</option>`).join('');
-    body.innerHTML=`<div class="form-group"><label>Assessment / Activity Name</label><input type="text" id="m-name" placeholder="e.g. SAT — Spring 2024" /></div><div class="form-row"><div class="form-group"><label>Type</label><select id="m-type">${typeOpts}</select></div><div class="form-group"><label>Date</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-row"><div class="form-group"><label>Score / Result</label><input type="text" id="m-score" placeholder="e.g. 1025 or Gold" /></div><div class="form-group"><label>Notes (optional)</label><input type="text" id="m-notes" /></div></div><div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem"><input type="checkbox" id="m-verified" /> Verified / completed</label></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveP4Record()">Save Assessment</button></div>`;
+    const ex=isEdit?state.p4Records.find(x=>x.id===editId):null;
+    title.textContent=isEdit?'Edit Assessment':'Log Alternative Assessment';
+    const typeOpts=P4_TYPES.map(t=>`<option value="${t.key}" ${ex?.type===t.key?'selected':''}>${t.label}</option>`).join('');
+    body.innerHTML=`
+      ${isEdit?`<input type="hidden" id="m-edit-id" value="${editId}" />`:''}
+      <div class="form-group"><label>Assessment / Activity Name</label><input type="text" id="m-name" value="${esc(ex?.name||'')}" placeholder="e.g. SAT — Spring 2024" /></div>
+      <div class="form-row">
+        <div class="form-group"><label>Type</label><select id="m-type">${typeOpts}</select></div>
+        <div class="form-group"><label>Date</label><input type="date" id="m-date" value="${ex?.date||today()}" /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Score / Result <span style="font-size:.76rem;color:var(--gray-400)">(leave blank if pending)</span></label>
+          <input type="text" id="m-score" value="${esc(ex?.score||'')}" placeholder="e.g. 1025 or Gold" />
+        </div>
+        <div class="form-group"><label>Notes (optional)</label><input type="text" id="m-notes" value="${esc(ex?.notes||'')}" /></div>
+      </div>
+      <div class="form-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.85rem">
+        <input type="checkbox" id="m-verified" ${ex?.verified?'checked':''} /> Verified / completed
+      </label></div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveP4Record()">${isEdit?'Save Changes':'Save Assessment'}</button>
+      </div>`;
+
   } else if(type==='p5'){
-    title.textContent='Add Evidence (Pathway 5)';
-    const s1Opts=P5_S1_TYPES.map(t=>`<option value="${t.key}">${t.label}</option>`).join('');
-    const s2Opts=P5_S2_TYPES.map(t=>`<option value="${t.key}">${t.label}</option>`).join('');
-    body.innerHTML=`<div class="form-group"><label>Evidence Description</label><input type="text" id="m-name" placeholder="e.g. AP Calculus Exam — Score 3" /></div><div class="form-row"><div class="form-group"><label>Section</label><select id="m-section" onchange="updateP5TypeOpts()"><option value="S1">Section 1</option><option value="S2">Section 2</option></select></div><div class="form-group"><label>Date</label><input type="date" id="m-date" value="${today()}" /></div></div><div class="form-row"><div class="form-group"><label>Type</label><select id="m-type">${s1Opts}</select></div><div class="form-group"><label>Score / Result</label><input type="text" id="m-score" placeholder="e.g. 3 or Gold" /></div></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveP5Evidence()">Add Evidence</button></div>`;
+    const ex=isEdit?state.p5Evidence.find(x=>x.id===editId):null;
+    title.textContent=isEdit?'Edit Evidence':'Add Evidence (Pathway 5)';
+    const s1Opts=P5_S1_TYPES.map(t=>`<option value="${t.key}" ${ex?.type===t.key?'selected':''}>${t.label}</option>`).join('');
+    const s2Opts=P5_S2_TYPES.map(t=>`<option value="${t.key}" ${ex?.type===t.key?'selected':''}>${t.label}</option>`).join('');
+    const curSection=ex?.section||'S1';
+    body.innerHTML=`
+      ${isEdit?`<input type="hidden" id="m-edit-id" value="${editId}" />`:''}
+      <div class="form-group"><label>Evidence Description</label><input type="text" id="m-name" value="${esc(ex?.name||'')}" placeholder="e.g. AP Calculus Exam — Score 3" /></div>
+      <div class="form-row">
+        <div class="form-group"><label>Section</label>
+          <select id="m-section" onchange="updateP5TypeOpts()">
+            <option value="S1" ${curSection==='S1'?'selected':''}>Section 1</option>
+            <option value="S2" ${curSection==='S2'?'selected':''}>Section 2</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Date</label><input type="date" id="m-date" value="${ex?.date||today()}" /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Type</label><select id="m-type">${curSection==='S1'?s1Opts:s2Opts}</select></div>
+        <div class="form-group"><label>Score / Result</label><input type="text" id="m-score" value="${esc(ex?.score||'')}" placeholder="e.g. 3 or Gold" /></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveP5Evidence()">${isEdit?'Save Changes':'Add Evidence'}</button>
+      </div>`;
     window._p5s1Opts=s1Opts;window._p5s2Opts=s2Opts;
+
   } else if(type==='plan-event'){
     title.textContent='Add Planned Event';
     body.innerHTML=`<div class="form-group"><label>Event Label</label><input type="text" id="m-label" placeholder='e.g. "Keystone Retake — Algebra I"' /></div><div class="form-row"><div class="form-group"><label>Date</label><input type="date" id="m-date" /></div><div class="form-group"><label>Projected Score / Result (optional)</label><input type="text" id="m-proj" placeholder='e.g. "1550"' /></div></div><div class="modal-footer"><button class="btn btn-outline" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="savePlannedEvent()">Add Event</button></div>`;
   }
   openModal();
 }
+
 function updateP5TypeOpts(){const sec=document.getElementById('m-section')?.value;const el=document.getElementById('m-type');if(el)el.innerHTML=sec==='S1'?(window._p5s1Opts||''):(window._p5s2Opts||'');}
-function saveKeystoneScore(){const subj=document.getElementById('m-subj')?.value;const date=document.getElementById('m-date')?.value;const score=Number(document.getElementById('m-score')?.value);if(!subj||!date||isNaN(score)||score<=0){toast('Please fill all fields.','error');return;}const level=calcKeystoneLevel(subj,score);state.keystoneScores.push({id:uid(),subject:subj,date,score,level});saveData();closeModal();renderP1();renderP2();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast(`Keystone score logged — ${level}.`,'success');}
-function saveP3Record(){const name=document.getElementById('m-name')?.value.trim();if(!name){toast('Please enter a description.','error');return;}state.p3Records.push({id:uid(),description:name,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,verified:document.getElementById('m-verified')?.checked});saveData();closeModal();renderP3();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast('CTE record saved.','success');}
-function saveP4Record(){const name=document.getElementById('m-name')?.value.trim();if(!name){toast('Please enter a name.','error');return;}state.p4Records.push({id:uid(),name,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,score:document.getElementById('m-score')?.value.trim(),notes:document.getElementById('m-notes')?.value.trim(),verified:document.getElementById('m-verified')?.checked});saveData();closeModal();renderP4();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast('Assessment logged.','success');}
-function saveP5Evidence(){const name=document.getElementById('m-name')?.value.trim();if(!name){toast('Please enter a description.','error');return;}state.p5Evidence.push({id:uid(),name,section:document.getElementById('m-section')?.value,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,score:document.getElementById('m-score')?.value.trim()});saveData();closeModal();renderP5();renderPathwayOverview();updatePathwayNavDots();renderDashboard();toast('Evidence added.','success');}
+
+function saveKeystoneScore(){
+  const editId=document.getElementById('m-edit-id')?.value;
+  const subj=document.getElementById('m-subj')?.value;
+  const date=document.getElementById('m-date')?.value;
+  const scoreRaw=document.getElementById('m-score')?.value;
+  if(!subj||!date){toast('Please fill subject and date.','error');return;}
+  const score=scoreRaw===''?null:Number(scoreRaw);
+  const level=score!==null?calcKeystoneLevel(subj,score):null;
+  if(editId){
+    const ex=state.keystoneScores.find(x=>x.id===editId);
+    if(ex){Object.assign(ex,{subject:subj,date,score,level});}
+  } else {
+    state.keystoneScores.push({id:uid(),subject:subj,date,score,level});
+  }
+  saveData();closeModal();renderP1();renderP2();renderPathwayOverview();updatePathwayNavDots();renderDashboard();
+  toast(editId?'Score updated.':`Keystone score logged${level?` — ${level}`:' (pending)'}.`,'success');
+}
+
+function saveP3Record(){
+  const editId=document.getElementById('m-edit-id')?.value;
+  const name=document.getElementById('m-name')?.value.trim();
+  if(!name){toast('Please enter a description.','error');return;}
+  const data={description:name,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,verified:document.getElementById('m-verified')?.checked};
+  if(editId){const ex=state.p3Records.find(x=>x.id===editId);if(ex)Object.assign(ex,data);}
+  else state.p3Records.push({id:uid(),...data});
+  saveData();closeModal();renderP3();renderPathwayOverview();updatePathwayNavDots();renderDashboard();
+  toast(editId?'Record updated.':'CTE record saved.','success');
+}
+
+function saveP4Record(){
+  const editId=document.getElementById('m-edit-id')?.value;
+  const name=document.getElementById('m-name')?.value.trim();
+  if(!name){toast('Please enter a name.','error');return;}
+  const data={name,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,score:document.getElementById('m-score')?.value.trim(),notes:document.getElementById('m-notes')?.value.trim(),verified:document.getElementById('m-verified')?.checked};
+  if(editId){const ex=state.p4Records.find(x=>x.id===editId);if(ex)Object.assign(ex,data);}
+  else state.p4Records.push({id:uid(),...data});
+  saveData();closeModal();renderP4();renderPathwayOverview();updatePathwayNavDots();renderDashboard();
+  toast(editId?'Assessment updated.':'Assessment logged.','success');
+}
+
+function saveP5Evidence(){
+  const editId=document.getElementById('m-edit-id')?.value;
+  const name=document.getElementById('m-name')?.value.trim();
+  if(!name){toast('Please enter a description.','error');return;}
+  const data={name,section:document.getElementById('m-section')?.value,type:document.getElementById('m-type')?.value,date:document.getElementById('m-date')?.value,score:document.getElementById('m-score')?.value.trim()};
+  if(editId){const ex=state.p5Evidence.find(x=>x.id===editId);if(ex)Object.assign(ex,data);}
+  else state.p5Evidence.push({id:uid(),...data});
+  saveData();closeModal();renderP5();renderPathwayOverview();updatePathwayNavDots();renderDashboard();
+  toast(editId?'Evidence updated.':'Evidence added.','success');
+}
 function savePlannedEvent(){
   const label=document.getElementById('m-label')?.value.trim();
   const date=document.getElementById('m-date')?.value;
@@ -1536,6 +1703,14 @@ function editPlannedEvent(evId){
   openModal();
 }
 function deletePathwayEntry(k,id){if(!confirm('Remove this entry?'))return;state[k]=state[k].filter(x=>x.id!==id);saveData();renderAll();toast('Entry removed.');}
+
+// Opens the appropriate edit modal for any pathway log entry
+function editPathwayEntry(listKey, id) {
+  if(listKey==='keystoneScores') openPathwayModal('keystone', id);
+  else if(listKey==='p3Records')    openPathwayModal('p3', id);
+  else if(listKey==='p4Records')    openPathwayModal('p4', id);
+  else if(listKey==='p5Evidence')   openPathwayModal('p5', id);
+}
 
 // ══════════════════════════════════════════════════════════════
 // SETTINGS

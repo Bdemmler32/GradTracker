@@ -1,5 +1,5 @@
 /* ============================================================
-   GradTracker v1.6.0 — Styles
+   GradTracker v1.7.6 — Styles
    [1] Sidebar collapse bg removed (#2)
    [2] Sub-link indent aligned to icon column (#3)
    [3] Toolbar button baseline-aligned (#4)
@@ -36,7 +36,7 @@
   --exploring-light:#f3effe;
   --exploring-bdr:  #c4b5fd;
 
-  --sidebar-w:  268px;
+  --sidebar-w:  300px;
   --radius:     10px;
   --radius-sm:  6px;
   --shadow:     0 2px 12px rgba(0,61,122,.10);
